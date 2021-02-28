@@ -1,0 +1,103 @@
+#! /Applications/Nuke12.1v2/Nuke12.1v2.app/Contents/MacOS/libnuke-12.1.2.dylib -nx
+version 12.1 v2
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="23" w="2560" h="1010" maximized="1" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1897" stretch="1"/>
+            <splitter orientation="2">
+                <split size="581"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="409"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/source/Nuke/setup.nk
+ format "1024 1024 0 0 1024 1024 1 rarepizza-1k"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-0-box-r0-cardboard-v0.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ name Read1
+ xpos 591
+ ypos -231
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-0-box-r1-waxpaper-v0.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ name Read2
+ xpos 594
+ ypos -133
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thin-r0-v0_shad.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ name Read4
+ xpos 599
+ ypos -27
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thick-v0.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ name Read3
+ xpos 599
+ ypos 244
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thin-r0-v0.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ name Read5
+ xpos 603
+ ypos 133
+}
+Viewer {
+ frame 1
+ frame_range 1-100
+ name Viewer1
+ xpos -40
+ ypos -9
+}

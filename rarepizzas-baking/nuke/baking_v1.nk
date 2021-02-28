@@ -1,0 +1,293 @@
+#! /Applications/Nuke12.1v2/Nuke12.1v2.app/Contents/MacOS/libnuke-12.1.2.dylib -nx
+version 12.1 v2
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="62" w="1680" h="941" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1222" stretch="1"/>
+            <splitter orientation="1">
+                <split size="641"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="577"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="uk.co.thefoundry.scripteditor.1"/>
+                </dock>
+            </splitter>
+            <split size="410"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/Nuke/baking_v1.nk
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode1
+ tile_color 0x7171c600
+ label bbq
+ note_font_size 42
+ xpos -345
+ ypos -564
+ bdwidth 205
+ bdheight 506
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-0-box-r1-waxpaper-v0.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ name Read2
+ xpos -254
+ ypos -1872
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-3-cheese-r0-feta-v0.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ premultiplied true
+ name Read7
+ xpos -340
+ ypos 85
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-8-cheese-r0-vegan-v1.png
+ format "3072 3072 0 0 3072 3072 1 "
+ proxy_format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ name Read9
+ xpos 224
+ ypos 76
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-8-cheese-r0-mozzarella-v1.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ premultiplied true
+ name Read8
+ xpos -23
+ ypos 82
+}
+Read {
+ inputs 0
+ file_type png
+ file "/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-118-sauce-r4-BBQ Sauce-v1.png"
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ premultiplied true
+ name Read6
+ xpos -298
+ ypos -484
+}
+Transform {
+ scale 0.898999989
+ center {1536 1536}
+ name Transform2
+ xpos -298
+ ypos -382
+}
+set Nd88e2800 [stack 0]
+Dilate {
+ channels alpha
+ size -3
+ name Dilate1
+ xpos -230
+ ypos -269
+}
+push $Nd88e2800
+Shuffle2 {
+ fromInput1 {{0} B}
+ fromInput2 {{0} B}
+ mappings "4 rgba.red 0 0 rgba.red 0 0 rgba.green 0 1 rgba.green 0 1 rgba.blue 0 2 rgba.blue 0 2 rgba.red 0 0 rgba.alpha 0 3"
+ name Shuffle1
+ xpos -335
+ ypos -343
+}
+Invert {
+ channels alpha
+ name Invert1
+ xpos -335
+ ypos -305
+}
+Grade {
+ channels alpha
+ whitepoint 0.08
+ black 0.26
+ name Grade4
+ xpos -335
+ ypos -259
+ disable true
+}
+Merge2 {
+ inputs 2
+ operation mask
+ name Out
+ xpos -273
+ ypos -182
+}
+Clamp {
+ channels alpha
+ name Clamp1
+ xpos -273
+ ypos -138
+}
+Grade {
+ channels alpha
+ gamma 2.4
+ white_clamp true
+ name Grade2
+ xpos -273
+ ypos -94
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thick-v0.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ premultiplied true
+ name Read3
+ xpos -244
+ ypos -1007
+}
+Grain2 {
+ name Grain2_1
+ label "Kodak 5248"
+ xpos -244
+ ypos -927
+ black {0 0 0}
+ minimum {0 0 0}
+}
+Grade {
+ whitepoint {1 1 1 1}
+ whitepoint_panelDropped true
+ white {0.9 0.77 0.7 1}
+ white_panelDropped true
+ multiply_panelDropped true
+ name Grade3
+ xpos -244
+ ypos -870
+}
+Transform {
+ translate {20 26}
+ scale 0.96
+ center {1536 1536}
+ name Transform1
+ xpos -244
+ ypos -835
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thin-r0-v0.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ premultiplied true
+ name Read5
+ xpos -450
+ ypos -1015
+}
+EdgeBlur {
+ size 7.8
+ name EdgeBlur1
+ xpos -450
+ ypos -845
+}
+Switch {
+ inputs 2
+ name Switch1
+ xpos -351
+ ypos -755
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thin-r0-v0_shad.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ name Read4
+ xpos -457
+ ypos -1451
+}
+Grade {
+ gamma 1.18
+ name Grade1
+ xpos -457
+ ypos -1313
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-0-box-r0-cardboard-v0.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ premultiplied true
+ name Read1
+ xpos -467
+ ypos -1879
+}
+Dot {
+ name Dot1
+ xpos -645
+ ypos -1848
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Merge2
+ xpos -679
+ ypos -1313
+}
+Merge2 {
+ inputs 2
+ name Merge1
+ xpos -679
+ ypos -755
+}
+Merge2 {
+ inputs 2
+ name Merge3
+ xpos -679
+ ypos -90
+}
+set Nd88e2c00 [stack 0]
+push $Nd88e2c00
+Viewer {
+ inputs 2
+ frame 1
+ frame_range 1-100
+ translate {0.08799999952 -0.06000000238}
+ rotate 19.21265793
+ name Viewer1
+ xpos -541
+ ypos 248
+}
