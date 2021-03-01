@@ -2,7 +2,7 @@
 version 12.1 v2
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="0" y="23" w="2560" h="1035" maximized="1" screen="0">
+    <window x="0" y="23" w="2560" h="1010" maximized="1" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
@@ -10,11 +10,11 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
             </dock>
             <split size="1897" stretch="1"/>
             <splitter orientation="2">
-                <split size="596"/>
+                <split size="581"/>
                 <dock id="" activePageId="Viewer.1">
                     <page id="Viewer.1"/>
                 </dock>
-                <split size="419"/>
+                <split size="409"/>
                 <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
@@ -32,7 +32,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 }
 Root {
  inputs 0
- name /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/nuke/burn_masks.nk
+ name /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/Nuke/burn_masks.nk
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
  proxy_type scale
  proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
@@ -79,24 +79,10 @@ Write {
  file_type png
  checkHashOnRead false
  version 1
- in_colorspace scene_linear
- out_colorspace scene_linear
  name Write1
  xpos 575
  ypos -33
 }
-Read {
- inputs 0
- file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-8-cheese-r0-mozzarella-v1.png
- format "3072 3072 0 0 3072 3072 1 3k"
- origset true
- premultiplied true
- name Read4
- xpos 379
- ypos 29
-}
-set N22823000 [stack 0]
 Read {
  inputs 0
  file_type png
@@ -116,12 +102,32 @@ Merge2 {
  xpos 219
  ypos -19
 }
-set N227d7800 [stack 0]
+set N5937a800 [stack 0]
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-8-cheese-r0-mozzarella-v1.png
+ format "3072 3072 0 0 3072 3072 1 3k"
+ origset true
+ premultiplied true
+ name Read4
+ xpos 379
+ ypos 29
+}
+push $N5937a800
 Merge2 {
  inputs 2
  name Merge1
  xpos 137
  ypos 90
+}
+Viewer {
+ inputs 2
+ frame 1
+ frame_range 1-100
+ name Viewer1
+ xpos -40
+ ypos -9
 }
 Read {
  inputs 0
@@ -156,46 +162,8 @@ Write {
  file_type png
  checkHashOnRead false
  version 2
- in_colorspace scene_linear
- out_colorspace scene_linear
  name Write2
- xpos 379
- ypos -16
-}
-push $N227d7800
-push $N22823000
-Shuffle2 {
- fromInput1 {{0} B}
- fromInput2 {{0} B}
- mappings "4 rgba.alpha 0 3 rgba.blue 0 2 rgba.alpha 0 3 rgba.green 0 1 rgba.alpha 0 3 rgba.alpha 0 3 rgba.alpha 0 3 rgba.red 0 0"
- name Shuffle1
- xpos 379
- ypos 128
-}
-Grade {
- channels all
- multiply 1.58
- gamma 0.89
- white_clamp true
- name Grade1
- xpos 379
- ypos 152
-}
-Write {
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-masks/rarepizzas-topping-mask.png
- file_type png
- checkHashOnRead false
- version 3
- name Write3
  selected true
  xpos 379
- ypos 201
-}
-Viewer {
- inputs 2
- frame 1
- frame_range 1-100
- name Viewer1
- xpos -40
- ypos -9
+ ypos -16
 }
