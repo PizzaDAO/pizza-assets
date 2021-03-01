@@ -1,0 +1,169 @@
+#! /Applications/Nuke12.1v2/Nuke12.1v2.app/Contents/MacOS/libnuke-12.1.2.dylib -nx
+version 12.1 v2
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="23" w="2560" h="1010" maximized="1" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1897" stretch="1"/>
+            <splitter orientation="2">
+                <split size="581"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="409"/>
+                <dock id="" activePageId="DAG.1">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1" focus="true">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/Nuke/burn_masks.nk
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Constant {
+ inputs 0
+ channels rgb
+ name Constant1
+ xpos 672
+ ypos -251
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/blender/Crust_and_box/more_cooked.png
+ format "2048 2048 0 0 2048 2048 1 square_2K"
+ origset true
+ name Read3
+ xpos 573
+ ypos -254
+}
+Reformat {
+ format "3072 3072 0 0 3072 3072 1 3k"
+ name Reformat2
+ xpos 575
+ ypos -124
+}
+Transform {
+ translate {130 -50}
+ center {1536 1536}
+ name Transform2
+ xpos 575
+ ypos -92
+}
+Write {
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-masks/rarepizzas-burn1-mask.png
+ file_type png
+ checkHashOnRead false
+ version 1
+ name Write1
+ xpos 575
+ ypos -33
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thin-v0.png
+ format "3072 3072 0 0 3072 3072 1 3k"
+ origset true
+ premultiplied true
+ name Read1
+ xpos 219
+ ypos -182
+}
+push 0
+Merge2 {
+ inputs 2
+ operation multiply
+ name Multiply
+ xpos 219
+ ypos -19
+}
+set N5937a800 [stack 0]
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-8-cheese-r0-mozzarella-v1.png
+ format "3072 3072 0 0 3072 3072 1 3k"
+ origset true
+ premultiplied true
+ name Read4
+ xpos 379
+ ypos 29
+}
+push $N5937a800
+Merge2 {
+ inputs 2
+ name Merge1
+ xpos 137
+ ypos 90
+}
+Viewer {
+ inputs 2
+ frame 1
+ frame_range 1-100
+ name Viewer1
+ xpos -40
+ ypos -9
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/blender/Crust_and_box/bubbbles.png
+ format "3072 3072 0 0 3072 3072 1 3k"
+ origset true
+ name Read2
+ xpos 390
+ ypos -289
+}
+Reformat {
+ format "3072 3072 0 0 3072 3072 1 3k"
+ name Reformat1
+ xpos 390
+ ypos -209
+}
+Transform {
+ translate {200 0}
+ center {1536 1536}
+ name Transform1
+ xpos 390
+ ypos -158
+}
+Invert {
+ name Invert1
+ xpos 379
+ ypos -122
+}
+Write {
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-masks/rarepizzas-burnbubble1-mask.png
+ file_type png
+ checkHashOnRead false
+ version 2
+ name Write2
+ selected true
+ xpos 379
+ ypos -16
+}
