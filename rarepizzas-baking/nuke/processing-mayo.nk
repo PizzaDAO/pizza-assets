@@ -1,0 +1,121 @@
+#! /Applications/Nuke12.1v2/Nuke12.1v2.app/Contents/MacOS/libnuke-12.1.2.dylib -nx
+#write_info Write1 file:"/Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-130-squirt-r0-mayosquirt-v1.png" format:"3072 3072 1" chans:":rgba.red:rgba.green:rgba.blue:rgba.alpha:" framerange:"1 100" fps:"0" colorspace:"default (sRGB)" datatype:"8 bit" transfer:"unknown" views:"main" colorManagement:"Nuke"
+version 12.1 v2
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="23" w="2560" h="1035" maximized="1" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1897" stretch="1"/>
+            <splitter orientation="2">
+                <split size="596"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="419"/>
+                <dock id="" activePageId="DAG.1">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1" focus="true">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/nuke/processing-mayo.nk
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-130-squirt-r0-mayosquirt-v0.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ premultiplied true
+ name Read1
+ xpos -188
+ ypos -179
+}
+set N24f5c000 [stack 0]
+Grade {
+ channels all
+ blackpoint 0.024
+ whitepoint 0.29
+ white 0.62
+ white_clamp true
+ name Grade1
+ xpos -55
+ ypos -68
+}
+push $N24f5c000
+push $N24f5c000
+Noise {
+ output rgb
+ size 24
+ center {1024 778}
+ name Noise1
+ xpos -336
+ ypos -76
+}
+Merge2 {
+ inputs 2
+ operation geometric
+ name Multiply
+ xpos -233
+ ypos -44
+}
+Blur {
+ size 2
+ name Blur1
+ xpos -233
+ ypos -20
+}
+Shuffle2 {
+ inputs 2
+ fromInput1 {{0} B A}
+ fromInput2 {{1} B A}
+ in2 rgb
+ out2 alpha
+ mappings "5 rgba.red 0 0 rgba.red 0 0 rgba.green 0 1 rgba.green 0 1 rgba.blue 0 2 rgba.blue 0 2 rgba.alpha 0 3 rgba.alpha 0 3 rgba.blue 1 2 rgba.alpha 1 0"
+ name Shuffle1
+ xpos -169
+ ypos 12
+}
+Write {
+ channels rgba
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-130-squirt-r0-mayosquirt-v1.png
+ file_type png
+ checkHashOnRead false
+ version 3
+ name Write1
+ selected true
+ xpos -169
+ ypos 49
+}
+Viewer {
+ frame 1
+ frame_range 1-100
+ name Viewer1
+ xpos -169
+ ypos 95
+}
