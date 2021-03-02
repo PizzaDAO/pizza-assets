@@ -2,26 +2,27 @@
 version 12.1 v2
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="0" y="62" w="1680" h="941" screen="0">
+    <window x="0" y="23" w="2560" h="1010" maximized="1" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="1222" stretch="1"/>
-            <splitter orientation="1">
-                <split size="641"/>
+            <split size="1897" stretch="1"/>
+            <splitter orientation="2">
+                <split size="581"/>
                 <dock id="" activePageId="Viewer.1">
                     <page id="Viewer.1"/>
                 </dock>
-                <split size="577"/>
-                <dock id="" activePageId="DAG.1" focus="true">
+                <split size="409"/>
+                <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
-                    <page id="uk.co.thefoundry.scripteditor.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
                 </dock>
             </splitter>
-            <split size="410"/>
-            <dock id="" activePageId="Properties.1">
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1" focus="true">
                 <page id="Properties.1"/>
                 <page id="uk.co.thefoundry.backgroundrenderview.1"/>
             </dock>
@@ -67,17 +68,6 @@ Read {
 Read {
  inputs 0
  file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-3-cheese-r0-feta-v0.png
- format "3072 3072 0 0 3072 3072 1 "
- origset true
- premultiplied true
- name Read7
- xpos -340
- ypos 85
-}
-Read {
- inputs 0
- file_type png
  file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-8-cheese-r0-vegan-v1.png
  format "3072 3072 0 0 3072 3072 1 "
  proxy_format "3072 3072 0 0 3072 3072 1 "
@@ -85,17 +75,6 @@ Read {
  name Read9
  xpos 224
  ypos 76
-}
-Read {
- inputs 0
- file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-8-cheese-r0-mozzarella-v1.png
- format "3072 3072 0 0 3072 3072 1 "
- origset true
- premultiplied true
- name Read8
- xpos -23
- ypos 82
 }
 Read {
  inputs 0
@@ -115,7 +94,7 @@ Transform {
  xpos -298
  ypos -382
 }
-set Nd88e2800 [stack 0]
+set N4cf49000 [stack 0]
 Dilate {
  channels alpha
  size -3
@@ -123,7 +102,7 @@ Dilate {
  xpos -230
  ypos -269
 }
-push $Nd88e2800
+push $N4cf49000
 Shuffle2 {
  fromInput1 {{0} B}
  fromInput2 {{0} B}
@@ -171,6 +150,396 @@ Grade {
 Read {
  inputs 0
  file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-3-cheese-r0-feta-v0.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ premultiplied true
+ name Read7
+ xpos -15
+ ypos 207
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-120-sauce-r0-tomato-v0.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ name Read11
+ xpos -986
+ ypos -442
+}
+set N4a3a6400 [stack 0]
+Noise {
+ size 170
+ zoffset 1.72
+ lacunarity 2.16
+ gain 0.715
+ gamma 0.63
+ center {1024 778}
+ name Noise3
+ xpos -753
+ ypos -362
+ postage_stamp true
+}
+Grade {
+ channels alpha
+ blackpoint 0.74
+ white 1.38
+ multiply 0.66
+ add 0.21
+ gamma 0.385
+ name Grade9
+ xpos -876
+ ypos -300
+}
+set N4c268400 [stack 0]
+push $N4a3a6400
+Merge2 {
+ inputs 2
+ operation multiply
+ name Multiply2
+ xpos -880
+ ypos -332
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-archive/blenderlogo_vectorized.png
+ format "3072 2440 0 0 3072 2440 1 "
+ origset true
+ name Read10
+ xpos -1445
+ ypos -686
+}
+Reformat {
+ format "3072 3072 0 0 3072 3072 1 "
+ name Reformat2
+ xpos -1428
+ ypos -582
+}
+set Na1853400 [stack 0]
+Transform {
+ translate {220 605}
+ scale 0.8309999704
+ center {1024 778}
+ name Transform4
+ xpos -1365
+ ypos -713
+}
+Invert {
+ channels alpha
+ name Invert2
+ xpos -1271
+ ypos -647
+}
+Grade {
+ channels alpha
+ blackpoint 0.035
+ whitepoint 0.53
+ black 0.02
+ white 1.22
+ multiply 0.44
+ add 0.47
+ white_clamp true
+ name Grade6
+ xpos -1186
+ ypos -585
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-archive/blenderlogo.png
+ format "175 139 0 0 175 139 1 "
+ origset true
+ name Read12
+ xpos -1034
+ ypos -607
+}
+Median {
+ size 4.5
+ ignore_top_line false
+ name Median1
+ xpos -1041
+ ypos -499
+}
+Transform {
+ translate {1630 1680}
+ scale 15.8579998
+ center {87.5 69.5}
+ name Transform5
+ xpos -1051
+ ypos -508
+}
+push $Na1853400
+Noise {
+ size 680
+ zoffset 1.72
+ lacunarity 3.65
+ gain 0.238
+ gamma 0.53
+ center {1024 778}
+ name Noise2
+ xpos -1547
+ ypos -804
+ postage_stamp true
+}
+push $Na1853400
+Transform {
+ translate {80 580}
+ scale 0.4329999983
+ center {1536 1220}
+ name Transform3
+ xpos -1595
+ ypos -515
+}
+Merge2 {
+ inputs 2
+ name Merge6
+ xpos -1623
+ ypos -598
+}
+push $Na1853400
+Merge2 {
+ inputs 2
+ operation multiply
+ name Multiply1
+ xpos -1701
+ ypos -710
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/nuke/download.png
+ format "309 163 0 0 309 163 1 "
+ origset true
+ premultiplied true
+ name Read13
+ xpos -1663
+ ypos -213
+}
+set N4eaeac00 [stack 0]
+push $N4eaeac00
+Shuffle2 {
+ fromInput1 {{0} B}
+ fromInput2 {{0} B}
+ mappings "4 rgba.red 0 0 rgba.red 0 0 rgba.green 0 1 rgba.green 0 1 rgba.blue 0 2 rgba.blue 0 2 rgba.red 0 0 rgba.alpha 0 3"
+ name Shuffle3
+ xpos -1456
+ ypos -196
+}
+Grade {
+ channels alpha
+ blackpoint 0.62
+ whitepoint 0.66
+ black -0.25
+ white 0.58
+ name Grade8
+ xpos -1456
+ ypos -172
+}
+Invert {
+ channels alpha
+ name Invert3
+ xpos -1456
+ ypos -140
+}
+Blur {
+ inputs 1+1
+ channels alpha
+ size 2.4
+ name Blur1
+ xpos -1456
+ ypos -66
+}
+Premult {
+ name Premult3
+ xpos -1456
+ ypos -34
+}
+Dot {
+ name Dot2
+ xpos -1426
+ ypos 5
+}
+set N9f89b000 [stack 0]
+Transform {
+ translate {1428 1250}
+ scale 2.407000065
+ center {154.5 81.5}
+ name Transform10
+ xpos -1098
+ ypos -98
+ disable true
+}
+push $N9f89b000
+Transform {
+ translate {2090 1495}
+ scale 2.64199996
+ center {154.5 81.5}
+ name Transform9
+ xpos -1151
+ ypos -54
+ disable true
+}
+push $N9f89b000
+Transform {
+ translate {2200 980}
+ scale 2.83100009
+ center {154.5 81.5}
+ name Transform11
+ xpos -1004
+ ypos -78
+ disable true
+}
+push 0
+push 0
+push $N9f89b000
+Transform {
+ translate {1680 1490}
+ scale 2.217999935
+ center {154.5 81.5}
+ name Transform6
+ xpos -1269
+ ypos -24
+ disable true
+}
+push 0
+Merge2 {
+ inputs 6+1
+ name Merge7
+ xpos -1025
+ ypos 50
+}
+Constant {
+ inputs 0
+ channels alpha
+ format "3072 3072 0 0 3072 3072 1 "
+ name Constant1
+ xpos -886
+ ypos -59
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/elem/pepparoni-lg.png
+ format "3024 3024 0 0 3024 3024 1 "
+ origset true
+ premultiplied true
+ name Read14
+ xpos -1591
+ ypos 80
+}
+Transform {
+ translate {425 -130}
+ scale 0.4110000134
+ center {1512 1512}
+ name Transform12
+ xpos -1423
+ ypos 170
+}
+push 0
+push 0
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-8-cheese-r0-mozzarella-v1.png
+ format "3072 3072 0 0 3072 3072 1 "
+ origset true
+ name Read8
+ xpos -45
+ ypos -65
+}
+set N4cf49800 [stack 0]
+Noise {
+ size 680
+ zoffset 1.72
+ lacunarity 2.16
+ gain 0.715
+ gamma 0.63
+ center {1024 778}
+ name Noise1
+ xpos -119
+ ypos 27
+ postage_stamp true
+}
+Grade {
+ channels alpha
+ blackpoint 0.022
+ black 0.23
+ white 1.38
+ multiply 0.66
+ add 0.21
+ gamma 0.385
+ name Grade5
+ xpos -80
+ ypos 134
+}
+push $N4cf49800
+Merge2 {
+ inputs 2
+ operation multiply
+ name Multiply
+ xpos -266
+ ypos -4
+}
+Premult {
+ name Premult1
+ xpos -371
+ ypos -4
+}
+Transform {
+ translate {580 85}
+ scale {0.6200000048 0.6200000644}
+ center {1024 778}
+ name Transform7
+ xpos -569
+ ypos 50
+}
+push $Na1853400
+Shuffle2 {
+ fromInput1 {{0} B}
+ fromInput2 {{0} B}
+ mappings "4 rgba.red 0 0 rgba.red 0 0 rgba.green 0 1 rgba.green 0 1 rgba.blue 0 2 rgba.blue 0 2 rgba.red 0 0 rgba.alpha 0 3"
+ name Shuffle2
+ xpos -1261
+ ypos -405
+}
+Grade {
+ channels rgba
+ blackpoint 0.04
+ whitepoint 0.29
+ name Grade7
+ xpos -1261
+ ypos -356
+}
+push $N4c268400
+push $N4a3a6400
+Shuffle2 {
+ inputs 2
+ fromInput1 {{0} B A}
+ fromInput2 {{1} B A}
+ in2 alpha
+ out2 alpha
+ mappings "5 rgba.red 0 0 rgba.red 0 0 rgba.green 0 1 rgba.green 0 1 rgba.blue 0 2 rgba.blue 0 2 rgba.alpha 1 0 rgba.alpha 1 0 black -1 -1 rgba.alpha 0 3"
+ name Shuffle4
+ xpos -996
+ ypos -303
+}
+Merge2 {
+ inputs 2
+ operation multiply
+ name Multiply3
+ xpos -955
+ ypos -205
+}
+Premult {
+ name Premult2
+ xpos -604
+ ypos -163
+}
+Read {
+ inputs 0
+ file_type png
  file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thick-v0.png
  format "3072 3072 0 0 3072 3072 1 "
  origset true
@@ -208,7 +577,7 @@ Transform {
 Read {
  inputs 0
  file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thin-r0-v0.png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thin-v0.png
  format "3072 3072 0 0 3072 3072 1 "
  origset true
  premultiplied true
@@ -225,13 +594,13 @@ EdgeBlur {
 Switch {
  inputs 2
  name Switch1
- xpos -351
+ xpos -350
  ypos -755
 }
 Read {
  inputs 0
  file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thin-r0-v0_shad.png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thin-v0_shad.png
  format "3072 3072 0 0 3072 3072 1 "
  origset true
  name Read4
@@ -247,14 +616,15 @@ Grade {
 Read {
  inputs 0
  file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-0-box-r0-cardboard-v0.png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-0-box-r1-waxchecker-v0.png
  format "3072 3072 0 0 3072 3072 1 "
  origset true
  premultiplied true
  name Read1
- xpos -467
+ xpos -461
  ypos -1879
 }
+set N4cdcfc00 [stack 0]
 Dot {
  name Dot1
  xpos -645
@@ -279,15 +649,112 @@ Merge2 {
  xpos -679
  ypos -90
 }
-set Nd88e2c00 [stack 0]
-push $Nd88e2c00
+Merge2 {
+ inputs 2
+ name Merge4
+ xpos -689
+ ypos 50
+}
+set N87ee1000 [stack 0]
+Merge2 {
+ inputs 3+1
+ name Merge5
+ xpos -1025
+ ypos 116
+}
+set N8ca71800 [stack 0]
+Reformat {
+ format "512 512 0 0 512 512 1 square_512"
+ name Reformat1
+ xpos -1159
+ ypos 166
+}
+Sharpen {
+ size 1.7
+ name Sharpen1
+ xpos -1115
+ ypos 209
+}
+Write {
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/out/rarepizzas-blenpie_512.jpg
+ file_type jpeg
+ _jpeg_quality 1
+ checkHashOnRead false
+ version 3
+ name Write1
+ xpos -1115
+ ypos 279
+}
+push $N9f89b000
+Transform {
+ translate {1700 1230}
+ scale 6.353000164
+ center {130 80}
+ name Transform8
+ xpos -1310
+ ypos 45
+}
+Sharpen {
+ size 9.2
+ name Sharpen2
+ xpos -1180
+ ypos 73
+}
+push $N87ee1000
+push $N8ca71800
 Viewer {
  inputs 2
- frame 1
  frame_range 1-100
  translate {0.08799999952 -0.06000000238}
  rotate 19.21265793
  name Viewer1
- xpos -541
+ xpos -689
+ ypos 245
+}
+push $N4cdcfc00
+push $N8ca71800
+Shuffle2 {
+ inputs 2
+ fromInput1 {{0} B A}
+ fromInput2 {{1} B A}
+ in2 alpha
+ out2 alpha
+ mappings "5 rgba.red 0 0 rgba.red 0 0 rgba.green 0 1 rgba.green 0 1 rgba.blue 0 2 rgba.blue 0 2 rgba.alpha 1 0 rgba.alpha 1 0 black -1 -1 rgba.alpha 0 3"
+ name Shuffle5
+ xpos -966
+ ypos 195
+}
+Premult {
+ name Premult4
+ xpos -966
+ ypos 219
+}
+set N4f439400 [stack 0]
+Write {
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/out/rarepizzas-blenpie_3k.jpg
+ file_type jpeg
+ _jpeg_quality 1
+ checkHashOnRead false
+ version 6
+ name Write2
+ xpos -966
+ ypos 298
+}
+push $N4f439400
+Reformat {
+ format "350 350 0 0 350 350 1 350x350"
+ name Reformat3
+ xpos -875
  ypos 248
+}
+Write {
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/out/rarepizzas-blenpie_350.jpg
+ file_type jpeg
+ _jpeg_quality 1
+ checkHashOnRead false
+ version 7
+ name Write3
+ selected true
+ xpos -844
+ ypos 301
 }
