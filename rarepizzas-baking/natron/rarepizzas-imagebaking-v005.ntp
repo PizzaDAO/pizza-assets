@@ -8289,11 +8289,11 @@
 			<Plugin_minor_version>0</Plugin_minor_version>
 			<KnobsCount>0</KnobsCount>
 			<Inputs_map>
-				<count>4</count>
+				<count>3</count>
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
-					<second>Merge2</second>
+					<second>Merge1</second>
 				</item>
 				<item>
 					<first>10</first>
@@ -8302,10 +8302,6 @@
 				<item>
 					<first>2</first>
 					<second>Transform9</second>
-				</item>
-				<item>
-					<first>3</first>
-					<second>switch_cheese_r</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>5</KnobsAge>
@@ -11132,7 +11128,7 @@ Control&lt;/font&gt;&lt;/b&gt;</Value>
 					<second>Merge1</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>529</KnobsAge>
+			<KnobsAge>540</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -11155,7 +11151,7 @@ Control&lt;/font&gt;&lt;/b&gt;</Value>
 					<item>
 						<Enabled>1</Enabled>
 						<HasAnimation>0</HasAnimation>
-						<Value>0</Value>
+						<Value>-1</Value>
 						<Default>0</Default>
 						<HasMaster>0</HasMaster>
 						<Expression></Expression>
@@ -12581,7 +12577,7 @@ Control&lt;/font&gt;&lt;/b&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>5.08999999999999991e-03</Value>
+					<Value>5.04000000000000021e-03</Value>
 					<Default>2.00000000000000004e-03</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -12615,7 +12611,7 @@ Control&lt;/font&gt;&lt;/b&gt;</Value>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1614557734</Value>
+					<Value>1614790809</Value>
 					<Default>2000</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>import time
@@ -12705,7 +12701,7 @@ ret=time.time()</Expression>
 					<second>switch_sauce_r</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>265</KnobsAge>
+			<KnobsAge>270</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -19413,7 +19409,7 @@ ret=time.time()</Expression>
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>1614558202</Value>
+					<Value>1614790443</Value>
 					<Default>2000</Default>
 					<HasMaster>0</HasMaster>
 					<Expression>import time
@@ -22833,7 +22829,7 @@ ret=time.time()</Expression>
 		<item>
 			<Enabled>0</Enabled>
 			<HasAnimation>0</HasAnimation>
-			<Value>Sun Feb 28 16:25:26 2021</Value>
+			<Value>Wed Mar 3 09:00:51 2021</Value>
 			<Default></Default>
 			<HasMaster>0</HasMaster>
 			<Expression></Expression>
@@ -25208,12 +25204,11 @@ ret=time.time()</Expression>
 					<ChildIsSplitter>0</ChildIsSplitter>
 					<Child object_id="_3">
 						<Tabs>
-							<count>4</count>
+							<count>3</count>
 							<item_version>0</item_version>
 							<item>nodeGraph</item>
 							<item>curveEditor</item>
 							<item>dopeSheetEditor</item>
-							<item>progress</item>
 						</Tabs>
 						<Index>0</Index>
 						<Name>pane3</Name>
@@ -25281,7 +25276,7 @@ ret=time.time()</Expression>
 				<Fps>2.40000000000000000e+01</Fps>
 				<FpsLocked>1</FpsLocked>
 				<aInput>0</aInput>
-				<bInput>2</bInput>
+				<bInput>0</bInput>
 				<fullFrame>0</fullFrame>
 			</second>
 		</item>
@@ -25293,6 +25288,8 @@ ret=time.time()</Expression>
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
+		<item>pcontrol</item>
+		<item>Plasma2</item>
 		<item>Backdrop6</item>
 		<item>Read13</item>
 		<item>Write1</item>
@@ -25301,8 +25298,6 @@ ret=time.time()</Expression>
 		<item>Transform5</item>
 		<item>Merge2</item>
 		<item>Read2</item>
-		<item>NoOp1</item>
-		<item>pcontrol</item>
 	</OpenedPanels>
 	<ScriptEditorInput>print dir(app.pcontrol.crust_v.getLabel())
 </ScriptEditorInput>
