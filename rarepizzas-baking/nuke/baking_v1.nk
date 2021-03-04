@@ -700,17 +700,6 @@ Sharpen {
  xpos -1180
  ypos 73
 }
-push $N87ee1000
-push $N8ca71800
-Viewer {
- inputs 2
- frame_range 1-100
- translate {0.08799999952 -0.06000000238}
- rotate 19.21265793
- name Viewer1
- xpos -689
- ypos 245
-}
 push $N4cdcfc00
 push $N8ca71800
 Shuffle2 {
@@ -737,15 +726,41 @@ Write {
  checkHashOnRead false
  version 6
  name Write2
- xpos -966
- ypos 298
+ xpos -1017
+ ypos 334
+}
+push $N87ee1000
+push $N4f439400
+Transform {
+ translate {76 21}
+ scale 0.66
+ center {1440 1460}
+ name Transform13
+ xpos -925
+ ypos 265
+}
+Reformat {
+ format "600 400 0 0 600 400 1 600x400"
+ name Reformat4
+ xpos -919
+ ypos 345
+}
+set N4f589c00 [stack 0]
+Viewer {
+ inputs 2
+ frame_range 1-100
+ translate {0.08799999952 -0.06000000238}
+ rotate 19.21265793
+ name Viewer1
+ xpos -689
+ ypos 245
 }
 push $N4f439400
 Reformat {
  format "350 350 0 0 350 350 1 350x350"
  name Reformat3
- xpos -875
- ypos 248
+ xpos -843
+ ypos 227
 }
 Write {
  file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/out/rarepizzas-blenpie_350.jpg
@@ -754,7 +769,18 @@ Write {
  checkHashOnRead false
  version 7
  name Write3
+ xpos -807
+ ypos 319
+}
+push $N4f589c00
+Write {
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/out/rarepizzas-blenpie_600.jpg
+ file_type jpeg
+ _jpeg_quality 1
+ checkHashOnRead false
+ version 8
+ name Write4
  selected true
- xpos -844
- ypos 301
+ xpos -912
+ ypos 413
 }
