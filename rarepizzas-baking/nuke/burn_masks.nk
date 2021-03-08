@@ -2,19 +2,19 @@
 version 12.1 v2
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="0" y="23" w="2560" h="1035" maximized="1" screen="0">
+    <window x="-2067" y="23" w="1680" h="1005" screen="1">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="1897" stretch="1"/>
+            <split size="1017" stretch="1"/>
             <splitter orientation="2">
-                <split size="596"/>
+                <split size="578"/>
                 <dock id="" activePageId="Viewer.1">
                     <page id="Viewer.1"/>
                 </dock>
-                <split size="419"/>
+                <split size="407"/>
                 <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
@@ -48,32 +48,26 @@ Constant {
  inputs 0
  channels rgb
  name Constant1
- xpos 672
- ypos -251
+ xpos 795
+ ypos -266
 }
 Read {
  inputs 0
  file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/blender/Crust_and_box/more_cooked.png
- format "2048 2048 0 0 2048 2048 1 square_2K"
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-masks/rarepizzas-burn1-mask.png
+ format "3072 3072 0 0 3072 3072 1 3k"
  origset true
  name Read3
- xpos 573
- ypos -254
+ xpos 698
+ ypos -269
 }
 Reformat {
  format "3072 3072 0 0 3072 3072 1 3k"
  name Reformat2
- xpos 575
- ypos -124
+ xpos 698
+ ypos -152
 }
-Transform {
- translate {130 -50}
- center {1536 1536}
- name Transform2
- xpos 575
- ypos -92
-}
+set N197c0400 [stack 0]
 Write {
  file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-masks/rarepizzas-burn1-mask.png
  file_type png
@@ -82,8 +76,8 @@ Write {
  in_colorspace scene_linear
  out_colorspace scene_linear
  name Write1
- xpos 575
- ypos -33
+ xpos 698
+ ypos -48
 }
 Read {
  inputs 0
@@ -96,74 +90,7 @@ Read {
  xpos 379
  ypos 29
 }
-set N22823000 [stack 0]
-Read {
- inputs 0
- file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thin-v0.png
- format "3072 3072 0 0 3072 3072 1 3k"
- origset true
- premultiplied true
- name Read1
- xpos 219
- ypos -182
-}
-push 0
-Merge2 {
- inputs 2
- operation multiply
- name Multiply
- xpos 219
- ypos -19
-}
-set N227d7800 [stack 0]
-Merge2 {
- inputs 2
- name Merge1
- xpos 137
- ypos 90
-}
-Read {
- inputs 0
- file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/blender/Crust_and_box/bubbbles.png
- format "3072 3072 0 0 3072 3072 1 3k"
- origset true
- name Read2
- xpos 390
- ypos -289
-}
-Reformat {
- format "3072 3072 0 0 3072 3072 1 3k"
- name Reformat1
- xpos 390
- ypos -209
-}
-Transform {
- translate {200 0}
- center {1536 1536}
- name Transform1
- xpos 390
- ypos -158
-}
-Invert {
- name Invert1
- xpos 379
- ypos -122
-}
-Write {
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-masks/rarepizzas-burnbubble1-mask.png
- file_type png
- checkHashOnRead false
- version 2
- in_colorspace scene_linear
- out_colorspace scene_linear
- name Write2
- xpos 379
- ypos -16
-}
-push $N227d7800
-push $N22823000
+set N197c1c00 [stack 0]
 Shuffle2 {
  fromInput1 {{0} B}
  fromInput2 {{0} B}
@@ -187,10 +114,181 @@ Write {
  checkHashOnRead false
  version 3
  name Write3
- selected true
  xpos 379
  ypos 201
 }
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/blender/Crust_and_box/bubbbles.png
+ format "3072 3072 0 0 3072 3072 1 3k"
+ origset true
+ name Read2
+ xpos 398
+ ypos -379
+}
+Reformat {
+ format "3072 3072 0 0 3072 3072 1 3k"
+ name Reformat1
+ xpos 398
+ ypos -299
+}
+Transform {
+ translate {200 0}
+ center {1536 1536}
+ name Transform1
+ xpos 398
+ ypos -248
+}
+Invert {
+ name Invert1
+ xpos 387
+ ypos -212
+}
+Write {
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-masks/rarepizzas-burnbubble1-mask.png
+ file_type png
+ checkHashOnRead false
+ version 2
+ name Write2
+ xpos 387
+ ypos -145
+}
+push $N197c1c00
+push $N197c0400
+Invert {
+ name Invert2
+ xpos 584
+ ypos -81
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizzas-1-crust-r0-thin-v0.png
+ format "3072 3072 0 0 3072 3072 1 3k"
+ origset true
+ premultiplied true
+ name Read1
+ xpos 219
+ ypos -250
+}
+set N197c1800 [stack 0]
+Merge2 {
+ inputs 2
+ operation multiply
+ mix 0.81
+ name Multiply
+ xpos 219
+ ypos -77
+}
+Merge2 {
+ inputs 2
+ name Merge1
+ xpos 219
+ ypos 57
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-submission/3.-apollo-17.png
+ format "2639 1642 0 0 2639 1642 1 "
+ origset true
+ premultiplied true
+ name Read6
+ xpos -9
+ ypos -308
+}
+GridWarp3 {
+ toolbar_visibility_src false
+ divisions 4
+ source_grid_col   {
+    1 4 4 4 1 0
+    {default }
+    {
+      { {2 0 0} { {2 0 182.444}  {2 -0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 879.667 0} { {2 0 182.444}  {2 -0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 1759.33 0} { {2 0 182.444}  {2 -0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 2639 0} { {2 0 182.444}  {2 -0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 0 547.333} { {2 0 182.444}  {2 -0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 879.667 547.333} { {2 0 182.444}  {2 -0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 1759.33 547.333} { {2 0 182.444}  {2 -0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 2639 547.333} { {2 0 182.444}  {2 -0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 0 1094.67} { {2 -0 182.444}  {2 0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 879.667 1094.67} { {2 -0 182.444}  {2 0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 1759.33 1094.67} { {2 -0 182.444}  {2 0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 2639 1094.67} { {2 -0 182.444}  {2 0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 0 1642} { {2 -0 182.444}  {2 0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 879.667 1642} { {2 -0 182.444}  {2 0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 1759.33 1642} { {2 -0 182.444}  {2 0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+      { {2 2639 1642} { {2 -0 182.444}  {2 0 -182.444}  {2 293.222 0}  {2 -293.222 0} } } 
+    }
+  }
+ destination_grid_col   {
+    1 4 4 4 1 0
+    {default }
+    {
+      { {1 {curve x1 322.6245117} {curve x1 459.0975037}} { {1 {curve x1 -63.69000244} {curve x1 91.49501038}}  {1 {curve x1 63.98968506} {curve x1 -91.59643555}}  {1 {curve x1 159.2249756} {curve x1 78.875}}  {1 {curve x1 -154.4844513} {curve x1 -76.74008179}} } } 
+      { {1 {curve x1 696.0794067} {curve x1 594.7624512}} { {1 {curve x1 0} {curve x1 115.1221619}}  {1 {curve x1 0} {curve x1 -115.1221619}}  {1 {curve x1 167.1320496} {curve x1 32.52662659}}  {1 {curve x1 -162.119873} {curve x1 -31.55000305}} } } 
+      { {1 {curve x1 1194.019531} {curve x1 661.0174561}} { {1 {curve x1 0} {curve x1 115.1221619}}  {1 {curve x1 0} {curve x1 -115.1221619}}  {1 {curve x1 169.7758789} {curve x1 0}}  {1 {curve x1 -169.7758789} {curve x1 0}} } } 
+      { {1 {curve x1 1677.484375} {curve x1 626.3125}} { {1 {curve x1 0} {curve x1 115.1221313}}  {1 {curve x1 0} {curve x1 -115.1221771}}  {1 {curve x1 169.776123} {curve x1 0}}  {1 {curve x1 -169.7758789} {curve x1 0}} } } 
+      { {1 {curve x1 177.8745117} {curve x1 711.4974976}} { {1 {curve x1 -42.20967102} {curve x1 105.5322571}}  {1 {curve x1 49.21496582} {curve x1 -123.0450134}}  {1 {curve x1 156.3300171} {curve x1 85.18496704}}  {1 {curve x1 -151.8156128} {curve x1 -82.82485962}} } } 
+      { {1 {curve x1 719.239563} {curve x1 926.0374756}} { {1 {curve x1 0} {curve x1 115.1221619}}  {1 {curve x1 0} {curve x1 -115.1221008}}  {1 {curve x1 169.7758484} {curve x1 0}}  {1 {curve x1 -169.776001} {curve x1 0}} } } 
+      { {1 {curve x1 1184.948486} {curve x1 918.0447388}} { {1 {curve x1 0} {curve x1 115.1222229}}  {1 {curve x1 0} {curve x1 -115.1221313}}  {1 {curve x1 169.776001} {curve x1 0}}  {1 {curve x1 -169.7758789} {curve x1 0}} } } 
+      { {1 {curve x1 1680.379395} {curve x1 705.1875}} { {1 {curve x1 0} {curve x1 115.1221008}}  {1 {curve x1 0} {curve x1 -115.1221619}}  {1 {curve x1 128.1154785} {curve x1 -121.4063721}}  {1 {curve x1 -133.1699219} {curve x1 126.2000427}} } } 
+      { {1 {curve x1 93.91949463} {curve x1 973.3624878}} { {1 {curve x1 -45.82676697} {curve x1 103.7249451}}  {1 {curve x1 37.6350174} {curve x1 -85.18508911}}  {1 {curve x1 182.3850403} {curve x1 72.56500244}}  {1 {curve x1 -159.4802246} {curve x1 -63.45214844}} } } 
+      { {1 {curve x1 725.02948} {curve x1 1263.622559}} { {1 {curve x1 0} {curve x1 115.1222229}}  {1 {curve x1 0} {curve x1 -115.1221619}}  {1 {curve x1 169.7759705} {curve x1 0}}  {1 {curve x1 -169.7758789} {curve x1 0}} } } 
+      { {1 {curve x1 1184.948486} {curve x1 1263.412109}} { {1 {curve x1 0} {curve x1 115.1221008}}  {1 {curve x1 0} {curve x1 -115.1221619}}  {1 {curve x1 169.776001} {curve x1 0}}  {1 {curve x1 -169.7758789} {curve x1 0}} } } 
+      { {1 {curve x1 1694.275391} {curve x1 1263.412109}} { {1 {curve x1 0} {curve x1 115.1221008}}  {1 {curve x1 0} {curve x1 -115.1221619}}  {1 {curve x1 169.776123} {curve x1 0}}  {1 {curve x1 -169.7758789} {curve x1 0}} } } 
+      { {1 {curve x1 33.12451172} {curve x1 1383.512451}} { {1 {curve x1 0} {curve x1 115.1221008}}  {1 {curve x1 0} {curve x1 -115.1222229}}  {1 {curve x1 141.8549957} {curve x1 97.80493164}}  {1 {curve x1 -143.3848267} {curve x1 -99.074646}} } } 
+      { {1 {curve x1 617.9144897} {curve x1 1673.772461}} { {1 {curve x1 0} {curve x1 115.1221008}}  {1 {curve x1 0} {curve x1 -115.1222229}}  {1 {curve x1 169.7759705} {curve x1 0}}  {1 {curve x1 -169.7758484} {curve x1 0}} } } 
+      { {1 {curve x1 1179.544434} {curve x1 1692.702393}} { {1 {curve x1 -18.7331543} {curve x1 113.2973938}}  {1 {curve x1 20.26501465} {curve x1 -123.0449524}}  {1 {curve x1 176.5949707} {curve x1 -18.92993164}}  {1 {curve x1 -152.9370117} {curve x1 16.45507812}} } } 
+      { {1 {curve x1 1651.429443} {curve x1 1538.107422}} { {1 {curve x1 0} {curve x1 115.1221008}}  {1 {curve x1 0} {curve x1 -115.1221008}}  {1 {curve x1 155.029541} {curve x1 -75.4239502}}  {1 {curve x1 -162.1199951} {curve x1 78.875}} } } 
+    }
+  }
+ grids_manually_moved true
+ source_grid_transform_center {1319.5 821}
+ destination_grid_transform_center {1319.5 821}
+ name GridWarp3_1
+ xpos -24
+ ypos -195
+}
+set N49d5a000 [stack 0]
+Transform {
+ translate {-628 512}
+ rotate 23.15859795
+ scale {0.398999989 0.3990000188}
+ center {1319.5 821}
+ name Transform2
+ xpos -16
+ ypos -144
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients/rarepizza-1-crust-r3-mooncrust-v1.png
+ format "2048 2048 0 0 2048 2048 1 square_2K"
+ origset true
+ premultiplied true
+ name Read5
+ xpos 102
+ ypos -299
+}
+Transform {
+ translate {105 -120}
+ scale 0.8289999962
+ center {1024 1024}
+ name Transform3
+ xpos 102
+ ypos -171
+}
+Merge2 {
+ inputs 2
+ name Merge2
+ xpos 65
+ ypos -121
+}
+push $N197c1800
+push $N49d5a000
 Viewer {
  inputs 2
  frame 1
