@@ -11,11 +11,11 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
             <split size="1627" stretch="1"/>
             <splitter orientation="2">
                 <split size="583"/>
-                <dock id="" activePageId="Viewer.1">
+                <dock id="" activePageId="Viewer.1" focus="true">
                     <page id="Viewer.1"/>
                 </dock>
                 <split size="410"/>
-                <dock id="" activePageId="DAG.1" focus="true">
+                <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
@@ -33,7 +33,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 Root {
  inputs 0
  name /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/nuke/box-closed.nk
- frame 60
+ frame 4
  lock_range true
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
  proxy_type scale
@@ -541,7 +541,6 @@ Read {
  format "500 500 0 0 500 500 1 "
  origset true
  name Read7
- selected true
  xpos 1834
  ypos 85
 }
@@ -566,7 +565,7 @@ Transform {
 }
 push $N595de800
 Switch {
- which {{clamp((random(frame,frame*0.1)*7)-4)}}
+ which {{clamp((random(frame,frame*0.1)*4)-5)}}
  name Switch2
  label clamp((random(frame,0.1)*7)-4)
  xpos 954
@@ -638,7 +637,7 @@ Transform {
 }
 push $N595de800
 Switch {
- which {{clamp((random(frame,0.35)*8)-2)}}
+ which {{clamp((random(frame,0.09)*7)-6) x84 1}}
  name Switch3
  label clamp((random(frame,0.1)*7)-4)
  xpos 1174
@@ -657,7 +656,7 @@ push $N595de800
 push 0
 Switch {
  inputs 2
- which {{clamp((random(frame,0.6)*5)-6)}}
+ which {{clamp((random(frame,1)*3)-4)}}
  name Switch4
  label clamp((random(frame,0.1)*7)-4)
  xpos 1064
@@ -716,7 +715,7 @@ push $N595de800
 push 0
 Switch {
  inputs 2
- which {{clamp((random(frame,0.1)*7)-4)}}
+ which {{clamp((random(frame,0.09)*7)-5)}}
  name Switch11
  label clamp((random(frame,0.1)*7)-4)
  xpos 2164
@@ -861,7 +860,7 @@ Text2 {
  font_width_toolbar 100
  font_height_toolbar 100
  message "Rare Pizza #\[format %03d \[frame]] Minimum Viable Pizza - The first and only pie minted directly from Shrimp's oven and the chef's choice. \nTake it or leave it, Shrimp don't care."
- old_message {{82 97 114 101 32 80 105 122 122 97 32 35 45 49 51 32 77 105 110 105 109 117 109 32 86 105 97 98 108 101 32 80 105 122 122 97 32 45 32 84 104 101 32 102 105 114 115 116 32 97 110 100 32 111 110 108 121 32 112 105 101 32 109 105 110 116 101 100 32 100 105 114 101 99 116 108 121 32 102 114 111 109 32 83 104 114 105 109 112 39 115 32 111 118 101 110 32 97 110 100 32 116 104 101 32 99 104 101 102 39 115 32 99 104 111 105 99 101 46 32 10 84 97 107 101 32 105 116 32 111 114 32 108 101 97 118 101 32 105 116 44 32 83 104 114 105 109 112 32 100 111 110 39 116 32 99 97 114 101 46}
+ old_message {{82 97 114 101 32 80 105 122 122 97 32 35 49 53 55 32 77 105 110 105 109 117 109 32 86 105 97 98 108 101 32 80 105 122 122 97 32 45 32 84 104 101 32 102 105 114 115 116 32 97 110 100 32 111 110 108 121 32 112 105 101 32 109 105 110 116 101 100 32 100 105 114 101 99 116 108 121 32 102 114 111 109 32 83 104 114 105 109 112 39 115 32 111 118 101 110 32 97 110 100 32 116 104 101 32 99 104 101 102 39 115 32 99 104 111 105 99 101 46 32 10 84 97 107 101 32 105 116 32 111 114 32 108 101 97 118 101 32 105 116 44 32 83 104 114 105 109 112 32 100 111 110 39 116 32 99 97 114 101 46}
    }
  old_expression_markers {{12 14}
    }
@@ -1216,8 +1215,7 @@ push $Nd803e000
 push $Nfb993000
 Viewer {
  inputs 10
- frame 60
- frame_range 1-7
+ frame_range 1-100
  frame_range_lock true
  input_number 9
  roi {0.3289999962 -0.8899999857 0.9300000072 -0.7509999871}
