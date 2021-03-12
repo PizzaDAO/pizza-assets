@@ -8,7 +8,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="905" stretch="1"/>
+            <split size="869" stretch="1"/>
             <splitter orientation="2">
                 <split size="550"/>
                 <dock id="" activePageId="Viewer.2">
@@ -19,7 +19,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                     <page id="Viewer.1"/>
                 </dock>
             </splitter>
-            <split size="673"/>
+            <split size="709"/>
             <dock id="" activePageId="DAG.1" focus="true">
                 <page id="DAG.1"/>
                 <page id="Curve Editor.1"/>
@@ -37,7 +37,6 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 Root {
  inputs 0
  name /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/nuke/box-closed_hacjs.nk
- frame 16
  lock_range true
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
  proxy_type scale
@@ -101,21 +100,22 @@ end_group
 Read {
  inputs 0
  file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-box-closed/0.png
- format "3000 3000 0 0 3000 3000 1 "
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-box-closed/box-closed.#.png
+ format "3072 3072 0 0 3072 3072 1 3k"
+ before loop
+ last 50
+ after loop
+ origlast 50
  origset true
- version 23
- name Read14
- xpos -298
- ypos -553
-}
-set Na1ea8800 [stack 0]
-Grade {
- gamma 0.305
- name Grade4
- xpos -298
- ypos -437
- disable true
+ on_error checkerboard
+ version 20
+ premultiplied true
+ name Read2
+ label "\[value Read2.first]"
+ xpos -373
+ ypos -283
+ addUserKnob {20 User}
+ addUserKnob {22 Random l "" t "import nuke\nimport os.path as path\nimport random\n\nfolder = path.abspath(\"C:\\Users\\Jotun\\Downloads\")\nfile_names = nuke.getFileNameList(folder)\nfile_names = \[name for name in file_names if \".jpg\" in name]\nchosen = random.choice(file_names)\nfile_path = path.join(folder, chosen)\n\nreadNode = nuke.createNode(\"Read\")\nreadNode\[\"file\"].fromUserText(file_path)" +STARTLINE +STARTLINE}
 }
 Reformat {
  format "3072 3072 0 0 3072 3072 1 3k"
@@ -588,6 +588,16 @@ Write {
  name Write4
  xpos -1679
  ypos 1279
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-db/9000-box-closed-cardboard.png
+ format "3000 3000 0 0 3000 3000 1 "
+ origset true
+ name Read13
+ xpos -345
+ ypos -644
 }
 Read {
  inputs 0
@@ -1487,16 +1497,16 @@ Text2 {
  font_width_toolbar 100
  font_height_toolbar 100
  opacity 0.535
- message "aaafRare Pizza Box: \[format %02d \[frame]] ofa 100"
- old_message {{97 97 97 102 82 97 114 101 32 80 105 122 122 97 32 66 111 120 58 32 49 54 32 111 102 97 32 49 48 48}
+ message "Rare Pizza Box: \[format %03d \[frame]] of 100  "
+ old_message {{82 97 114 101 32 80 105 122 122 97 32 66 111 120 58 32 48 48 56 32 111 102 32 49 48 48 32 32}
    }
- old_expression_markers {{20 21}
+ old_expression_markers {{16 18}
    }
  box {21.25 -140 2126.75 216}
  yjustify center
  transforms {{0 2}
    }
- cursor_position 49
+ cursor_position 46
  font {{ Flyer LT Std : Extra Black Condensed : FlyerLTStd-ExtraBlackCond.otf : 0 }}
  global_font_scale 0.69
  leading 0.1
@@ -1846,7 +1856,6 @@ Group {
  help "Remap the luminance of the RGB channels based on an input colour ramp."
  xpos -349
  ypos 647
- disable true
 }
  Input {
   inputs 0
@@ -1953,68 +1962,17 @@ Merge2 {
  ypos 1266
 }
 set N3287e400 [stack 0]
-push 0
-push 0
-push 0
-push 0
-push 0
-push 0
-push 0
-push $N3274cc00
-push $N3287e400
-Viewer {
- inputs 10
- frame 16
- frame_range 1-100
- frame_range_lock true
- downrez 2
- roi {0.3289999962 -0.8899999857 0.9300000072 -0.7509999871}
- name Viewer2
- xpos 491
- ypos 1467
-}
-Read {
- inputs 0
- file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-box-closed/box-closed.#.png
- format "3072 3072 0 0 3072 3072 1 3k"
- before loop
- last 50
- after loop
- origlast 50
- origset true
- on_error checkerboard
- version 20
- premultiplied true
- name Read2
- label "\[value Read2.first]"
- xpos -373
- ypos -283
- addUserKnob {20 User}
- addUserKnob {22 Random l "" t "import nuke\nimport os.path as path\nimport random\n\nfolder = path.abspath(\"C:\\Users\\Jotun\\Downloads\")\nfile_names = nuke.getFileNameList(folder)\nfile_names = \[name for name in file_names if \".jpg\" in name]\nchosen = random.choice(file_names)\nfile_path = path.join(folder, chosen)\n\nreadNode = nuke.createNode(\"Read\")\nreadNode\[\"file\"].fromUserText(file_path)" +STARTLINE +STARTLINE}
-}
-Read {
- inputs 0
- file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-db/9000-box-closed-cardboard.png
- format "3000 3000 0 0 3000 3000 1 "
- origset true
- name Read13
- xpos -345
- ypos -644
-}
-push $N3287e400
 Write {
  channels rgba
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-box-closed/0.png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-box-closed/renders/1.png
  file_type png
  checkHashOnRead false
- version 14
+ version 15
  name Write1
- selected true
  xpos 670
  ypos 1320
 }
+set N3287e000 [stack 0]
 push 0
 push 0
 push 0
@@ -2023,7 +1981,18 @@ push 0
 push 0
 push 0
 push 0
-push $Na1ea8800
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-box-closed/0.png
+ format "3000 3000 0 0 3000 3000 1 "
+ origset true
+ version 23
+ name Read14
+ xpos -298
+ ypos -553
+}
+set Na1ea8800 [stack 0]
 Roto {
  output none
  premultiply rgba
@@ -2122,9 +2091,38 @@ Merge2 {
 }
 Viewer {
  inputs 10
- frame 16
+ frame 1
  frame_range 1-100
  name Viewer1
  xpos -990
  ypos 593
+}
+push $Na1ea8800
+Grade {
+ gamma 0.305
+ name Grade4
+ xpos -298
+ ypos -437
+ disable true
+}
+push $N3287e400
+push 0
+push 0
+push 0
+push 0
+push 0
+push 0
+push 0
+push $N3274cc00
+push $N3287e000
+Viewer {
+ inputs 10
+ frame 1
+ frame_range 1-100
+ frame_range_lock true
+ downrez 2
+ roi {0.3289999962 -0.8899999857 0.9300000072 -0.7509999871}
+ name Viewer2
+ xpos 491
+ ypos 1467
 }
