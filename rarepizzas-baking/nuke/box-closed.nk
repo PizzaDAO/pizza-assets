@@ -2,28 +2,33 @@
 version 12.1 v2
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="-2404" y="23" w="2029" h="1013" screen="1">
+    <window x="-2360" y="-55" w="2237" h="1005" screen="1">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="1475" stretch="1"/>
+            <split size="1574" stretch="1"/>
             <splitter orientation="2">
-                <split size="583"/>
-                <dock id="" activePageId="Viewer.2" focus="true">
-                    <page id="Viewer.1"/>
-                    <page id="Viewer.2"/>
-                </dock>
-                <split size="410"/>
+                <split size="578"/>
+                <splitter orientation="1">
+                    <split size="785"/>
+                    <dock id="" activePageId="Viewer.2">
+                        <page id="Viewer.2"/>
+                    </dock>
+                    <split size="785"/>
+                    <dock id="" activePageId="Viewer.1" focus="true">
+                        <page id="Viewer.1"/>
+                    </dock>
+                </splitter>
+                <split size="407"/>
                 <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
-                    <page id="DopeSheet.1"/>
                     <page id="Curve Editor.1"/>
-                    <page id="uk.co.thefoundry.scripteditor.1"/>
+                    <page id="DopeSheet.1"/>
                 </dock>
             </splitter>
-            <split size="506"/>
+            <split size="615"/>
             <dock id="" activePageId="Properties.1">
                 <page id="Properties.1"/>
                 <page id="uk.co.thefoundry.backgroundrenderview.1"/>
@@ -35,7 +40,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 Root {
  inputs 0
  name /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/nuke/box-closed.nk
- frame 53
+ frame 33
  lock_range true
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
  proxy_type scale
@@ -48,65 +53,67 @@ Root {
  logLut Cineon
  floatLut linear
 }
-Read {
+Group {
  inputs 0
- file_type png
- file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-submission/box-closed-designs/cardboard-color.png
- format "1540 1254 0 0 1540 1254 1 "
- origset true
- name Read5
- xpos -659
- ypos 126
+ name Group2
+ help "Allows the easy creation of a variety of Waveform Expressions for use in manipulating knob values."
+ xpos 2273
+ ypos 90
+ addUserKnob {20 main l Main}
+ addUserKnob {26 unnamed_1 l "" +STARTLINE T " "}
+ addUserKnob {68 type l "Wave Type" t "Controls what type of wave to generate." M {Random Noise Sine Triangle Square Sawtooth/Sawtooth "Sawtooth/Sawtooth (Parabolic)" "Sawtooth/Sawtooth (Parabolic reversed)" "Sawtooth/Sawtooth (Exponential)" Bounce "" "" "" "" ""}}
+ type Square
+ addUserKnob {7 minVal l "Min Value" t "Minimum value you want the wave to reach." R 0 10}
+ minVal 1
+ addUserKnob {7 maxVal l "Max Value" t "Maximum value you want the wave to reach." -STARTLINE R 0 10}
+ addUserKnob {7 waveLength l WaveLength t "Controls the frequency or cycle length of the wave. The number of frames before the pattern repeats." R 0 50}
+ waveLength 5.4
+ addUserKnob {7 offset l Offset t "Offsets the frame value to allow control of values at a certain frame" R 0 10}
+ offset 0.5
+ addUserKnob {7 r1}
+ addUserKnob {7 rOffset}
+ rOffset 0.105
+ addUserKnob {7 rAttr}
+ rAttr 0.605
+ addUserKnob {6 invert +STARTLINE}
+ invert true
+ addUserKnob {26 unnamed l "" +STARTLINE T " "}
+ addUserKnob {22 expButton l "Generate Expression" T "node = nuke.thisNode()\ntype = node.knob('type').getValue()\nexpText = node.knob('expText')\nexpFormula = node.knob('formula')\nexpResult = node.knob('expResult')\ndef setExp():\n    if type == 0: #Random\n        exp = 'random((frame+%s)/%s) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 1: #Noise\n        exp = '(noise((frame+%s)/%s)+1)/2 * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 2: #Sine\n        exp = '(sin(2*pi*(frame+%s)/%s)+1)/2 * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 3: #Triangle\n        exp = '(asin(sin(2*pi*(frame+%s)/%s))/pi+0.5) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 4: #Square\n        exp = 'int(sin(2*pi*(frame+%s)/%s)+1) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 5: #Sawtooth\n        exp = '((frame+%s) %% %s)/%s * (%s-%s) + %s' %(offset,waveLength,waveLength,maxVal,minVal,minVal)\n    if type == 6: #Sawtooth(Parabolic)\n        exp = 'sin((4.93480220054468*(frame+%s)/(pi*%s)) %% (pi/2)) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 7: #Sawtooth(Parabolic Reversed)\n        exp = 'cos((4.93480220054468*(frame+%s)/(pi*%s)) %% (pi/2)) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 8: #Sawtooth (Exponential)\n        exp = '(exp(2*pi*((frame+%s) %% %s)/%s)-1)/exp(2*pi) * (%s-%s) + %s' %(offset,waveLength,waveLength,maxVal,minVal,minVal)\n    if type == 9: #Bounce\n        exp = 'abs(sin(pi*(frame + %s)/%s))* (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    return exp\n\nwaveLength = 'waveLength'\noffset = 'offset'\nmaxVal = 'maxVal'\nminVal = 'minVal'\nexpResult.setExpression(setExp())\nexpFormula.setValue(setExp())\n\nwaveLength = node.knob('waveLength').getValue()\noffset = node.knob('offset').getValue()\nmaxVal = node.knob('maxVal').getValue()\nminVal = node.knob('minVal').getValue()\nexpText.setValue(setExp())" +STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {7 expResult l Result t "The calculated result of the wave at the given frame. Link to this value if you want to control the expression from this node."}
+ expResult {{"int(sin(2*pi*(frame+offset)/waveLength)+1) * (maxVal-minVal) + minVal" i x93 0}}
+ addUserKnob {26 unnamed_2 l "" +STARTLINE T " "}
+ addUserKnob {1 expText l Expression t "The wave in expression form. For copying to another knobs expression value."}
+ expText "int(sin(2*pi*(frame+0.5)/36.2)+1) * (0.0--1.0) + -1.0"
+ addUserKnob {26 unnamed_3 l "" +STARTLINE T " "}
+ addUserKnob {1 formula l Formula t "The formula that generates the wave."}
+ formula "int(sin(2*pi*(frame+offset)/waveLength)+1) * (maxVal-minVal) + minVal"
 }
-Crop {
- box {320.8250046 479.3250122 417.1749954 572.6749878}
- reformat true
- crop false
- name Crop3
- xpos -659
- ypos 206
-}
-Dilate {
- size -4
- name Dilate1
- xpos -659
- ypos 285
- disable true
-}
-Constant {
- inputs 0
- color 1
- format "3072 3072 0 0 3072 3072 1 "
- name Constant1
- xpos -299
- ypos -287
-}
-Merge2 {
- name Merge2
- xpos -295
- ypos -160
-}
+end_group
 Read {
  inputs 0
  file_type png
  file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-box-closed/box-closed.#.png
- format "3072 3072 0 0 3072 3072 1 "
- last 15
- origlast 15
+ format "3072 3072 0 0 3072 3072 1 3k"
+ last 47
+ origlast 47
  origset true
+ on_error checkerboard
+ version 6
  premultiplied true
  name Read2
- label "box-closed.\[% int(random(frame)*(last-first)) + first]\n"
- xpos -457
- ypos -135
+ label "\[value Read2.first]"
+ xpos -373
+ ypos -285
  addUserKnob {20 User}
  addUserKnob {22 Random l "" t "import nuke\nimport os.path as path\nimport random\n\nfolder = path.abspath(\"C:\\Users\\Jotun\\Downloads\")\nfile_names = nuke.getFileNameList(folder)\nfile_names = \[name for name in file_names if \".jpg\" in name]\nchosen = random.choice(file_names)\nfile_path = path.join(folder, chosen)\n\nreadNode = nuke.createNode(\"Read\")\nreadNode\[\"file\"].fromUserText(file_path)" +STARTLINE +STARTLINE}
 }
+set N53c55400 [stack 0]
 Reformat {
  format "3072 3072 0 0 3072 3072 1 3k"
  name Reformat2
- xpos -245
- ypos -106
+ xpos -298
+ ypos -81
 }
 Constant {
  inputs 0
@@ -120,118 +127,250 @@ Constant {
 Merge2 {
  inputs 2
  name Merge3
- xpos -140
- ypos 27
+ xpos -298
+ ypos 2
 }
 Premult {
  name Premult2
- xpos -7
+ xpos -165
+ ypos 2
+}
+set N53c54000 [stack 0]
+Write {
+ in_colorspace scene_linear
+ out_colorspace scene_linear
+ name Write2
+ xpos 127
  ypos 27
 }
-set N72d6d000 [stack 0]
+Group {
+ inputs 0
+ name Group1
+ help "Allows the easy creation of a variety of Waveform Expressions for use in manipulating knob values."
+ xpos 2164
+ ypos 92
+ addUserKnob {20 main l Main}
+ addUserKnob {26 unnamed_1 l "" +STARTLINE T " "}
+ addUserKnob {68 type l "Wave Type" t "Controls what type of wave to generate." M {Random Noise Sine Triangle Square Sawtooth/Sawtooth "Sawtooth/Sawtooth (Parabolic)" "Sawtooth/Sawtooth (Parabolic reversed)" "Sawtooth/Sawtooth (Exponential)" Bounce "" "" "" "" ""}}
+ type Square
+ addUserKnob {7 minVal l "Min Value" t "Minimum value you want the wave to reach." R 0 10}
+ minVal 1
+ addUserKnob {7 maxVal l "Max Value" t "Maximum value you want the wave to reach." -STARTLINE R 0 10}
+ addUserKnob {7 waveLength l WaveLength t "Controls the frequency or cycle length of the wave. The number of frames before the pattern repeats." R 0 50}
+ waveLength 36.2
+ addUserKnob {7 offset l Offset t "Offsets the frame value to allow control of values at a certain frame" R 0 10}
+ offset 0.5
+ addUserKnob {7 r1}
+ r1 0.355
+ addUserKnob {7 rOffset}
+ rOffset 0.06
+ addUserKnob {7 rAttr}
+ rAttr 0.79
+ addUserKnob {6 invert +STARTLINE}
+ invert true
+ addUserKnob {26 unnamed l "" +STARTLINE T " "}
+ addUserKnob {22 expButton l "Generate Expression" T "node = nuke.thisNode()\ntype = node.knob('type').getValue()\nexpText = node.knob('expText')\nexpFormula = node.knob('formula')\nexpResult = node.knob('expResult')\ndef setExp():\n    if type == 0: #Random\n        exp = 'random((frame+%s)/%s) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 1: #Noise\n        exp = '(noise((frame+%s)/%s)+1)/2 * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 2: #Sine\n        exp = '(sin(2*pi*(frame+%s)/%s)+1)/2 * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 3: #Triangle\n        exp = '(asin(sin(2*pi*(frame+%s)/%s))/pi+0.5) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 4: #Square\n        exp = 'int(sin(2*pi*(frame+%s)/%s)+1) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 5: #Sawtooth\n        exp = '((frame+%s) %% %s)/%s * (%s-%s) + %s' %(offset,waveLength,waveLength,maxVal,minVal,minVal)\n    if type == 6: #Sawtooth(Parabolic)\n        exp = 'sin((4.93480220054468*(frame+%s)/(pi*%s)) %% (pi/2)) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 7: #Sawtooth(Parabolic Reversed)\n        exp = 'cos((4.93480220054468*(frame+%s)/(pi*%s)) %% (pi/2)) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 8: #Sawtooth (Exponential)\n        exp = '(exp(2*pi*((frame+%s) %% %s)/%s)-1)/exp(2*pi) * (%s-%s) + %s' %(offset,waveLength,waveLength,maxVal,minVal,minVal)\n    if type == 9: #Bounce\n        exp = 'abs(sin(pi*(frame + %s)/%s))* (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    return exp\n\nwaveLength = 'waveLength'\noffset = 'offset'\nmaxVal = 'maxVal'\nminVal = 'minVal'\nexpResult.setExpression(setExp())\nexpFormula.setValue(setExp())\n\nwaveLength = node.knob('waveLength').getValue()\noffset = node.knob('offset').getValue()\nmaxVal = node.knob('maxVal').getValue()\nminVal = node.knob('minVal').getValue()\nexpText.setValue(setExp())" +STARTLINE}
+ addUserKnob {26 ""}
+ addUserKnob {7 expResult l Result t "The calculated result of the wave at the given frame. Link to this value if you want to control the expression from this node."}
+ expResult {{"clamp(-(int(sin(2*pi*((frame+offset)*random(1,frame))/waveLength*random(1,r1)+rAttr)+1+rOffset)* (maxVal-minVal) + minVal))" K x93 0}}
+ addUserKnob {26 unnamed_2 l "" +STARTLINE T " "}
+ addUserKnob {1 expText l Expression t "The wave in expression form. For copying to another knobs expression value."}
+ expText "int(sin(2*pi*(frame+0.0)/1.8)+1) * (1.0-0.0) + 0.0"
+ addUserKnob {26 unnamed_3 l "" +STARTLINE T " "}
+ addUserKnob {1 formula l Formula t "The formula that generates the wave."}
+ formula "int(sin(2*pi*(frame+offset)/waveLength)+1) * (maxVal-minVal) + minVal"
+}
+end_group
+NoOp {
+ inputs 0
+ name Controller
+ xpos -572
+ ypos -66
+ addUserKnob {20 User}
+ addUserKnob {3 shot}
+ shot 2
+}
+Write {
+ inputs 0
+ file "shot\[value Controller.shot].exr"
+ file_type exr
+ first_part rgba
+ in_colorspace scene_linear
+ out_colorspace scene_linear
+ name Write3
+ xpos -711
+ ypos 9
+}
+push $N53c54000
 Keyer {
  operation "luminance key"
  range {0.0004040302013 0.8456604631 1 1}
  name Keyer1
- xpos -295
- ypos 97
+ xpos -94
+ ypos 54
 }
-Constant {
+Group {
  inputs 0
- channels rgb
- format "3072 3072 0 0 3072 3072 1 "
- name Constant2
- xpos 322
- ypos 36
+ name Random_transform2
+ xpos 1101
+ ypos 579
+ addUserKnob {20 "" l Settings}
+ addUserKnob {26 "" l "@b;Random"}
+ addUserKnob {7 miny l "Min Y:" R -100 100}
+ miny {{format.h}}
+ addUserKnob {7 maxy l "Max Y:" R -100 100}
+ maxy {{format.w}}
+ addUserKnob {7 speed R 0 10}
+ speed {{Speed}}
+ addUserKnob {26 ""}
+ addUserKnob {7 result l Result:}
+ result {{(random(frame/(speed))*(maxy-miny)+miny)*amount+Random.result x66 0}}
 }
-set N21896000 [stack 0]
-Roto {
- curves {{{v x3f99999a}
-  {f 0}
-  {n
-   {layer Root
-    {f 2097152}
-    {t x44800000 x44428000}
-    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
-    {curvegroup Ellipse1 512 bezier
-     {{cc
-       {f 8192}
-       {px 1
-        {xc38fa570 xc38fa568}
-        {x453a8097 x44d83ed2}
-        {x438fa568 x438fa570}
-        {x43863720 xc3863720}
-        {x453ca306 x452b0307}
-        {xc3863728 x43863720}
-        {x438fa568 x438fa570}
-        {x44fb7ed2 x4528e097}
-        {xc38fa56c xc38fa560}
-        {xc3863724 x43863728}
-        {x44f739f6 x44d3f9f6}
-        {x43863720 xc3863720}}}
-      {cc
-       {f 8192}
-       {px 1
-        {xc38fa570 xc38fa568}
-        {x43080000 xc3ae0000}
-        {x438fa568 x438fa570}
-        {x43863720 xc3863720}
-        {0 0}
-        {xc3863728 x43863720}
-        {x438fa568 x438fa570}
-        {xc38bfffc x42f00000}
-        {xc38fa56c xc38fa560}
-        {xc3863724 x43863728}
-        {xc3c00000 xc3be0000}
-        {x43863720 xc3863720}}}}
-     {tx 1 x450e2000 x44f30000}
-     {a fx x42500000 fy x42500000 ff x40a00000 osw x41200000 osf 0 str 1 spx x44800000 spy x44428000 sb 1 tt x40e00000}}}}}}
- toolbox {selectAll {
-  { selectAll str 1 ssx 1 ssy 1 sf 1 }
-  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
-  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 tt 7 }
-  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-} }
- toolbar_brush_hardness 0.200000003
- toolbar_source_transform_scale {1 1}
- toolbar_source_transform_center {1024 778}
- colorOverlay {0 0 0 0}
- lifetime_type "all frames"
- motionblur_shutter_offset_type centred
- feather 52
- feather_falloff 5
- source_black_outside true
- name Roto1
- xpos -40
- ypos 327
+ NoOp {
+  inputs 0
+  name NoOp1
+  xpos 19
+  ypos 13
+ }
+ Output {
+  name Output1
+  xpos 19
+  ypos 39
+ }
+end_group
+Group {
+ inputs 0
+ name Random_transform1
+ xpos 1100
+ ypos 538
+ addUserKnob {20 "" l Settings}
+ addUserKnob {26 "" l "@b;Random"}
+ addUserKnob {7 miny l "Min Y:" R -100 100}
+ miny {{format.w}}
+ addUserKnob {7 maxy l "Max Y:" R -100 100}
+ maxy {{format.h}}
+ addUserKnob {7 speed R 0 10}
+ speed {{Speed}}
+ addUserKnob {26 ""}
+ addUserKnob {7 result l Result:}
+ result {{(random(frame/(speed))*(maxy-miny)+miny)*amount+Random.result x66 0}}
 }
-Blur {
- size 400
- filter box
- name Blur1
- xpos -40
- ypos 347
+ NoOp {
+  inputs 0
+  name NoOp1
+  xpos 19
+  ypos 13
+ }
+ Output {
+  name Output1
+  xpos 19
+  ypos 39
+ }
+end_group
+Dot {
+ inputs 0
+ name Dot3
+ xpos 1392
+ ypos 458
 }
-push 0
-ColorCorrect {
- inputs 1+1
- gain 3.85
- name ColorCorrect1
- xpos -61
- ypos 409
+Transform {
+ scale {{Random_transform.result*1.1}}
+ center {{random()*height} {random()*width}}
+ name Transform3
+ xpos 1358
+ ypos 502
+ disable {{disable_scale}}
 }
+Dot {
+ inputs 0
+ name Dot4
+ xpos 1280
+ ypos 465
+}
+Transform {
+ scale {{Random_transform.result}}
+ center {{Input1.width/2} {Input1.height/2}}
+ name Transform5
+ xpos 1246
+ ypos 503
+ disable {{disable_scale}}
+}
+Switch {
+ inputs 2
+ which {{randomize_origin}}
+ name Switch3
+ xpos 1267
+ ypos 574
+}
+Dot {
+ name Dot6
+ xpos 1301
+ ypos 611
+}
+Group {
+ inputs 0
+ name Random_transform
+ xpos 1101
+ ypos 499
+ addUserKnob {20 "" l Settings}
+ addUserKnob {26 "" l "@b;Random"}
+ addUserKnob {7 miny l "Min Y:" R -100 100}
+ miny {{scale_min+amount-1}}
+ addUserKnob {7 maxy l "Max Y:" R -100 100}
+ maxy {{scale_max+amount-1}}
+ addUserKnob {7 speed R 0 10}
+ speed {{Speed}}
+ addUserKnob {26 ""}
+ addUserKnob {7 result l Result:}
+ result {{(random(frame/(speed))*(maxy-miny)+miny)*amount+Random.result x66 0}}
+}
+ NoOp {
+  inputs 0
+  name NoOp1
+  xpos 19
+  ypos 13
+ }
+ Output {
+  name Output1
+  xpos 19
+  ypos 39
+ }
+end_group
+Group {
+ inputs 0
+ name Random
+ xpos 985
+ ypos 542
+ addUserKnob {20 "" l Settings}
+ addUserKnob {26 "" l "@b;Random"}
+ addUserKnob {7 minx l "Min X"}
+ addUserKnob {7 maxx l "Max X:"}
+ addUserKnob {7 miny l "Min Y:" R -100 100}
+ miny 20.5
+ addUserKnob {7 maxy l "Max Y:" R -100 100}
+ maxy 27.5
+ addUserKnob {7 speed R 0 10}
+ speed {{random(10)}}
+ addUserKnob {26 ""}
+ addUserKnob {12 Rtran}
+ Rtran {{random(20)} {(random(frame/(speed))*(maxy-miny)+miny)}}
+ addUserKnob {7 Rrot}
+ addUserKnob {12 Rscl}
+ addUserKnob {7 result l Result: R 0 100}
+ result {{(random(frame/(speed))*(maxy-miny)+miny)}}
+}
+ NoOp {
+  inputs 0
+  name NoOp1
+  xpos 19
+  ypos 13
+ }
+ Output {
+  name Output1
+  xpos 19
+  ypos 39
+ }
+end_group
 Read {
  inputs 0
  file_type png
@@ -239,10 +378,10 @@ Read {
  format "500 500 0 0 500 500 1 "
  origset true
  name Read7
- xpos 2022
- ypos 85
+ xpos 1912
+ ypos 94
 }
-set N595de800 [stack 0]
+set N53d40c00 [stack 0]
 push 0
 Switch {
  inputs 2
@@ -250,7 +389,7 @@ Switch {
  name special
  label clamp((random(frame,0.1)*7)-4)
  xpos 1912
- ypos 260
+ ypos 269
 }
 Transform {
  translate {2198.5 -25.5}
@@ -259,28 +398,28 @@ Transform {
  center {276 264}
  name Transform_special
  xpos 1912
- ypos 337
+ ypos 301
 }
-push $N595de800
+push $N53d40c00
 push 0
 Switch {
  inputs 2
- which {{"-(int(sin(2*pi*((frame+offset)*random(1,frame))/waveLength*random(1,r1))+1) * (maxVal-minVal) + minVal)" i K 0 x61 1 x62 0 x68 1 x69 0 x92 1}}
+ which {{curve K 0 x61 1 x62 0 x68 1 x69 0 x95 1 x96 0}}
  name candy
  label clamp((random(frame,frame*0.1)*4)-5)
- xpos 1142
- ypos 249
+ xpos 1078
+ ypos 268
 }
 Transform {
- translate {2410.5 66.5}
+ translate {{Random.Rtran.x+2416} {Random.Rtran.y+61}}
  rotate -12.52890396
  scale {0.123999998 0.0719999969}
  center {276 264}
  name Transform_candy
- xpos 1142
- ypos 337
+ xpos 1078
+ ypos 300
 }
-push $N595de800
+push $N53d40c00
 push 0
 Switch {
  inputs 2
@@ -288,7 +427,7 @@ Switch {
  name vegan
  label clamp((random(frame,0.1)*7)-4)
  xpos 2022
- ypos 260
+ ypos 269
 }
 Transform {
  translate {2400.5 35.5}
@@ -297,15 +436,15 @@ Transform {
  center {276 264}
  name Transform_vegan
  xpos 2022
- ypos 337
+ ypos 301
 }
-push $N595de800
+push $N53d40c00
 Switch {
  which {{clamp((random(frame*4,0.1)*8)-4)}}
  name gf
  label clamp((random(frame,0.1)*7)-4)
  xpos 1582
- ypos 252
+ ypos 269
 }
 Transform {
  translate {2385 2}
@@ -314,9 +453,9 @@ Transform {
  center {276 264}
  name Transform_gf
  xpos 1582
- ypos 337
+ ypos 301
 }
-push $N595de800
+push $N53d40c00
 push 0
 Switch {
  inputs 2
@@ -324,7 +463,7 @@ Switch {
  name space
  label clamp((random(frame,0.1)*7)-4)
  xpos 1472
- ypos 251
+ ypos 269
 }
 Transform {
  translate {2241.5 69}
@@ -333,15 +472,15 @@ Transform {
  center {276 264}
  name Transform_Space
  xpos 1472
- ypos 337
+ ypos 301
 }
-push $N595de800
+push $N53d40c00
 Switch {
  which {{clamp((random(frame,0.09)*7)-6) i}}
  name herbs
  label clamp((random(frame,0.1)*7)-4)
- xpos 1362
- ypos 250
+ xpos 1355
+ ypos 268
 }
 Transform {
  translate {2229.5 34.5}
@@ -349,18 +488,18 @@ Transform {
  scale {0.07900000364 0.09796000272}
  center {276 264}
  name Transform_Herbs
- xpos 1362
- ypos 337
+ xpos 1355
+ ypos 300
 }
-push $N595de800
+push $N53d40c00
 push 0
 Switch {
  inputs 2
  which {{clamp((random(frame,1)*3)-4) i}}
  name crypto
  label clamp((random(frame,0.1)*7)-4)
- xpos 1252
- ypos 246
+ xpos 1217
+ ypos 269
  addUserKnob {20 User}
  addUserKnob {41 which_1 l which T crypto.which}
  addUserKnob {7 amp R 0 10}
@@ -371,10 +510,10 @@ Transform {
  scale {-0.0719999969 0.0719999969}
  center {276 264}
  name Transform_crypto
- xpos 1252
- ypos 337
+ xpos 1217
+ ypos 301
 }
-push $N595de800
+push $N53d40c00
 push 0
 Switch {
  inputs 2
@@ -382,7 +521,7 @@ Switch {
  name peppes
  label clamp((random(frame,0.1)*7)-4)
  xpos 1802
- ypos 257
+ ypos 269
 }
 Transform {
  translate {2372.5 -27.5}
@@ -391,15 +530,15 @@ Transform {
  center {276 264}
  name Transform_Peppes
  xpos 1802
- ypos 337
+ ypos 301
 }
-push $N595de800
+push $N53d40c00
 Switch {
  which {{clamp((random(frame,0.1)*7)-4) i}}
  name poultry
  label clamp((random(frame,0.1)*7)-4)
  xpos 2132
- ypos 262
+ ypos 269
 }
 Transform {
  translate {2016.5 -29.5}
@@ -408,10 +547,9 @@ Transform {
  center {276 264}
  name Transform_poulty
  xpos 2132
- ypos 337
+ ypos 301
 }
-set Nfb992c00 [stack 0]
-push $N595de800
+push $N53d40c00
 push 0
 Switch {
  inputs 2
@@ -419,7 +557,7 @@ Switch {
  name nuts
  label clamp((random(frame,0.1)*7)-4)
  xpos 2352
- ypos 264
+ ypos 269
 }
 Transform {
  translate {2037 33}
@@ -428,15 +566,15 @@ Transform {
  center {276 264}
  name Transform_nuts
  xpos 2352
- ypos 337
+ ypos 301
 }
-push $N595de800
+push $N53d40c00
 Switch {
  which {{clamp((random(frame,0.02)*6)-10)}}
  name seafood
  label clamp((random(frame,0.1)*7)-4)
  xpos 2462
- ypos 263
+ ypos 269
 }
 Transform {
  translate {1863 65}
@@ -445,9 +583,9 @@ Transform {
  center {276 264}
  name Transform2
  xpos 2462
- ypos 337
+ ypos 301
 }
-push $N595de800
+push $N53d40c00
 push 0
 Switch {
  inputs 2
@@ -464,9 +602,9 @@ Transform {
  center {276 264}
  name Transform4
  xpos 2792
- ypos 337
+ ypos 301
 }
-push $N595de800
+push $N53d40c00
 Switch {
  which {{clamp((random(frame,0.1)*7)-4)}}
  name cheese
@@ -481,9 +619,9 @@ Transform {
  center {276 264}
  name Transform_cheese
  xpos 2572
- ypos 337
+ ypos 301
 }
-push $N595de800
+push $N53d40c00
 Switch {
  which {{(random(frame,0.5)*15)-10}}
  name fungi
@@ -498,10 +636,10 @@ Transform {
  center {276 264}
  name Transform_fungi
  xpos 2682
- ypos 337
+ ypos 301
 }
 push 0
-push $N595de800
+push $N53d40c00
 push 0
 Switch {
  inputs 2
@@ -509,7 +647,7 @@ Switch {
  name bugs
  label clamp((random(frame,0.1)*7)-4)
  xpos 1692
- ypos 252
+ ypos 269
 }
 Transform {
  translate {2029 -1}
@@ -518,15 +656,15 @@ Transform {
  center {276 264}
  name Transform_Bugs
  xpos 1692
- ypos 337
+ ypos 301
 }
-push $N595de800
+push $N53d40c00
 Switch {
  which {{clamp((random(frame,0.1)*7)-4) i}}
  name fruit
  label clamp((random(frame,0.1)*7)-4)
  xpos 2242
- ypos 262
+ ypos 269
 }
 Transform {
  translate {2048 63.5}
@@ -534,33 +672,40 @@ Transform {
  center {276 264}
  name Transform_fruit
  xpos 2242
- ypos 337
+ ypos 301
 }
 Merge2 {
  inputs 16+1
  name Merge6
  xpos 1912
- ypos 643
- hide_input true
+ ypos 503
 }
 ColorCorrect {
  gain 0.1
  name ColorCorrect5
  xpos 1912
- ypos 682
+ ypos 542
 }
 Dot {
  name Dot7
  xpos 1946
  ypos 1156
 }
-push $N21896000
+Constant {
+ inputs 0
+ channels rgb
+ format "3072 3072 0 0 3072 3072 1 3k"
+ name Constant2
+ xpos 322
+ ypos 36
+}
+set N53d41c00 [stack 0]
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
  font_height_toolbar 100
  message "Rare Pizza #\[format %03d \[frame]] Minimum Viable Pizza - The first and only pie minted directly from Shrimp's oven and the chef's choice. \nTake it or leave it, Shrimp don't care."
- old_message {{82 97 114 101 32 80 105 122 122 97 32 35 49 53 55 32 77 105 110 105 109 117 109 32 86 105 97 98 108 101 32 80 105 122 122 97 32 45 32 84 104 101 32 102 105 114 115 116 32 97 110 100 32 111 110 108 121 32 112 105 101 32 109 105 110 116 101 100 32 100 105 114 101 99 116 108 121 32 102 114 111 109 32 83 104 114 105 109 112 39 115 32 111 118 101 110 32 97 110 100 32 116 104 101 32 99 104 101 102 39 115 32 99 104 111 105 99 101 46 32 10 84 97 107 101 32 105 116 32 111 114 32 108 101 97 118 101 32 105 116 44 32 83 104 114 105 109 112 32 100 111 110 39 116 32 99 97 114 101 46}
+ old_message {{82 97 114 101 32 80 105 122 122 97 32 35 48 52 53 32 77 105 110 105 109 117 109 32 86 105 97 98 108 101 32 80 105 122 122 97 32 45 32 84 104 101 32 102 105 114 115 116 32 97 110 100 32 111 110 108 121 32 112 105 101 32 109 105 110 116 101 100 32 100 105 114 101 99 116 108 121 32 102 114 111 109 32 83 104 114 105 109 112 39 115 32 111 118 101 110 32 97 110 100 32 116 104 101 32 99 104 101 102 39 115 32 99 104 111 105 99 101 46 32 10 84 97 107 101 32 105 116 32 111 114 32 108 101 97 118 101 32 105 116 44 32 83 104 114 105 109 112 32 100 111 110 39 116 32 99 97 114 101 46}
    }
  old_expression_markers {{12 14}
    }
@@ -568,7 +713,7 @@ Text2 {
  yjustify center
  transforms {{0 2}
    }
- cursor_position 132
+ cursor_position 80
  font {{ SignPainter : HouseScript : Supplemental/SignPainter.ttc : 0 }}
  center {1024 778}
  cursor_initialised true
@@ -580,12 +725,11 @@ Text2 {
    }
  color {1 1 0.1 1}
  color_panelDropped true
- enable_shadows true
  name Text1
- xpos 250
- ypos 389
+ xpos 213
+ ypos 265
 }
-push $N21896000
+push $N53d41c00
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
@@ -598,7 +742,6 @@ Text2 {
  box {2220 57 2424 391}
  transforms {{0 2}
    }
- cursor_position 31
  font {{ SF Movie Poster : Bold : SF Movie Poster Bold.ttf : 0 }}
  center {1024 778}
  cursor_initialised true
@@ -815,14 +958,14 @@ CornerPin2D {
  xpos 683
  ypos 515
 }
-push $N21896000
+push $N53d41c00
 Roto {
  output alpha
  curves {{{v x3f99999a}
   {f 0}
   {n
    {layer Root
-    {f 2097152}
+    {f 2097664}
     {t x44800000 x44428000}
     {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
     {curvegroup Bezier1 512 bezier
@@ -847,7 +990,7 @@ Roto {
   { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
   { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
   { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 tt 9 }
   { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
   { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
   { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
@@ -876,16 +1019,239 @@ Merge2 {
  operation out
  name Out
  xpos 683
- ypos 579
+ ypos 695
 }
-push $N72d6d000
+push $N53d41c00
+Dot {
+ name Dot2
+ xpos 16
+ ypos 160
+}
+Roto {
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097664}
+    {t x44800000 x44428000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Ellipse1 512 bezier
+     {{cc
+       {f 8192}
+       {px
+        {1 x40e00000 x42080000}
+        {{{xc38fa570 -}      xc38fa570
+       {xc38fa570 -}}
+      {{xc38fa568 -}      xc38fa568
+       {xc38fa568 -}}}
+        {{{x453a8097 -}      x4540ea31
+       {x453a8097 -}}
+      {{x44d83ed2 -}      x44d0686c
+       {x44d83ed2 -}}}
+        {{{x438fa568 -}      x438fa568
+       {x438fa568 -}}
+      {{x438fa570 -}      x438fa570
+       {x438fa570 -}}}
+        {{{x43863720 -}      x43863720
+       {x43863720 -}}
+      {{xc3863720 -}      xc3863720
+       {xc3863720 -}}}
+        {{{x453ca306 -}      x453ca306
+       {x453ca306 -}}
+      {{x452b0307 -}      x452b0307
+       {x452b0307 -}}}
+        {{{xc3863728 -}      xc3863728
+       {xc3863728 -}}
+      {{x43863720 -}      x43863720
+       {x43863720 -}}}
+        {{{x438fa568 -}      x438fa568
+       {x438fa568 -}}
+      {{x438fa570 -}      x438fa570
+       {x438fa570 -}}}
+        {{{x44fb7ed2 -}
+       {x44e84208 -}
+       {x44fb7ed2 -}}
+      {{x4528e097 -}
+       {x452ddd64 -}
+       {x4528e097 -}}}
+        {{{xc38fa56c -}      xc38fa56c
+       {xc38fa56c -}}
+      {{xc38fa560 -}      xc38fa560
+       {xc38fa560 -}}}
+        {{{xc3863724 -}      xc3863724
+       {xc3863724 -}}
+      {{x43863728 -}      x43863728
+       {x43863728 -}}}
+        {{{x44f739f6 0 1 x4025d174 1}      x44f92b6a
+       {x4500f4fb x4025d174 1 0 1}}
+      {{x44d3f9f6 0 1 x3fb0df65 1}      x44d50345
+       {x44d9ad29 x3fb0df65 1 0 1}}}
+        {{{x43863720 -}      x43863720
+       {x43863720 -}}
+      {{xc3863720 -}      xc3863720
+       {xc3863720 -}}}}}
+      {cc
+       {f 8192}
+       {px
+        {1 x40e00000 x42080000}
+        {{{xc38fa570 -}      xc38fa570
+       {xc38fa570 -}}
+      {{xc38fa568 -}      xc38fa568
+       {xc38fa568 -}}}
+        {{{x43080000 0 1 x400fb593 1}      x43157906
+       {x435219a0 x400fb593 1 0 1}}
+      {{xc3ae0000 0 1 xc0b66665 1}      xc3bf1999
+       {xc4060666 xc0b66665 1 0 1}}}
+        {{{x438fa568 -}      x438fa568
+       {x438fa568 -}}
+      {{x438fa570 -}      x438fa570
+       {x438fa570 -}}}
+        {{{x43863720 -}      x43863720
+       {x43863720 -}}
+      {{xc3863720 -}      xc3863720
+       {xc3863720 -}}}
+        {{{0 -}      0
+       {0 -}}
+      {{0 -}      0
+       {0 -}}}
+        {{{xc3863728 -}      xc3863728
+       {xc3863728 -}}
+      {{x43863720 -}      x43863720
+       {x43863720 -}}}
+        {{{x438fa568 -}      x438fa568
+       {x438fa568 -}}
+      {{x438fa570 -}      x438fa570
+       {x438fa570 -}}}
+        {{{xc38bfffc 0 1 xc0d79046 1}      xc3a03583
+       {xc3fb2660 xc0d79046 1 0 1}}
+      {{x42f00000 0 1 x3f5d1746 1}      x42fa5d17
+       {x43148000 x3f5d1746 1 0 1}}}
+        {{{xc38fa56c -}      xc38fa56c
+       {xc38fa56c -}}
+      {{xc38fa560 -}      xc38fa560
+       {xc38fa560 -}}}
+        {{{xc3863724 0 1 xbf887574 1}      xc38969e5
+       {xc397ce48 xbf887574 1 0 1}}
+      {{x43863728 0 1 x4067acf8 1}      x43911344
+       {x43c1f1c0 x4067acf8 1 0 1}}}
+        {{{xc3c00000 0 1 xbe30dd17 1}      xc3c084a6
+       {xc3c2d990 xbe30dd17 1 0 1}}
+      {{xc3be0000 0 1 x3e30e000 1}      xc3bd7b58
+       {xc3bb2664 x3e30e000 1 0 1}}}
+        {{{x43863720 0 1 x407d4174 1}      x43921631
+       {x43c78200 x407d4174 1 0 1}}
+      {{xc3863720 0 1 xc0ea07f4 1}      xc39c27df
+       {xc3fee33a xc0ea07f4 1 0 1}}}}}}
+     {tx 1 x450e2000 x44f30000}
+     {a fx x42500000 fy x42500000 ff x40a00000 osw x41200000 osf 0 str 1 spx x44800000 spy x44428000 sb 1 tt x40e00000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 tt 7 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {1024 778}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ motionblur_shutter_offset_type centred
+ feather 52
+ feather_falloff 5
+ source_black_outside true
+ name Roto1
+ xpos -18
+ ypos 776
+}
+Blur {
+ size 400
+ filter box
+ name Blur1
+ xpos -18
+ ypos 811
+}
+push $N53c54000
 Grade {
  channels alpha
  name Grade2
- xpos -295
- ypos 163
+ xpos -165
+ ypos 109
 }
-set N21991400 [stack 0]
+set N4f7f6c00 [stack 0]
+Blur {
+ size 4.4
+ name Blur5
+ xpos -165
+ ypos 165
+ disable true
+}
+set N4f7f6000 [stack 0]
+Noise {
+ output rgb
+ premult alpha
+ size 12
+ zoffset 1.32
+ lacunarity 9.9
+ gain 1
+ gamma 1
+ center {1536 1536}
+ name Noise1
+ xpos -231
+ ypos 211
+ postage_stamp true
+}
+set N4f83fc00 [stack 0]
+Noise {
+ output rgb
+ premult alpha
+ size 8.2
+ zoffset 1.94
+ lacunarity 9.9
+ gain 1
+ gamma 0.25
+ center {1536 1536}
+ name Noise2
+ xpos -332
+ ypos 306
+ postage_stamp true
+}
+push $N4f83fc00
+push $N4f7f6000
+Merge2 {
+ inputs 2
+ operation multiply
+ mix 0.315
+ name Multiply
+ xpos -165
+ ypos 336
+}
+Grade {
+ channels alpha
+ gamma 1.65
+ name Grade1
+ xpos -165
+ ypos 360
+}
+Multiply {
+ inputs 1+1
+ channels alpha
+ value 0.42
+ name Multiply3
+ xpos -165
+ ypos 426
+}
 CornerPin2D {
  to1 {196 469}
  to2 {2800 485}
@@ -897,52 +1263,23 @@ CornerPin2D {
  from3 {3072 3072}
  from4 {0 3072}
  name CornerPin2D1
- xpos -295
- ypos 209
-}
-Blur {
- size 4.4
- name Blur5
  xpos -165
- ypos 235
+ ypos 458
 }
-set N21990800 [stack 0]
-Noise {
- output rgb
- premult alpha
- size 5.6
- lacunarity 4.35
- gain 0.121
- center {1536 1536}
- name Noise1
- xpos -273
- ypos 272
+Dot {
+ name Dot1
+ xpos -131
+ ypos 501
 }
-push $N21990800
-Merge2 {
- inputs 2
- operation multiply
- mix 0.26
- name Multiply
- xpos -165
- ypos 307
-}
-Grade {
- channels alpha
- gamma 1.65
- name Grade1
- xpos -165
- ypos 342
-}
-set N219d3c00 [stack 0]
-push $N219d3c00
+set N68007800 [stack 0]
+push $N68007800
 Keyer {
  invert true
  operation "luminance key"
  range {0 0.004267569001 1 1}
  name Keyer2
- xpos -182
- ypos 669
+ xpos -202
+ ypos 657
 }
 Merge2 {
  inputs 2
@@ -951,7 +1288,50 @@ Merge2 {
  xpos -117
  ypos 734
 }
-set Nd803e000 [stack 0]
+set N4f83ec00 [stack 0]
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-submission/box-closed-designs/cardboard-color.png
+ format "1540 1254 0 0 1540 1254 1 "
+ origset true
+ name Read8
+ xpos -500
+ ypos 122
+}
+Crop {
+ box {509.7281256 589.0406265 674.2718744 750.9593735}
+ reformat true
+ crop false
+ name Crop5
+ xpos -500
+ ypos 202
+}
+ColorCorrect {
+ saturation 1.4
+ name ColorCorrect4
+ xpos -500
+ ypos 226
+ disable true
+}
+HueShift {
+ hue_rotation -98
+ name HueShift1
+ xpos -500
+ ypos 250
+}
+Dilate {
+ size -4
+ name Dilate5
+ xpos -500
+ ypos 282
+}
+Blur {
+ size 12.5
+ name Blur7
+ xpos -500
+ ypos 372
+}
 Read {
  inputs 0
  file_type png
@@ -959,7 +1339,7 @@ Read {
  format "1540 1254 0 0 1540 1254 1 "
  origset true
  name Read4
- xpos -458
+ xpos -612
  ypos 124
 }
 Crop {
@@ -967,20 +1347,20 @@ Crop {
  reformat true
  crop false
  name Crop1
- xpos -458
+ xpos -612
  ypos 204
 }
 Dilate {
  size 1
  name Dilate3
- xpos -458
+ xpos -612
  ypos 290
 }
 Blur {
  size 22.5
  filter box
  name Blur4
- xpos -458
+ xpos -612
  ypos 380
 }
 Read {
@@ -990,7 +1370,7 @@ Read {
  format "1540 1254 0 0 1540 1254 1 "
  origset true
  name Read3
- xpos -547
+ xpos -701
  ypos 123
 }
 Crop {
@@ -998,20 +1378,20 @@ Crop {
  reformat true
  crop false
  name Crop2
- xpos -547
+ xpos -701
  ypos 203
 }
 Dilate {
  size 1
  name Dilate2
- xpos -547
+ xpos -701
  ypos 288
 }
 Blur {
  size 22.5
  filter box
  name Blur3
- xpos -547
+ xpos -701
  ypos 378
 }
 Read {
@@ -1020,8 +1400,40 @@ Read {
  file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-submission/box-closed-designs/cardboard-color.png
  format "1540 1254 0 0 1540 1254 1 "
  origset true
+ name Read5
+ xpos -813
+ ypos 126
+}
+Crop {
+ box {320.8250046 479.3250122 417.1749954 572.6749878}
+ reformat true
+ crop false
+ name Crop3
+ xpos -813
+ ypos 206
+}
+Dilate {
+ size -4
+ name Dilate1
+ xpos -813
+ ypos 285
+ disable true
+}
+Blur {
+ size 12.5
+ name Blur2
+ xpos -813
+ ypos 376
+ disable true
+}
+Read {
+ inputs 0
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-ingredients-submission/box-closed-designs/cardboard-color.png
+ format "1540 1254 0 0 1540 1254 1 "
+ origset true
  name Read6
- xpos -781
+ xpos -935
  ypos 126
 }
 Crop {
@@ -1029,58 +1441,55 @@ Crop {
  reformat true
  crop false
  name Crop4
- xpos -781
+ xpos -935
  ypos 206
 }
 ColorCorrect {
- saturation 2.05
+ saturation 1.3
  name ColorCorrect2
- xpos -781
+ xpos -935
  ypos 230
+}
+HueShift {
+ color_saturation 1.06
+ name HueShift2
+ xpos -935
+ ypos 254
 }
 Dilate {
  size -4
  name Dilate4
- xpos -781
+ xpos -935
  ypos 286
 }
 Blur {
  size 12.5
  name Blur6
- xpos -781
+ xpos -935
  ypos 376
 }
-set N21952800 [stack 0]
-Blur {
- size 12.5
- name Blur2
- xpos -659
- ypos 376
- disable true
-}
-push $N21952800
 Switch {
- inputs 4
+ inputs 5
  which {{random(1,frame)*6}}
  name Switch1
  xpos -612
  ypos 439
 }
 Reformat {
- format "3072 3072 0 0 3072 3072 1 "
+ format "3072 3072 0 0 3072 3072 1 3k"
  resize fill
  name Reformat1
  xpos -612
  ypos 507
 }
-push $N219d3c00
+push $N68007800
 Shuffle2 {
  fromInput1 {{0} B}
  fromInput2 {{0} B}
  mappings "4 rgba.alpha 0 3 rgba.alpha 0 3 rgba.green 0 1 rgba.green 0 1 rgba.blue 0 2 rgba.blue 0 2 rgba.red 0 0 rgba.red 0 0"
  name Shuffle1
- xpos -294
- ypos 391
+ xpos -349
+ ypos 498
 }
 Group {
  inputs 2
@@ -1141,10 +1550,17 @@ Merge2 {
  xpos -294
  ypos 758
 }
+ColorCorrect {
+ inputs 1+1
+ gain 1.38
+ name ColorCorrect1
+ xpos -291
+ ypos 808
+}
 Premult {
  name Premult1
- xpos -294
- ypos 847
+ xpos -291
+ ypos 900
 }
 Read {
  inputs 0
@@ -1159,89 +1575,83 @@ Read {
 Merge2 {
  inputs 2
  name Merge1
- xpos -37
- ypos 903
+ xpos 76
+ ypos 929
 }
 ColorCorrect {
  inputs 1+1
  gain 0.34
  name ColorCorrect3
- xpos 675
- ypos 1006
+ xpos 683
+ ypos 1056
+}
+ColorCorrect {
+ gain 0.76
+ name ColorCorrect6
+ xpos 683
+ ypos 1080
 }
 Merge2 {
  inputs 2
  mix 0.88
  name Merge5
- xpos 675
+ xpos 683
  ypos 1153
 }
-set N595de000 [stack 0]
+set N36bf3400 [stack 0]
 Write {
  file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-box-closed/1.png
  file_type png
  checkHashOnRead false
  version 1
  name Write1
- xpos 675
- ypos 1244
+ xpos 683
+ ypos 1252
 }
-push 0
-push 0
-push 0
-push 0
-push 0
-push 0
-push 0
-push $N21991400
-push $N21952800
+Constant {
+ inputs 0
+ color 1
+ format "3072 3072 0 0 3072 3072 1 3k"
+ name Constant1
+ xpos -235
+ ypos -284
+}
+Merge2 {
+ name Merge2
+ xpos -235
+ ypos -176
+}
+push $N4f7f6c00
+push $N53c55400
 Viewer {
- inputs 10
- frame 53
+ inputs 2
+ frame 33
  frame_range 1-4
- input_number 9
+ downrez 4
  name Viewer1
  xpos -990
  ypos 593
 }
-Group {
+Read {
  inputs 0
- name Group2
- help "Allows the easy creation of a variety of Waveform Expressions for use in manipulating knob values."
- xpos 2383
- ypos 81
- addUserKnob {20 main l Main}
- addUserKnob {26 unnamed_1 l "" +STARTLINE T " "}
- addUserKnob {68 type l "Wave Type" t "Controls what type of wave to generate." M {Random Noise Sine Triangle Square Sawtooth/Sawtooth "Sawtooth/Sawtooth (Parabolic)" "Sawtooth/Sawtooth (Parabolic reversed)" "Sawtooth/Sawtooth (Exponential)" Bounce "" "" "" "" ""}}
- type Square
- addUserKnob {7 minVal l "Min Value" t "Minimum value you want the wave to reach." R 0 10}
- minVal 1
- addUserKnob {7 maxVal l "Max Value" t "Maximum value you want the wave to reach." -STARTLINE R 0 10}
- addUserKnob {7 waveLength l WaveLength t "Controls the frequency or cycle length of the wave. The number of frames before the pattern repeats." R 0 50}
- waveLength 5.4
- addUserKnob {7 offset l Offset t "Offsets the frame value to allow control of values at a certain frame" R 0 10}
- offset 0.5
- addUserKnob {7 r1}
- addUserKnob {7 rOffset}
- rOffset 0.105
- addUserKnob {7 rAttr}
- rAttr 0.605
- addUserKnob {6 invert +STARTLINE}
- invert true
- addUserKnob {26 unnamed l "" +STARTLINE T " "}
- addUserKnob {22 expButton l "Generate Expression" T "node = nuke.thisNode()\ntype = node.knob('type').getValue()\nexpText = node.knob('expText')\nexpFormula = node.knob('formula')\nexpResult = node.knob('expResult')\ndef setExp():\n    if type == 0: #Random\n        exp = 'random((frame+%s)/%s) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 1: #Noise\n        exp = '(noise((frame+%s)/%s)+1)/2 * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 2: #Sine\n        exp = '(sin(2*pi*(frame+%s)/%s)+1)/2 * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 3: #Triangle\n        exp = '(asin(sin(2*pi*(frame+%s)/%s))/pi+0.5) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 4: #Square\n        exp = 'int(sin(2*pi*(frame+%s)/%s)+1) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 5: #Sawtooth\n        exp = '((frame+%s) %% %s)/%s * (%s-%s) + %s' %(offset,waveLength,waveLength,maxVal,minVal,minVal)\n    if type == 6: #Sawtooth(Parabolic)\n        exp = 'sin((4.93480220054468*(frame+%s)/(pi*%s)) %% (pi/2)) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 7: #Sawtooth(Parabolic Reversed)\n        exp = 'cos((4.93480220054468*(frame+%s)/(pi*%s)) %% (pi/2)) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 8: #Sawtooth (Exponential)\n        exp = '(exp(2*pi*((frame+%s) %% %s)/%s)-1)/exp(2*pi) * (%s-%s) + %s' %(offset,waveLength,waveLength,maxVal,minVal,minVal)\n    if type == 9: #Bounce\n        exp = 'abs(sin(pi*(frame + %s)/%s))* (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    return exp\n\nwaveLength = 'waveLength'\noffset = 'offset'\nmaxVal = 'maxVal'\nminVal = 'minVal'\nexpResult.setExpression(setExp())\nexpFormula.setValue(setExp())\n\nwaveLength = node.knob('waveLength').getValue()\noffset = node.knob('offset').getValue()\nmaxVal = node.knob('maxVal').getValue()\nminVal = node.knob('minVal').getValue()\nexpText.setValue(setExp())" +STARTLINE}
- addUserKnob {26 ""}
- addUserKnob {7 expResult l Result t "The calculated result of the wave at the given frame. Link to this value if you want to control the expression from this node."}
- expResult {{"int(sin(2*pi*(frame+offset)/waveLength)+1) * (maxVal-minVal) + minVal" i x93 0}}
- addUserKnob {26 unnamed_2 l "" +STARTLINE T " "}
- addUserKnob {1 expText l Expression t "The wave in expression form. For copying to another knobs expression value."}
- expText "int(sin(2*pi*(frame+0.5)/36.2)+1) * (0.0--1.0) + -1.0"
- addUserKnob {26 unnamed_3 l "" +STARTLINE T " "}
- addUserKnob {1 formula l Formula t "The formula that generates the wave."}
- formula "int(sin(2*pi*(frame+offset)/waveLength)+1) * (maxVal-minVal) + minVal"
+ file_type png
+ file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-box-closed/box-closed.#.png
+ format "3072 3072 0 0 3072 3072 1 3k"
+ first {{int((random(frame,frame*.1)*45)+1)}}
+ last {{"\[value Read2.first]"}}
+ origlast 50
+ origset true
+ on_error checkerboard
+ version 6
+ premultiplied true
+ name Read9
+ label "\[value Read2.first]"
+ xpos -580
+ ypos -281
+ addUserKnob {20 User}
+ addUserKnob {22 Random l "" t "import nuke\nimport os.path as path\nimport random\n\nfolder = path.abspath(\"C:\\Users\\Jotun\\Downloads\")\nfile_names = nuke.getFileNameList(folder)\nfile_names = \[name for name in file_names if \".jpg\" in name]\nchosen = random.choice(file_names)\nfile_path = path.join(folder, chosen)\n\nreadNode = nuke.createNode(\"Read\")\nreadNode\[\"file\"].fromUserText(file_path)" +STARTLINE +STARTLINE}
 }
-end_group
-push $N595de000
+push $N36bf3400
 push 0
 push 0
 push 0
@@ -1249,59 +1659,16 @@ push 0
 push 0
 push 0
 push 0
-push $Nd803e000
-push $Nfb992c00
+push $N4f83ec00
+push $N53c55400
 Viewer {
  inputs 10
- frame 53
+ frame 33
  frame_range 1-100
  frame_range_lock true
+ downrez 4
  roi {0.3289999962 -0.8899999857 0.9300000072 -0.7509999871}
  name Viewer2
- xpos 1128
- ypos 1011
-}
-Group {
- inputs 0
- name Group1
- help "Allows the easy creation of a variety of Waveform Expressions for use in manipulating knob values."
- xpos 2272
- ypos 81
- addUserKnob {20 main l Main}
- addUserKnob {26 unnamed_1 l "" +STARTLINE T " "}
- addUserKnob {68 type l "Wave Type" t "Controls what type of wave to generate." M {Random Noise Sine Triangle Square Sawtooth/Sawtooth "Sawtooth/Sawtooth (Parabolic)" "Sawtooth/Sawtooth (Parabolic reversed)" "Sawtooth/Sawtooth (Exponential)" Bounce "" "" "" "" ""}}
- type Square
- addUserKnob {7 minVal l "Min Value" t "Minimum value you want the wave to reach." R 0 10}
- minVal 1
- addUserKnob {7 maxVal l "Max Value" t "Maximum value you want the wave to reach." -STARTLINE R 0 10}
- addUserKnob {7 waveLength l WaveLength t "Controls the frequency or cycle length of the wave. The number of frames before the pattern repeats." R 0 50}
- waveLength 36.2
- addUserKnob {7 offset l Offset t "Offsets the frame value to allow control of values at a certain frame" R 0 10}
- offset 0.5
- addUserKnob {7 r1}
- r1 0.355
- addUserKnob {7 rOffset}
- rOffset 0.06
- addUserKnob {7 rAttr}
- rAttr 0.79
- addUserKnob {6 invert +STARTLINE}
- invert true
- addUserKnob {26 unnamed l "" +STARTLINE T " "}
- addUserKnob {22 expButton l "Generate Expression" T "node = nuke.thisNode()\ntype = node.knob('type').getValue()\nexpText = node.knob('expText')\nexpFormula = node.knob('formula')\nexpResult = node.knob('expResult')\ndef setExp():\n    if type == 0: #Random\n        exp = 'random((frame+%s)/%s) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 1: #Noise\n        exp = '(noise((frame+%s)/%s)+1)/2 * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 2: #Sine\n        exp = '(sin(2*pi*(frame+%s)/%s)+1)/2 * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 3: #Triangle\n        exp = '(asin(sin(2*pi*(frame+%s)/%s))/pi+0.5) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 4: #Square\n        exp = 'int(sin(2*pi*(frame+%s)/%s)+1) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 5: #Sawtooth\n        exp = '((frame+%s) %% %s)/%s * (%s-%s) + %s' %(offset,waveLength,waveLength,maxVal,minVal,minVal)\n    if type == 6: #Sawtooth(Parabolic)\n        exp = 'sin((4.93480220054468*(frame+%s)/(pi*%s)) %% (pi/2)) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 7: #Sawtooth(Parabolic Reversed)\n        exp = 'cos((4.93480220054468*(frame+%s)/(pi*%s)) %% (pi/2)) * (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    if type == 8: #Sawtooth (Exponential)\n        exp = '(exp(2*pi*((frame+%s) %% %s)/%s)-1)/exp(2*pi) * (%s-%s) + %s' %(offset,waveLength,waveLength,maxVal,minVal,minVal)\n    if type == 9: #Bounce\n        exp = 'abs(sin(pi*(frame + %s)/%s))* (%s-%s) + %s' %(offset,waveLength,maxVal,minVal,minVal)\n    return exp\n\nwaveLength = 'waveLength'\noffset = 'offset'\nmaxVal = 'maxVal'\nminVal = 'minVal'\nexpResult.setExpression(setExp())\nexpFormula.setValue(setExp())\n\nwaveLength = node.knob('waveLength').getValue()\noffset = node.knob('offset').getValue()\nmaxVal = node.knob('maxVal').getValue()\nminVal = node.knob('minVal').getValue()\nexpText.setValue(setExp())" +STARTLINE}
- addUserKnob {26 ""}
- addUserKnob {7 expResult l Result t "The calculated result of the wave at the given frame. Link to this value if you want to control the expression from this node."}
- expResult {{"clamp(-(int(sin(2*pi*((frame+offset)*random(1,frame))/waveLength*random(1,r1)+rAttr)+1+rOffset)* (maxVal-minVal) + minVal))" i K x93 0}}
- addUserKnob {26 unnamed_2 l "" +STARTLINE T " "}
- addUserKnob {1 expText l Expression t "The wave in expression form. For copying to another knobs expression value."}
- expText "int(sin(2*pi*(frame+0.0)/1.8)+1) * (1.0-0.0) + 0.0"
- addUserKnob {26 unnamed_3 l "" +STARTLINE T " "}
- addUserKnob {1 formula l Formula t "The formula that generates the wave."}
- formula "int(sin(2*pi*(frame+offset)/waveLength)+1) * (maxVal-minVal) + minVal"
-}
-end_group
-push $N72d6d000
-Write {
- name Write2
- xpos 127
- ypos 27
+ xpos 491
+ ypos 1467
 }

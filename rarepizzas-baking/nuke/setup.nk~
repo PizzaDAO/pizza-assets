@@ -3,27 +3,26 @@
 version 12.1 v2
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="-2423" y="23" w="2423" h="1005" screen="1">
+    <window x="-2554" y="23" w="2554" h="980" screen="1">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="973" stretch="1"/>
+            <split size="1891" stretch="1"/>
             <splitter orientation="2">
-                <split size="989"/>
+                <split size="564"/>
                 <dock id="" activePageId="Viewer.1">
                     <page id="Viewer.1"/>
-                    <page id="Viewer.2"/>
+                </dock>
+                <split size="396"/>
+                <dock id="" activePageId="Curve Editor.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
                 </dock>
             </splitter>
-            <split size="905"/>
-            <dock id="" activePageId="DAG.1" focus="true">
-                <page id="DAG.1"/>
-                <page id="Curve Editor.1"/>
-                <page id="DopeSheet.1"/>
-            </dock>
-            <split size="493"/>
+            <split size="615"/>
             <dock id="" activePageId="Properties.1">
                 <page id="Properties.1"/>
                 <page id="uk.co.thefoundry.backgroundrenderview.1"/>
@@ -75,7 +74,6 @@ Read {
  origset true
  premultiplied true
  name Read5
- selected true
  xpos 1516
  ypos -3174
 }
@@ -83,7 +81,6 @@ push 0
 Merge2 {
  inputs 2
  name Merge8
- selected true
  xpos 1516
  ypos -2880
 }
@@ -95,13 +92,11 @@ Read {
  origset true
  premultiplied true
  name Read4
- selected true
  xpos 814
  ypos -3182
 }
 Merge2 {
  name Merge7
- selected true
  xpos 814
  ypos -2897
 }
@@ -113,7 +108,6 @@ Read {
  origset true
  premultiplied true
  name Read3
- selected true
  xpos 206
  ypos -3220
 }
@@ -121,13 +115,12 @@ push 0
 Merge2 {
  inputs 2
  name Merge6
- selected true
  xpos 206
  ypos -2897
 }
 Switch {
  inputs 3
- which 0.12
+ which 1
  name Switch1
  selected true
  xpos 814
@@ -137,11 +130,10 @@ push 0
 Merge2 {
  inputs 2
  name Merge5
- selected true
  xpos -601
  ypos -2504
 }
-set N2a072000 [stack 0]
+set N198a1000 [stack 0]
 Read {
  inputs 0
  file_type png
@@ -178,7 +170,7 @@ Shuffle {
  xpos 353
  ypos -428
 }
-set Nb7e6d000 [stack 0]
+set N198a1800 [stack 0]
 Transform {
  scale 0.9
  center {1536 1536}
@@ -191,8 +183,8 @@ Invert {
  xpos 180
  ypos 67
 }
-push $Nb7e6d000
-push $N2a072000
+push $N198a1800
+push $N198a1000
 Shuffle {
  red alpha
  green alpha
@@ -411,7 +403,7 @@ Switch {
  xpos 749
  ypos -658
 }
-set Nfda68000 [stack 0]
+set N199b5180 [stack 0]
 Emboss {
  channels disparity
  Width 4.3
@@ -462,7 +454,7 @@ Premult {
  xpos 749
  ypos -225
 }
-set N1b42c400 [stack 0]
+set N199d2800 [stack 0]
 Merge2 {
  inputs 2
  operation multiply
@@ -470,7 +462,7 @@ Merge2 {
  xpos 851
  ypos -188
 }
-push $N1b42c400
+push $N199d2800
 Merge2 {
  inputs 2
  name Merge12
@@ -495,7 +487,6 @@ Merge2 {
  xpos 353
  ypos 150
 }
-set Nb7e6d800 [stack 0]
 ColorCorrect {
  inputs 1+1
  gamma 1.08
@@ -504,7 +495,7 @@ ColorCorrect {
  xpos 164
  ypos 150
 }
-set Nae370400 [stack 0]
+set N29d89000 [stack 0]
 Read {
  inputs 0
  file_type png
@@ -516,7 +507,7 @@ Read {
  xpos 874
  ypos 699
 }
-set N1b300000 [stack 0]
+set N29d88c00 [stack 0]
 Read {
  inputs 0
  file_type png
@@ -533,7 +524,7 @@ Grade {
  xpos 465
  ypos 2463
 }
-set N4a2bc400 [stack 0]
+set N29d88400 [stack 0]
 Transform {
  scale 0.9
  center {1536 1536}
@@ -542,7 +533,7 @@ Transform {
  xpos 596
  ypos 2460
 }
-set N1b2a0c00 [stack 0]
+set N29d88000 [stack 0]
 Transform {
  scale 0.9
  center {1536 1536}
@@ -574,7 +565,7 @@ Grade {
  ypos 2607
 }
 push 0
-push $N1b2a0c00
+push $N29d88000
 Noise {
  size 145
  zoffset 3.28
@@ -588,8 +579,8 @@ Noise {
  ypos 2508
  postage_stamp true
 }
-set N4a2bd800 [stack 0]
-push $N4a2bc400
+set N29dcf000 [stack 0]
+push $N29d88400
 Merge2 {
  inputs 2
  operation multiply
@@ -597,7 +588,7 @@ Merge2 {
  xpos 467
  ypos 2516
 }
-push $N4a2bd800
+push $N29dcf000
 Merge2 {
  inputs 3+1
  operation max
@@ -651,7 +642,7 @@ Grade {
  xpos 1270
  ypos 1272
 }
-push $N1b300000
+push $N29d88c00
 Transform {
  translate {10 60}
  rotate -130
@@ -762,7 +753,7 @@ Roto {
  xpos 1001
  ypos 828
 }
-push $N1b300000
+push $N29d88c00
 Merge2 {
  inputs 2
  name Merge14
@@ -798,7 +789,7 @@ Dot {
  xpos 908
  ypos 979
 }
-set N1b36ac00 [stack 0]
+set N29e75800 [stack 0]
 Dilate {
  channels alpha
  size -200
@@ -806,7 +797,7 @@ Dilate {
  xpos 1075
  ypos 1057
 }
-push $N1b36ac00
+push $N29e75800
 Dilate {
  channels alpha
  size 100
@@ -853,7 +844,7 @@ Multiply {
  xpos 984
  ypos 1344
 }
-push $N1b36ac00
+push $N29e75800
 ColorCorrect {
  inputs 1+1
  saturation 1.1
@@ -930,8 +921,8 @@ Switch {
  xpos 874
  ypos 1742
 }
-push $Nae370400
-push $N2a072000
+push $N29d89000
+push $N198a1000
 Merge2 {
  inputs 2
  name Merge11
@@ -944,7 +935,7 @@ Merge2 {
  xpos -601
  ypos 2141
 }
-set N2a0bf800 [stack 0]
+set N29f4d000 [stack 0]
 Clamp {
  name Clamp2
  xpos -601
@@ -969,8 +960,8 @@ EdgeBlur {
  xpos -601
  ypos 2784
 }
-set N48860400 [stack 0]
-push $N48860400
+set N29f4c400 [stack 0]
+push $N29f4c400
 Read {
  inputs 0
  file_type png
@@ -978,7 +969,6 @@ Read {
  format "3072 3072 0 0 3072 3072 1 "
  origset true
  name Read2
- selected true
  xpos 729
  ypos -4393
 }
@@ -986,7 +976,6 @@ push 0
 Merge2 {
  inputs 2
  name Merge4
- selected true
  xpos 729
  ypos -4129
 }
@@ -997,7 +986,6 @@ Read {
  format "3072 3072 0 0 3072 3072 1 "
  origset true
  name Read1
- selected true
  xpos 713
  ypos -5294
 }
@@ -1005,7 +993,6 @@ push 0
 Merge2 {
  inputs 2
  name Merge1
- selected true
  xpos 713
  ypos -5010
 }
@@ -1013,14 +1000,12 @@ push 0
 Merge2 {
  inputs 2
  name Merge2
- selected true
  xpos -874
  ypos -5010
 }
 Merge2 {
  inputs 2
  name Merge3
- selected true
  xpos -874
  ypos -4007
  disable true
@@ -1053,7 +1038,7 @@ DropShadow {
  softness 40
  size 3.15
 }
-set N99351b80 [stack 0]
+set N29fccb00 [stack 0]
 Clamp {
  name Clamp1
  xpos -601
@@ -1069,7 +1054,6 @@ ContactSheet {
  xpos -1326
  ypos 2687
 }
-set N6ccfc00 [stack 0]
 Write {
  file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/rndr/burnt-mozzarella.png
  file_type png
@@ -1079,8 +1063,8 @@ Write {
  xpos -1170
  ypos 3049
 }
-push $Nfda68000
-push $N2a072000
+push $N199b5180
+push $N198a1000
 DropShadow {
  inputs 2
  name DropShadow1
@@ -1115,14 +1099,14 @@ Read {
  xpos 1809
  ypos -1227
 }
-push $N99351b80
+push $N29fccb00
 push 0
 push 0
 push 0
 push 0
 push 0
 push 0
-push $N2a0bf800
+push $N29f4d000
 Dot {
  name Dot5
  label image
@@ -1135,7 +1119,7 @@ Dot {
  xpos 100
  ypos 2286
 }
-set Nb5c8c400 [stack 0]
+set N2a284c00 [stack 0]
 Dot {
  name Dot8
  xpos -230
@@ -1189,26 +1173,26 @@ Dot {
  xpos -154
  ypos 2385
 }
-set N591f5800 [stack 0]
+set N2a284000 [stack 0]
 Dot {
  name Dot9
  xpos -154
  ypos 2409
 }
-push $N591f5800
-push $N591f5800
+push $N2a284000
+push $N2a284000
 Dot {
  name Dot10
  xpos -154
  ypos 2355
 }
-push $Nb5c8c400
+push $N2a284c00
 Dot {
  name Dot11
  xpos 100
  ypos 2353
 }
-set N591f5c00 [stack 0]
+set N2a319400 [stack 0]
 Laplacian {
  inputs 1+1
  size 600
@@ -1252,7 +1236,7 @@ Dilate {
  xpos -44
  ypos 2486
 }
-push $N591f5c00
+push $N2a319400
 Grade {
  inputs 1+1
  white 1.85
@@ -1268,8 +1252,9 @@ Dot {
  xpos 100
  ypos 2509
 }
-push $Nb7e6d800
-push $N6ccfc00
+set N2a341400 [stack 0]
+push $N2a341400
+push $N198a1000
 Viewer {
  inputs 10
  frame 1
