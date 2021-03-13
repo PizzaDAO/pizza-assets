@@ -10,11 +10,12 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
             </dock>
             <split size="1595" stretch="1"/>
             <splitter orientation="2">
-                <split size="426"/>
-                <dock id="" activePageId="Viewer.1" focus="true">
+                <split size="714"/>
+                <dock id="" activePageId="Viewer.2" focus="true">
                     <page id="Viewer.1"/>
+                    <page id="Viewer.2"/>
                 </dock>
-                <split size="564"/>
+                <split size="276"/>
                 <dock id="" activePageId="Curve Editor.1">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
@@ -40,7 +41,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 Root {
  inputs 0
  name /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/nuke/box-closed_renders_v2.nk
- frame 17
+ frame 8
  lock_range true
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
  proxy_type scale
@@ -59,7 +60,6 @@ BackdropNode {
  tile_color 0x388e8e00
  label bashup
  note_font_size 42
- selected true
  xpos -1805
  ypos 910
  bdwidth 357
@@ -69,7 +69,6 @@ Group {
  inputs 0
  name Group2
  help "Allows the easy creation of a variety of Waveform Expressions for use in manipulating knob values."
- selected true
  xpos 2136
  ypos 821
  addUserKnob {20 main l Main}
@@ -114,7 +113,7 @@ Read {
  origlast 50
  origset true
  on_error checkerboard
- version 21
+ version 39
  premultiplied true
  name Read2
  label "\[value Read2.first]"
@@ -127,7 +126,6 @@ Read {
 Reformat {
  format "3072 3072 0 0 3072 3072 1 3k"
  name Reformat2
- selected true
  xpos -298
  ypos -81
 }
@@ -137,20 +135,17 @@ Constant {
  color 1
  format "3072 3072 0 0 3072 3072 1 3k"
  name Constant3
- selected true
  xpos -140
  ypos -102
 }
 Merge2 {
  inputs 2
  name Merge3
- selected true
  xpos -298
  ypos 2
 }
 Premult {
  name Premult2
- selected true
  xpos -165
  ypos 2
 }
@@ -159,7 +154,6 @@ Write {
  in_colorspace scene_linear
  out_colorspace scene_linear
  name Write2
- selected true
  xpos 127
  ypos 27
 }
@@ -167,7 +161,6 @@ Group {
  inputs 0
  name Group1
  help "Allows the easy creation of a variety of Waveform Expressions for use in manipulating knob values."
- selected true
  xpos 2027
  ypos 823
  addUserKnob {20 main l Main}
@@ -205,7 +198,6 @@ end_group
 NoOp {
  inputs 0
  name Controller
- selected true
  xpos -572
  ypos -66
  addUserKnob {20 User}
@@ -220,14 +212,12 @@ Write {
  in_colorspace scene_linear
  out_colorspace scene_linear
  name Write3
- selected true
  xpos -711
  ypos 9
 }
 Group {
  inputs 0
  name Random_transform2
- selected true
  xpos 1992
  ypos 713
  addUserKnob {20 "" l Settings}
@@ -257,7 +247,6 @@ end_group
 Group {
  inputs 0
  name Random_transform1
- selected true
  xpos 1991
  ypos 672
  addUserKnob {20 "" l Settings}
@@ -287,7 +276,6 @@ end_group
 Dot {
  inputs 0
  name Dot3
- selected true
  xpos 2283
  ypos 592
 }
@@ -295,7 +283,6 @@ Transform {
  scale {{Random_transform.result*1.1}}
  center {{random()*height} {random()*width}}
  name Transform3
- selected true
  xpos 2249
  ypos 636
  disable {{disable_scale}}
@@ -303,7 +290,6 @@ Transform {
 Dot {
  inputs 0
  name Dot4
- selected true
  xpos 2171
  ypos 599
 }
@@ -311,7 +297,6 @@ Transform {
  scale {{Random_transform.result}}
  center {{Input1.width/2} {Input1.height/2}}
  name Transform5
- selected true
  xpos 2137
  ypos 637
  disable {{disable_scale}}
@@ -320,20 +305,17 @@ Switch {
  inputs 2
  which {{randomize_origin}}
  name Switch3
- selected true
  xpos 2158
  ypos 708
 }
 Dot {
  name Dot6
- selected true
  xpos 2192
  ypos 745
 }
 Group {
  inputs 0
  name Random_transform
- selected true
  xpos 1992
  ypos 633
  addUserKnob {20 "" l Settings}
@@ -365,13 +347,11 @@ Constant {
  color 1
  format "3072 3072 0 0 3072 3072 1 3k"
  name Constant1
- selected true
  xpos -235
  ypos -284
 }
 Merge2 {
  name Merge2
- selected true
  xpos -235
  ypos -176
 }
@@ -389,7 +369,6 @@ Read {
  premultiplied true
  name Read9
  label "\[value Read2.first]"
- selected true
  xpos -916
  ypos -407
  addUserKnob {20 User}
@@ -407,7 +386,6 @@ Read {
  version 15
  premultiplied true
  name Read12
- selected true
  xpos -1407
  ypos 1077
 }
@@ -420,7 +398,6 @@ Read {
  version 2
  premultiplied true
  name Read10
- selected true
  xpos -1795
  ypos 990
 }
@@ -428,7 +405,6 @@ set N1ec3ec00 [stack 0]
 Transform {
  center {1536 1536}
  name Transform6
- selected true
  xpos -1795
  ypos 1112
 }
@@ -437,7 +413,6 @@ Shuffle2 {
  fromInput2 {{0} B}
  mappings "4 rgba.alpha 0 3 rgba.red 0 0 rgba.alpha 0 3 rgba.green 0 1 rgba.alpha 0 3 rgba.blue 0 2 rgba.alpha 0 3 rgba.alpha 0 3"
  name Shuffle2
- selected true
  xpos -1795
  ypos 1136
 }
@@ -447,7 +422,6 @@ Read {
  origset true
  on_error checkerboard
  name Read11
- selected true
  xpos -1580
  ypos 1016
 }
@@ -455,7 +429,6 @@ push $N1ec3ec00
 Dilate {
  size 38
  name Dilate6
- selected true
  xpos -1692
  ypos 1045
 }
@@ -538,7 +511,6 @@ Roto {
  motionblur_shutter_offset_type centred
  source_black_outside true
  name Roto4
- selected true
  xpos -1696
  ypos 1085
 }
@@ -546,7 +518,6 @@ Merge2 {
  inputs 2
  operation out
  name Out
- selected true
  xpos -1626
  ypos 1128
 }
@@ -554,13 +525,11 @@ Merge2 {
  inputs 2
  operation plus
  name Merge9
- selected true
  xpos -1670
  ypos 1170
 }
 Clamp {
  name Clamp1
- selected true
  xpos -1679
  ypos 1205
 }
@@ -569,7 +538,6 @@ Shuffle2 {
  fromInput2 {{0} B}
  mappings "4 rgba.red 0 0 rgba.red 0 0 rgba.green 0 1 rgba.green 0 1 rgba.blue 0 2 rgba.blue 0 2 rgba.red 0 0 rgba.alpha 0 3"
  name Shuffle3
- selected true
  xpos -1679
  ypos 1245
  disable true
@@ -583,7 +551,6 @@ Write {
  in_colorspace scene_linear
  out_colorspace scene_linear
  name Write4
- selected true
  xpos -1679
  ypos 1279
 }
@@ -594,7 +561,6 @@ Read {
  format "3000 3000 0 0 3000 3000 1 "
  origset true
  name Read13
- selected true
  xpos -345
  ypos -644
 }
@@ -606,7 +572,6 @@ Read {
  origset true
  version 23
  name Read14
- selected true
  xpos -298
  ypos -553
 }
@@ -614,7 +579,6 @@ set N1ece5c00 [stack 0]
 Grade {
  gamma 0.305
  name Grade4
- selected true
  xpos -298
  ypos -437
  disable true
@@ -626,14 +590,12 @@ Read {
  format "1604 4004 0 0 1604 4004 1 "
  origset true
  name Read15
- selected true
  xpos -460
  ypos -338
 }
 Group {
  inputs 0
  name Random
- selected true
  xpos 1881
  ypos 635
  addUserKnob {20 "" l Settings}
@@ -752,7 +714,6 @@ Roto {
  feather -53
  source_black_outside true
  name Roto5
- selected true
  xpos -473
  ypos 485
 }
@@ -761,14 +722,12 @@ Constant {
  channels rgb
  format "3072 3072 0 0 3072 3072 1 3k"
  name Constant2
- selected true
  xpos 378
  ypos -239
 }
 set N1ece5400 [stack 0]
 Dot {
  name Dot2
- selected true
  xpos 259
  ypos 318
 }
@@ -947,7 +906,6 @@ Roto {
  feather_falloff 5
  source_black_outside true
  name Roto1
- selected true
  xpos 225
  ypos 677
  postage_stamp true
@@ -955,7 +913,6 @@ Roto {
 set N1ece4c00 [stack 0]
 Invert {
  name Invert1
- selected true
  xpos 225
  ypos 1235
 }
@@ -965,7 +922,6 @@ Constant {
  color 1
  format "3072 3072 0 0 3072 3072 1 3k"
  name Constant4
- selected true
  xpos 534
  ypos 816
 }
@@ -973,7 +929,6 @@ Noise {
  size 3.2
  center {1536 1536}
  name Noise3
- selected true
  xpos 534
  ypos 919
  postage_stamp true
@@ -983,13 +938,11 @@ Grade {
  whitepoint 1.9
  black -0.13
  name Grade3
- selected true
  xpos 534
  ypos 1019
 }
 Emboss {
  name Emboss1
- selected true
  xpos 534
  ypos 1073
 }
@@ -1020,7 +973,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_99
- selected true
  xpos 1454
  ypos 366
  disable {{curve K x1 0}}
@@ -1052,7 +1004,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_98
- selected true
  xpos 1346
  ypos 370
  disable {{curve K x1 0}}
@@ -1084,7 +1035,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_97
- selected true
  xpos 1223
  ypos 368
  disable {{curve K x1 0}}
@@ -1116,7 +1066,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_96
- selected true
  xpos 1101
  ypos 366
  disable {{curve K x1 0}}
@@ -1148,7 +1097,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_95
- selected true
  xpos 989
  ypos 366
  disable {{curve K x1 0}}
@@ -1180,7 +1128,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_94
- selected true
  xpos 873
  ypos 367
  disable {{curve K x1 0}}
@@ -1212,7 +1159,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_93
- selected true
  xpos 748
  ypos 370
  disable {{curve K x1 0}}
@@ -1243,7 +1189,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_92
- selected true
  xpos 636
  ypos 371
  disable {{curve K x1 0}}
@@ -1274,7 +1219,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_91
- selected true
  xpos 530
  ypos 376
  disable {{curve K x1 0}}
@@ -1307,7 +1251,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_90
- selected true
  xpos 418
  ypos 371
  disable {{curve K x1 0}}
@@ -1339,7 +1282,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_89
- selected true
  xpos 1452
  ypos 302
  disable {{curve K x1 0}}
@@ -1370,7 +1312,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_88
- selected true
  xpos 1334
  ypos 301
  disable {{curve K x1 0}}
@@ -1402,7 +1343,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_86
- selected true
  xpos 1225
  ypos 302
  disable {{curve K x1 0}}
@@ -1434,7 +1374,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_87
- selected true
  xpos 1111
  ypos 302
  disable {{curve K x1 0}}
@@ -1466,7 +1405,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_85
- selected true
  xpos 993
  ypos 303
  disable {{curve K x1 0}}
@@ -1498,7 +1436,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_84
- selected true
  xpos 877
  ypos 305
  disable {{curve K x1 0}}
@@ -1530,7 +1467,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_83
- selected true
  xpos 761
  ypos 306
  disable {{curve K x1 0}}
@@ -1562,7 +1498,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_82
- selected true
  xpos 636
  ypos 309
  disable {{curve K x1 0}}
@@ -1594,7 +1529,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_81
- selected true
  xpos 524
  ypos 310
  disable {{curve K x1 0}}
@@ -1626,7 +1560,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_80
- selected true
  xpos 418
  ypos 312
  disable {{curve K x1 0}}
@@ -1658,7 +1591,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_79
- selected true
  xpos 1452
  ypos 240
  disable {{curve K x1 0}}
@@ -1690,7 +1622,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_78
- selected true
  xpos 1341
  ypos 238
  disable {{curve K x1 0}}
@@ -1722,7 +1653,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_77
- selected true
  xpos 1230
  ypos 239
  disable {{curve K x1 0}}
@@ -1754,7 +1684,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_76
- selected true
  xpos 1114
  ypos 239
  disable {{curve K x1 0}}
@@ -1786,7 +1715,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_75
- selected true
  xpos 998
  ypos 241
  disable {{curve K x1 0}}
@@ -1818,7 +1746,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_74
- selected true
  xpos 882
  ypos 242
  disable {{curve K x1 0}}
@@ -1850,7 +1777,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_73
- selected true
  xpos 757
  ypos 245
  disable {{curve K x1 0}}
@@ -1882,7 +1808,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_72
- selected true
  xpos 642
  ypos 248
  disable {{curve K x1 0}}
@@ -1914,7 +1839,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_71
- selected true
  xpos 526
  ypos 247
  disable {{curve K x1 0}}
@@ -1946,7 +1870,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_70
- selected true
  xpos 418
  ypos 250
  disable {{curve K x1 0}}
@@ -1977,7 +1900,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_69
- selected true
  xpos 1452
  ypos 185
  disable {{curve K x1 0}}
@@ -2008,7 +1930,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_68
- selected true
  xpos 1341
  ypos 187
  disable {{curve K x1 0}}
@@ -2039,7 +1960,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_67
- selected true
  xpos 1230
  ypos 188
  disable {{curve K x1 0}}
@@ -2070,7 +1990,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_66
- selected true
  xpos 1114
  ypos 191
  disable {{curve K x1 0}}
@@ -2101,7 +2020,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_65
- selected true
  xpos 998
  ypos 191
  disable {{curve K x1 0}}
@@ -2132,7 +2050,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_64
- selected true
  xpos 882
  ypos 194
  disable {{curve K x1 0}}
@@ -2163,7 +2080,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_63
- selected true
  xpos 757
  ypos 195
  disable {{curve K x1 0}}
@@ -2195,7 +2111,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_62
- selected true
  xpos 642
  ypos 196
  disable {{curve K x1 0}}
@@ -2226,7 +2141,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_61
- selected true
  xpos 532
  ypos 197
  disable {{curve K x1 0}}
@@ -2257,7 +2171,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_60
- selected true
  xpos 418
  ypos 199
  disable {{curve K x1 0}}
@@ -2289,7 +2202,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_59
- selected true
  xpos 1455
  ypos 149
  disable {{curve K x1 0}}
@@ -2321,7 +2233,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_58
- selected true
  xpos 1345
  ypos 150
  disable {{curve K x1 0}}
@@ -2353,7 +2264,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_57
- selected true
  xpos 1231
  ypos 151
  disable {{curve K x1 0}}
@@ -2385,7 +2295,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_56
- selected true
  xpos 1118
  ypos 150
  disable {{curve K x1 0}}
@@ -2417,7 +2326,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_55
- selected true
  xpos 1001
  ypos 149
  disable {{curve K x1 0}}
@@ -2449,7 +2357,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_54
- selected true
  xpos 886
  ypos 145
  disable {{curve K x1 0}}
@@ -2481,7 +2388,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_53
- selected true
  xpos 760
  ypos 146
  disable {{curve K x1 0}}
@@ -2513,7 +2419,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_52
- selected true
  xpos 648
  ypos 150
  disable {{curve K x1 0}}
@@ -2545,7 +2450,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_51
- selected true
  xpos 532
  ypos 148
  disable {{curve K x1 0}}
@@ -2576,7 +2480,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_50
- selected true
  xpos 418
  ypos 148
  disable {{curve K x1 0}}
@@ -2608,7 +2511,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_49
- selected true
  xpos 1453
  ypos 111
  disable {{curve K x1 0}}
@@ -2640,7 +2542,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_48
- selected true
  xpos 1339
  ypos 112
  disable {{curve K x1 0}}
@@ -2672,7 +2573,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_47
- selected true
  xpos 1226
  ypos 111
  disable {{curve K x1 0}}
@@ -2704,7 +2604,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_46
- selected true
  xpos 1110
  ypos 110
  disable {{curve K x1 0}}
@@ -2736,7 +2635,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_45
- selected true
  xpos 1001
  ypos 111
  disable {{curve K x1 0}}
@@ -2768,7 +2666,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_44
- selected true
  xpos 879
  ypos 109
  disable {{curve K x1 0}}
@@ -2800,7 +2697,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_43
- selected true
  xpos 756
  ypos 111
  disable {{curve K x1 0}}
@@ -2832,7 +2728,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_42
- selected true
  xpos 640
  ypos 109
  disable {{curve K x1 0}}
@@ -2864,7 +2759,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_41
- selected true
  xpos 532
  ypos 109
  disable {{curve K x1 0}}
@@ -2896,7 +2790,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_40
- selected true
  xpos 417
  ypos 108
  disable {{curve K x1 0}}
@@ -2928,7 +2821,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_39
- selected true
  xpos 1450
  ypos 73
  disable {{curve K x1 0}}
@@ -2959,7 +2851,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_38
- selected true
  xpos 1339
  ypos 74
  disable {{curve K x1 0}}
@@ -2990,7 +2881,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_37
- selected true
  xpos 1227
  ypos 73
  disable {{curve K x1 0}}
@@ -3021,7 +2911,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_36
- selected true
  xpos 1109
  ypos 73
  disable {{curve K x1 0}}
@@ -3052,7 +2941,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_35
- selected true
  xpos 1001
  ypos 71
  disable {{curve K x1 0}}
@@ -3084,7 +2972,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_34
- selected true
  xpos 878
  ypos 73
  disable {{curve K x1 0}}
@@ -3116,7 +3003,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_33
- selected true
  xpos 759
  ypos 74
  disable {{curve K x1 0}}
@@ -3148,7 +3034,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_32
- selected true
  xpos 643
  ypos 71
  disable {{curve K x1 0}}
@@ -3180,7 +3065,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_31
- selected true
  xpos 534
  ypos 68
  disable {{curve K x1 0}}
@@ -3212,7 +3096,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_30
- selected true
  xpos 418
  ypos 73
  disable {{curve K x1 0}}
@@ -3244,7 +3127,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_29
- selected true
  xpos 1450
  ypos 25
  disable {{curve i K x1 0}}
@@ -3276,7 +3158,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_28
- selected true
  xpos 1341
  ypos 24
  disable {{curve i K x1 0}}
@@ -3308,7 +3189,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_27
- selected true
  xpos 1228
  ypos 24
  disable {{curve i K x1 0}}
@@ -3340,7 +3220,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_26
- selected true
  xpos 1110
  ypos 23
  disable {{curve i K x1 0}}
@@ -3372,7 +3251,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_25
- selected true
  xpos 1001
  ypos 24
  disable {{curve i K x1 0}}
@@ -3404,7 +3282,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_24
- selected true
  xpos 882
  ypos 25
  disable {{curve i K x1 0}}
@@ -3436,7 +3313,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_23
- selected true
  xpos 766
  ypos 22
  disable {{curve i K x1 0}}
@@ -3468,7 +3344,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_22
- selected true
  xpos 640
  ypos 20
  disable {{curve i K x1 0}}
@@ -3500,7 +3375,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_21
- selected true
  xpos 535
  ypos 20
  disable {{curve K x1 0}}
@@ -3532,7 +3406,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_20
- selected true
  xpos 428
  ypos 21
  disable {{curve K x1 0}}
@@ -3564,7 +3437,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_19
- selected true
  xpos 1447
  ypos -29
  disable {{curve K x1 0}}
@@ -3596,7 +3468,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_18
- selected true
  xpos 1339
  ypos -30
  disable {{curve K x1 0}}
@@ -3628,7 +3499,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_17
- selected true
  xpos 1229
  ypos -29
  disable {{curve K x1 0}}
@@ -3660,7 +3530,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_16
- selected true
  xpos 1112
  ypos -29
  disable {{curve K x1 0}}
@@ -3692,7 +3561,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_15
- selected true
  xpos 1001
  ypos -34
  disable {{curve K x1 0}}
@@ -3724,7 +3592,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_14
- selected true
  xpos 882
  ypos -33
  disable {{curve K x1 0}}
@@ -3756,7 +3623,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_13
- selected true
  xpos 765
  ypos -32
  disable {{curve K x1 0}}
@@ -3788,7 +3654,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_12
- selected true
  xpos 645
  ypos -33
  disable {{curve K x1 0}}
@@ -3820,7 +3685,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_11
- selected true
  xpos 539
  ypos -30
  disable {{curve K x1 0}}
@@ -3852,7 +3716,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_10
- selected true
  xpos 430
  ypos -30
  disable {{curve i K x1 0}}
@@ -3884,7 +3747,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_9
- selected true
  xpos 1447
  ypos -82
  disable {{curve i K x1 0}}
@@ -3916,7 +3778,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_8
- selected true
  xpos 1337
  ypos -82
  disable {{curve i K x1 0}}
@@ -3948,7 +3809,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_7
- selected true
  xpos 1227
  ypos -82
  disable {{curve i K x1 0}}
@@ -3980,7 +3840,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_6
- selected true
  xpos 1111
  ypos -82
  disable {{curve i K x1 0}}
@@ -4012,7 +3871,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_5
- selected true
  xpos 1001
  ypos -84
  disable {{curve i K x1 0}}
@@ -4044,7 +3902,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_4
- selected true
  xpos 882
  ypos -83
  disable {{curve i K x1 0}}
@@ -4076,7 +3933,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_3
- selected true
  xpos 765
  ypos -83
  disable {{curve i K x1 0}}
@@ -4108,7 +3964,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_2
- selected true
  xpos 648
  ypos -83
  disable {{curve K x1 0}}
@@ -4140,7 +3995,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_1
- selected true
  xpos 542
  ypos -81
  disable {{curve K x1 0}}
@@ -4151,7 +4005,6 @@ Switch {
  inputs 100
  which {{frame}}
  name Switch2
- selected true
  xpos 1018
  ypos 520
  hide_input true
@@ -4182,7 +4035,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_i1
- selected true
  xpos 1192
  ypos -418
 }
@@ -4211,7 +4063,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_i2
- selected true
  xpos 1302
  ypos -418
 }
@@ -4240,7 +4091,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_i3
- selected true
  xpos 1412
  ypos -418
 }
@@ -4269,7 +4119,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text_i4
- selected true
  xpos 1526
  ypos -418
 }
@@ -4277,7 +4126,6 @@ Transform {
  scale {1 0.8}
  center {2594 210}
  name Transform1
- selected true
  xpos 1526
  ypos -321
 }
@@ -4379,7 +4227,6 @@ Roto {
  inverted true
  source_black_outside true
  name Roto3
- selected true
  xpos 1526
  ypos 846
  postage_stamp true
@@ -4387,7 +4234,6 @@ Roto {
 Merge2 {
  inputs 2
  name Merge4
- selected true
  xpos 1001
  ypos 870
 }
@@ -4402,7 +4248,6 @@ CornerPin2D {
  from3 {3072 3072}
  from4 {0 3072}
  name CornerPin2D2
- selected true
  xpos 1001
  ypos 1128
 }
@@ -4459,7 +4304,6 @@ Roto {
  motionblur_shutter_offset_type centred
  source_black_outside true
  name Roto2
- selected true
  xpos 289
  ypos -124
  postage_stamp true
@@ -4468,14 +4312,12 @@ Merge2 {
  inputs 2
  operation out
  name Out1
- selected true
  xpos 1001
  ypos 1428
 }
 Merge2 {
  inputs 2
  name Merge7
- selected true
  xpos 1001
  ypos 1527
 }
@@ -4484,7 +4326,6 @@ Blur {
  size 400
  filter box
  name Blur1
- selected true
  xpos -18
  ypos 811
 }
@@ -4495,7 +4336,7 @@ Text2 {
  font_height_toolbar 100
  opacity 0.535
  message "Rare Pizza Box: \[format %03d \[frame]] of 100  "
- old_message {{82 97 114 101 32 80 105 122 122 97 32 66 111 120 58 32 48 49 55 32 111 102 32 49 48 48 32 32}
+ old_message {{82 97 114 101 32 80 105 122 122 97 32 66 111 120 58 32 48 48 56 32 111 102 32 49 48 48 32 32}
    }
  old_expression_markers {{16 18}
    }
@@ -4518,7 +4359,6 @@ Text2 {
  color {1 1 0.1 1}
  color_panelDropped true
  name Text1
- selected true
  xpos -59
  ypos 462
 }
@@ -4533,7 +4373,6 @@ CornerPin2D {
  from3 {3072 3072}
  from4 {0 3072}
  name CornerPin2D3
- selected true
  xpos -73
  ypos 508
 }
@@ -4541,14 +4380,12 @@ push $N1eb83c00
 Grade {
  channels alpha
  name Grade2
- selected true
  xpos -165
  ypos 109
 }
 Blur {
  size 4.4
  name Blur5
- selected true
  xpos -165
  ypos 165
  disable true
@@ -4564,7 +4401,6 @@ Noise {
  gamma 1
  center {1536 1536}
  name Noise1
- selected true
  xpos -231
  ypos 211
  postage_stamp true
@@ -4580,7 +4416,6 @@ Noise {
  gamma 0.25
  center {1536 1536}
  name Noise2
- selected true
  xpos -332
  ypos 306
  postage_stamp true
@@ -4592,7 +4427,6 @@ Merge2 {
  operation multiply
  mix 0.315
  name Multiply
- selected true
  xpos -165
  ypos 336
 }
@@ -4600,7 +4434,6 @@ Grade {
  channels alpha
  gamma 1.65
  name Grade1
- selected true
  xpos -165
  ypos 360
 }
@@ -4609,7 +4442,6 @@ Multiply {
  channels alpha
  value 0.42
  name Multiply3
- selected true
  xpos -165
  ypos 392
 }
@@ -4624,20 +4456,17 @@ CornerPin2D {
  from3 {3072 3072}
  from4 {0 3072}
  name CornerPin2D1
- selected true
  xpos -165
  ypos 450
 }
 Merge2 {
  inputs 2
  name Merge8
- selected true
  xpos -165
  ypos 541
 }
 Dot {
  name Dot1
- selected true
  xpos -131
  ypos 583
 }
@@ -4648,7 +4477,6 @@ Keyer {
  operation "luminance key"
  range {0 0.004267569001 1 1}
  name Keyer2
- selected true
  xpos -202
  ypos 657
 }
@@ -4656,7 +4484,6 @@ Merge2 {
  inputs 2
  operation multiply
  name Multiply2
- selected true
  xpos -117
  ypos 734
 }
@@ -4668,7 +4495,6 @@ Read {
  format "1540 1254 0 0 1540 1254 1 "
  origset true
  name Read8
- selected true
  xpos -500
  ypos 122
 }
@@ -4677,7 +4503,6 @@ Crop {
  reformat true
  crop false
  name Crop5
- selected true
  xpos -500
  ypos 202
 }
@@ -4688,7 +4513,6 @@ ColorCorrect {
  gamma 1.36
  gain 1.1
  name ColorCorrect4
- selected true
  xpos -500
  ypos 226
  disable true
@@ -4700,21 +4524,18 @@ HueShift {
  hue_rotation -70
  brightness 1.18
  name HueShift1
- selected true
  xpos -500
  ypos 250
 }
 Dilate {
  size -4
  name Dilate5
- selected true
  xpos -500
  ypos 282
 }
 Blur {
  size 12.5
  name Blur7
- selected true
  xpos -500
  ypos 372
 }
@@ -4725,7 +4546,6 @@ Read {
  format "1540 1254 0 0 1540 1254 1 "
  origset true
  name Read4
- selected true
  xpos -612
  ypos 124
 }
@@ -4734,14 +4554,12 @@ Crop {
  reformat true
  crop false
  name Crop1
- selected true
  xpos -612
  ypos 204
 }
 Dilate {
  size 1
  name Dilate3
- selected true
  xpos -612
  ypos 290
 }
@@ -4749,7 +4567,6 @@ Blur {
  size 22.5
  filter box
  name Blur4
- selected true
  xpos -612
  ypos 380
 }
@@ -4760,7 +4577,6 @@ Read {
  format "1540 1254 0 0 1540 1254 1 "
  origset true
  name Read3
- selected true
  xpos -701
  ypos 123
 }
@@ -4769,14 +4585,12 @@ Crop {
  reformat true
  crop false
  name Crop2
- selected true
  xpos -701
  ypos 203
 }
 Dilate {
  size 1
  name Dilate2
- selected true
  xpos -701
  ypos 288
 }
@@ -4784,7 +4598,6 @@ Blur {
  size 22.5
  filter box
  name Blur3
- selected true
  xpos -701
  ypos 378
 }
@@ -4795,7 +4608,6 @@ Read {
  format "1540 1254 0 0 1540 1254 1 "
  origset true
  name Read5
- selected true
  xpos -813
  ypos 126
 }
@@ -4804,24 +4616,20 @@ Crop {
  reformat true
  crop false
  name Crop3
- selected true
  xpos -813
  ypos 206
 }
 Dilate {
  size -4
  name Dilate1
- selected true
  xpos -813
  ypos 285
 }
 Blur {
  size 12.5
  name Blur2
- selected true
  xpos -813
  ypos 376
- disable true
 }
 Read {
  inputs 0
@@ -4830,7 +4638,6 @@ Read {
  format "1540 1254 0 0 1540 1254 1 "
  origset true
  name Read6
- selected true
  xpos -935
  ypos 126
 }
@@ -4839,35 +4646,30 @@ Crop {
  reformat true
  crop false
  name Crop4
- selected true
  xpos -935
  ypos 206
 }
 ColorCorrect {
  saturation 1.3
  name ColorCorrect2
- selected true
  xpos -935
  ypos 230
 }
 HueShift {
  color_saturation 1.06
  name HueShift2
- selected true
  xpos -935
  ypos 254
 }
 Dilate {
  size -4
  name Dilate4
- selected true
  xpos -935
  ypos 286
 }
 Blur {
  size 12.5
  name Blur6
- selected true
  xpos -935
  ypos 374
 }
@@ -4875,7 +4677,6 @@ Switch {
  inputs 5
  which {{random(1,frame)*6 i}}
  name Switch1
- selected true
  xpos -612
  ypos 439
 }
@@ -4883,7 +4684,6 @@ Reformat {
  format "3072 3072 0 0 3072 3072 1 3k"
  resize fill
  name Reformat1
- selected true
  xpos -612
  ypos 507
 }
@@ -4893,7 +4693,6 @@ Shuffle2 {
  fromInput2 {{0} B}
  mappings "4 rgba.alpha 0 3 rgba.alpha 0 3 rgba.green 0 1 rgba.green 0 1 rgba.blue 0 2 rgba.blue 0 2 rgba.red 0 0 rgba.red 0 0"
  name Shuffle1
- selected true
  xpos -349
  ypos 580
 }
@@ -4901,7 +4700,6 @@ Group {
  inputs 2
  name Gizmo2
  help "Remap the luminance of the RGB channels based on an input colour ramp."
- selected true
  xpos -349
  ypos 647
 }
@@ -4953,7 +4751,6 @@ Merge2 {
  inputs 2
  operation matte
  name Multiply1
- selected true
  xpos -294
  ypos 758
 }
@@ -4961,14 +4758,12 @@ ColorCorrect {
  inputs 1+1
  gain 1.38
  name ColorCorrect1
- selected true
  xpos -291
  ypos 808
  disable true
 }
 Premult {
  name Premult1
- selected true
  xpos -291
  ypos 929
 }
@@ -4980,14 +4775,12 @@ Read {
  origset true
  premultiplied true
  name Read1
- selected true
  xpos 76
  ypos 884
 }
 Merge2 {
  inputs 2
  name Merge1
- selected true
  xpos 76
  ypos 1067
 }
@@ -4995,7 +4788,6 @@ ColorCorrect {
  inputs 1+1
  gain 0.06
  name ColorCorrect3
- selected true
  xpos 1001
  ypos 1870
 }
@@ -5003,7 +4795,6 @@ ColorCorrect {
  inputs 1+1
  gain 0.8
  name ColorCorrect6
- selected true
  xpos 1001
  ypos 1954
  disable true
@@ -5012,7 +4803,6 @@ set N37a91800 [stack 0]
 Merge2 {
  inputs 2
  name Out2
- selected true
  xpos -588
  ypos 1378
  disable true
@@ -5022,17 +4812,8 @@ Keyer {
  operation "luminance key"
  range {0.0004040302013 0.8456604631 1 1}
  name Keyer1
- selected true
  xpos -94
  ypos 54
-}
-Viewer {
- inputs 0
- frame_range 1-100
- name Viewer1
- selected true
- xpos -990
- ypos 593
 }
 Read {
  inputs 0
@@ -5041,9 +4822,8 @@ Read {
  format "500 500 0 0 500 500 1 "
  origset true
  name Read7
- selected true
- xpos 1755
- ypos -313
+ xpos 1783
+ ypos 396
 }
 set N37a90800 [stack 0]
 push 0
@@ -5052,7 +4832,6 @@ Switch {
  which {{chef.special}}
  name special
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2038
  ypos 240
 }
@@ -5062,7 +4841,6 @@ Transform {
  scale {0.09099999815 0.05283870548}
  center {276 264}
  name Transform_special
- selected true
  xpos 2128
  ypos 244
 }
@@ -5073,7 +4851,6 @@ Switch {
  which {{chef.candy K x1.906225204 0 x1.906225204 1 x2.732931137 0 x7 1 x8 0 x34 1 x35 0}}
  name candy
  label clamp((random(frame,frame*0.1)*4)-5)
- selected true
  xpos 2035
  ypos 362
 }
@@ -5083,7 +4860,6 @@ Transform {
  scale {0.123999998 0.0719999969}
  center {276 264}
  name Transform_candy
- selected true
  xpos 2133
  ypos 366
 }
@@ -5094,7 +4870,6 @@ Switch {
  which {{chef.vegan x30 0}}
  name vegan
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2032
  ypos 406
 }
@@ -5104,29 +4879,25 @@ Transform {
  scale {0.07900000364 0.09796000272}
  center {276 264}
  name Transform_vegan
- selected true
  xpos 2132
  ypos 410
 }
 push $N37a90800
-push $N37a90800
+push 0
 Switch {
  inputs 2
  which {{chef.gf}}
  name gf
  label clamp((random(frame,0.1)*7)-4)
- selected true
- xpos 2033
+ xpos 2030
  ypos 459
 }
-set N37ab5b00 [stack 0]
 Transform {
  translate {2385 2}
  rotate -95.19410706
  scale {-0.0719999969 0.0719999969}
  center {276 264}
  name Transform_gf
- selected true
  xpos 2133
  ypos 463
 }
@@ -5137,7 +4908,6 @@ Switch {
  which {{chef.space}}
  name space
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2033
  ypos 93
 }
@@ -5147,7 +4917,6 @@ Transform {
  scale {0.123999998 0.0719999969}
  center {276 264}
  name Transform_Space
- selected true
  xpos 2125
  ypos 97
 }
@@ -5158,7 +4927,6 @@ Switch {
  which {{chef.herbs K x1.906229973 0 x1.906229973 1 x2.732929945 0 x7 1 x8 0 x34 1 x35 0}}
  name herbs
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2034
  ypos 141
 }
@@ -5168,7 +4936,6 @@ Transform {
  scale {0.07900000364 0.09796000272}
  center {276 264}
  name Transform_Herbs
- selected true
  xpos 2124
  ypos 145
 }
@@ -5179,7 +4946,6 @@ Switch {
  which {{chef.crypto}}
  name crypto
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2034
  ypos 193
  addUserKnob {20 User}
@@ -5192,20 +4958,18 @@ Transform {
  scale {-0.0719999969 0.0719999969}
  center {276 264}
  name Transform_crypto
- selected true
  xpos 2127
  ypos 197
 }
-push $N37ab5b00
+push $N37a90800
 push 0
 Switch {
  inputs 2
  which {{chef.rare}}
  name rare
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2030
- ypos 511
+ ypos 544
 }
 Transform {
  translate {2372.5 -27.5}
@@ -5213,7 +4977,6 @@ Transform {
  scale {0.09099999815 0.05283870548}
  center {276 264}
  name Transform_Peppes
- selected true
  xpos 2133
  ypos 515
 }
@@ -5224,7 +4987,6 @@ Switch {
  which {{chef.meat x8 0.205}}
  name meat
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2018
  ypos -22
 }
@@ -5234,7 +4996,6 @@ Transform {
  scale {0.09099999815 0.05283870548}
  center {276 264}
  name Transform_meat
- selected true
  xpos 2128
  ypos -18
 }
@@ -5245,7 +5006,6 @@ Switch {
  which {{chef.nuts}}
  name nuts
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2019
  ypos -122
 }
@@ -5255,7 +5015,6 @@ Transform {
  scale {0.07900000364 0.09796000272}
  center {276 264}
  name Transform_nuts
- selected true
  xpos 2129
  ypos -118
 }
@@ -5266,7 +5025,6 @@ Switch {
  which {{chef.seafood x72 0 1 0}}
  name seafood
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2015
  ypos -417
 }
@@ -5276,7 +5034,6 @@ Transform {
  scale {0.123999998 0.0719999969}
  center {276 264}
  name Transform2
- selected true
  xpos 2125
  ypos -413
 }
@@ -5287,7 +5044,6 @@ Switch {
  which {{chef.veggies}}
  name veggies
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2011
  ypos -335
 }
@@ -5297,7 +5053,6 @@ Transform {
  scale {-0.07400000095 0.08823075891}
  center {276 264}
  name Transform4
- selected true
  xpos 2125
  ypos -331
 }
@@ -5308,7 +5063,6 @@ Switch {
  which {{chef.cheese}}
  name cheese
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2014
  ypos -379
 }
@@ -5318,7 +5072,6 @@ Transform {
  scale {0.07900000364 0.09796000272}
  center {276 264}
  name Transform_cheese
- selected true
  xpos 2126
  ypos -375
 }
@@ -5329,7 +5082,6 @@ Switch {
  which {{chef.fungi}}
  name fungi
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2013
  ypos -289
 }
@@ -5339,7 +5091,6 @@ Transform {
  scale {-0.05900000036 0.07034613937}
  center {276 264}
  name Transform_fungi
- selected true
  xpos 2126
  ypos -285
 }
@@ -5351,7 +5102,6 @@ Switch {
  which {{chef.bugs}}
  name bugs
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2018
  ypos -71
 }
@@ -5361,7 +5111,6 @@ Transform {
  scale {0.123999998 0.06599999964}
  center {276 264}
  name Transform_Bugs
- selected true
  xpos 2128
  ypos -67
 }
@@ -5372,7 +5121,6 @@ Switch {
  which {{chef.fruit}}
  name fruit
  label clamp((random(frame,0.1)*7)-4)
- selected true
  xpos 2019
  ypos -165
 }
@@ -5381,14 +5129,12 @@ Transform {
  scale {0.123999998 0.0719999969}
  center {276 264}
  name Transform_fruit
- selected true
  xpos 2129
  ypos -161
 }
 Merge2 {
  inputs 16+1
  name Merge6
- selected true
  xpos 2568
  ypos 515
  hide_input true
@@ -5396,13 +5142,11 @@ Merge2 {
 ColorCorrect {
  gain 0.1
  name ColorCorrect5
- selected true
  xpos 2568
  ypos 848
 }
 Dot {
  name Dot7
- selected true
  xpos 2602
  ypos 1493
 }
@@ -5411,7 +5155,6 @@ Merge2 {
  inputs 2
  mix 0.88
  name Merge5
- selected true
  xpos 1001
  ypos 2143
 }
@@ -5419,7 +5162,6 @@ Transform {
  translate {0 270}
  center {1500 1500}
  name Transform7
- selected true
  xpos 1001
  ypos 2209
 }
@@ -5431,10 +5173,10 @@ Write {
  checkHashOnRead false
  version 19
  name Write1
- selected true
  xpos 1001
  ypos 2470
 }
+set N37b95400 [stack 0]
 push 0
 push 0
 push 0
@@ -5446,56 +5188,75 @@ push $N37963c00
 push $N510bac00
 Viewer {
  inputs 10
- frame 17
+ frame 8
  frame_range 1-100
  frame_range_lock true
  input_number 9
  downrez 4
  roi {0.3289999962 -0.8899999857 0.9300000072 -0.7509999871}
  name Viewer2
- selected true
  xpos -1096
  ypos 1671
+}
+push $N37b95400
+push 0
+push 0
+push 0
+push 0
+push 0
+push 0
+push 0
+push 0
+push 0
+Viewer {
+ inputs 10
+ frame 8
+ frame_range 10-100
+ frame_range_lock true
+ input_number 9
+ downrez 4
+ name Viewer1
+ xpos -990
+ ypos 593
 }
 push $N510bac00
 NoOp {
  name chef
  label CONTROL
- selected true
  xpos 1680
  ypos 244
  hide_input true
  addUserKnob {20 Ingredients}
  addUserKnob {6 seafood +STARTLINE}
- seafood {{curve K x1 1 0 x6 1 x7 1 1 0 1 0 0 0 0 0 1 0 x90 1}}
+ seafood {{curve i K x1 1 0 x6 1 x7 1 1 0 1 0 0 0 0 0 1 0 x19 0 x20 1 1 0 x26 1 x27 0 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 1 0 1 0 0 0 0 0 0 0 x74 0 x75 0 1 0 0 0 0 1 0 1 1 0 1 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1}}
  addUserKnob {6 cheese +STARTLINE}
- cheese {{curve K x1 0 1 x5 1 x6 0 1 1 0 1 0 1 1 1 0 1 0 x90 1}}
+ cheese {{curve i K x1 0 1 x5 1 x6 0 1 1 0 1 0 1 1 1 0 1 1 x19 0 x20 1 1 1 x25 1 x26 1 1 1 x31 0 1 1 0 1 0 1 1 1 0 1 1 x64 0 1 x67 1 1 x71 1 1 1 1 1 x78 0 1 1 0 1 0 1 1 1 0 1 1 x111 0 1 x114 1 1}}
  addUserKnob {6 veggies +STARTLINE}
- veggies {{curve K x1 0 1 0 0 0 1 0 1 0 x11 0 x12 0 1 0 1 1 0 x90 1}}
+ veggies {{curve i K x1 0 1 0 0 0 1 0 1 0 x11 0 x12 0 1 0 1 1 0 x19 0 x20 1 0 x26 1 x27 1 1 1 1 1 0 1 0 1 0 0 0 1 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 1 0 x59 0 x60 1 1 1 1 1 1 1 0 0 0 0 0 1 0 x75 0 x76 1 1 1 0 0 0 1 1 1 1 0 0 0 1 0 x92 0 x93 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1}}
  addUserKnob {6 fungi +STARTLINE}
- fungi {{curve K x1 0 1 0 x8 1 x9 0 x11 0 x12 1 1 0 0 0 0 x90 1}}
+ fungi {{curve i K x1 0 1 0 x8 1 x9 0 x11 0 x12 1 1 0 0 0 0 x19 1 x20 0 1 0 x25 1 x26 0 0 0 0 0 0 0 0 0 0 0 0 1 0 x44 1 x45 0 x47 0 x48 1 1 0 0 0 0 x55 1 x56 0 1 0 x61 1 x62 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 x81 1 x82 0 x84 0 x85 1 1 0 0 0 0 x92 1 x93 0 1 0 x98 1 x99 0 0 0 0 0 0 0 0 0 0}}
  addUserKnob {6 fruit +STARTLINE}
- fruit {{curve K x1 0 x4 1 x5 0 1 x8 1 x11 0 x12 0 1 0 0 0 0 x90 1}}
+ fruit {{curve i K x1 0 x4 1 x5 1 1 x8 1 x9 1 1 0 1 1 1 1 1 0 1 1 x21 1 x22 1 1 0 1 1 1 1 1 0 1 1 x34 1 x35 0 1 1 1 1 1 0 1 1 x45 1 x46 1 0 1 1 1 1 1 0 1 1 x57 0 x58 0 1 1 1 1 1 0 1 1 x68 1 x69 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 0 1 1 x88 1 x89 1 1 1 0 1 1 1 1 1 0 1 1 x102 1 x103 1 1 1 1 1 1}}
  addUserKnob {6 nuts +STARTLINE}
- nuts {{curve K x1 0 x3 1 x4 0 1 0 x8 1 0 x11 1 0 0 0 1 0 0 x90 1}}
+ nuts {{curve i K x1 0 x3 1 x4 0 1 0 x8 1 0 x11 1 0 0 0 1 0 0 x19 1 x20 0 x22 1 x25 1 x26 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 x51 0 x52 1 0 0 0 1 0 0 x60 1 x61 0 x63 1 x66 1 x67 1 x69 0 x70 1 0 0 0 1 0 0 x78 1 x79 0 x81 1 x84 1 x85 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0}}
  addUserKnob {6 bugs +STARTLINE}
- bugs {{curve K x1 0 x3 1 x4 0 x7 1 x8 1 0 x11 0 x12 0 0 0 0 0 0 x90 1}}
+ bugs {{curve i K x1 0 x3 1 x4 0 x7 1 x8 1 0 x11 0 x12 0 0 0 0 0 0 x19 1 x20 0 x22 0 x26 0 x27 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 x53 1 x54 1 0 x57 0 x58 0 0 0 0 0 0 x65 1 x66 0 x68 0 x69 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0}}
  addUserKnob {6 meat +STARTLINE}
- meat {{curve K x1 0 x5 0 x6 1 1 0 0 x11 1 x12 0 0 0 0 1 0 x90 1}}
+ meat {{curve K x1 0 x5 0 x6 1 1 0 0 x11 1 x12 0 0 0 0 1 1 x19 0 x24 0 x25 1 1 0 0 x30 1 x31 0 0 0 0 1 1 x38 0 x39 0 0 x42 1 x43 0 0 0 0 1 1 x50 0 x51 1 1 0 1 1 0 0 x59 1 x60 0 0 0 0 1 1 x67 0 x68 0 1 1 0 0 x74 1 x75 0 0 0 0 1 1 x82 0 x83 1 1 0 1 1 0 0 x91 1 x92 0 0 0 0 1 1 x99 0 1 x102 0 0 0 0 1 1 x109 0}}
  addUserKnob {6 space +STARTLINE}
- space {{curve K x1 0 x5 1 x7 0 x8 1 0 x11 0 x12 0 0 1 0 0 0 x90 1}}
+ space {{curve i K x1 0 x5 1 x7 0 x8 1 0 x11 0 x12 0 0 1 0 0 0 x19 1 x20 0 x26 0 x27 0 0 0 0 0 x34 0 x35 1 0 x38 0 x39 0 0 0 0 0 0 0 0 0 0 0 0 0 0 x55 0 x57 0 0 x60 0 0 0 0 0 0 0 0 0 1 x71 0 0 0 x76 0 0 0 0 0 0 0 0 0 0 x88 0 x89 1 0 x92 0 x93 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0}}
  addUserKnob {6 herbs +STARTLINE}
- herbs {{curve K x1 0 x3 1 x4 1 0 x8 1 x10 0 x11 1 0 0 1 0 1 0 x90 1}}
+ herbs {{curve i K x1 0 x3 1 x4 1 0 x8 1 x10 0 x11 1 0 0 1 0 1 0 x19 0 x20 1 0 1 1 x25 0 x26 1 0 0 1 0 0 1 0 1 0 x37 0 x38 1 0 0 1 0 1 0 x46 0 x47 1 0 1 0 0 1 0 1 0 x57 0 x58 1 0 0 0 1 0 1 0 x67 0 x68 1 0 0 0 1 0 1 0 x77 0 x78 1 0 0 1 0 1 0 x86 0 x87 1 0 1 1 0 0 1 0 1 0 x98 0 x99 1 0 1 1 x104 0 x105 1 0 0 1}}
  addUserKnob {6 crypto +STARTLINE}
- crypto {{curve K x1 0 0 x7 1 x8 1 0 x11 0 x12 0 0 1 0 0 0 x90 1}}
+ crypto {{curve i K x1 0 0 x7 1 x8 1 0 x11 0 x12 0 0 1 0 0 1 x19 0 x26 0 x27 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0}}
  addUserKnob {6 special +STARTLINE}
- special {{curve K x1 0 1 1 0 0 x7 0 x8 1 0 x11 1 x12 0 0 0 1 0 0 x90 1}}
+ special {{curve i K x1 0 1 1 0 0 x7 0 x8 1 0 x11 1 x12 0 0 0 1 0 0 x19 0 x26 0 x27 0 0 0 0 0 0 x34 0 x37 0 x38 1 0 0 0 0 0 0 0 0 0 0 0 0 0 x54 0 x55 0 1 0 x60 0 x61 0 0 0 0 0 0 0 0 x71 0 x73 0 1 x76 0 0 0 0 0 0 0 0 0 0 0 x88 0 0 1 x93 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0}}
  addUserKnob {6 candy +STARTLINE}
- candy {{curve K x1 1 0 x4 1 x5 0 x8 1 x10 0 x11 0 0 0 0 0 1 0 x90 1}}
+ candy {{curve i K x1 1 0 x4 1 x5 0 x8 1 x10 0 x11 0 0 0 0 0 1 0 x19 0 x22 1 0 x26 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0}}
  addUserKnob {6 vegan +STARTLINE}
- vegan {{curve K x1 1 0 x6 1 x7 0 1 x10 1 x11 0 0 0 0 1 0 0 x90 1}}
+ vegan {{curve i K x1 1 0 x6 1 x7 0 1 x10 1 x11 0 0 0 0 1 0 0 x19 0 x22 1 0 x26 0 0 0 0 0 0 1 0 1 0 x37 0 x38 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 x52 0 x53 1 x55 1 x56 0 0 0 0 0 0 0 x65 0 x66 0 x72.43164062 0 x73.43164062 0 0 0 1 x78.43164062 1 x79.43164062 0 0 0 x82 0 x83 0 0 0 1 0 x90 1 x91 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0}}
  addUserKnob {6 gf +STARTLINE}
- gf {{curve K x1 1 0 x7 0 x8 1 x10 0 x11 1 0 0 0 1 0 0 x90 1}}
+ gf {{curve i K x1 1 0 x7 0 x8 1 x10 0 x11 1 0 0 0 1 0 0 x19 0 1 x22 0 x26 0 x27 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 x48 0 x49 1 0 0 0 1 0 0 x57 0 1 x60 0 0 0 0 0 0 0 0 0 0 0 0 1 x74 0 x75 1 0 0 0 1 0 0 x83 0 1 x86 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 x105 0 x106 1 0 0 0 1 0 0 x114 0 1 x117 0}}
  addUserKnob {6 rare +STARTLINE}
- rare {{curve K x1 1 0 x8 1 x9 0 x11 0 x12 0 0 0 0 0 0 x90 1}}
+ rare {{curve i K x1 1 0 x8 0 x9 0 x11 0 x12 0 0 0 0 0 0 x19 0 x26 0 x27 0 0 0 0 0 0 0 x35 0 x36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 x56 0 x57 0 0 0 0 0 0 0 0 0 0 0 0 0 0 x72 0 x73 0 0 0 0 0 0 0 0 0 0 0 0 0 x87 0 0 0 x92 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0}}
 }
