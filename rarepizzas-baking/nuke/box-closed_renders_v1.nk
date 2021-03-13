@@ -2,37 +2,26 @@
 version 12.1 v2
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="-2513" y="68" w="2412" h="960" screen="1">
+    <window x="-2362" y="23" w="2204" h="1028" screen="1">
         <splitter orientation="1">
-            <split size="0"/>
+            <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="819" stretch="1"/>
+            <split size="1541" stretch="1"/>
             <splitter orientation="2">
-                <split size="525"/>
-                <splitter orientation="1">
-                    <split size="179"/>
-                    <dock id="" activePageId="Viewer.2">
-                        <page id="Viewer.2"/>
-                    </dock>
-                    <split size="636"/>
-                    <dock id="" activePageId="Viewer.1">
-                        <page id="Viewer.1"/>
-                    </dock>
-                </splitter>
-                <split size="415"/>
-                <dock id="" activePageId="Curve Editor.1">
+                <split size="592"/>
+                <dock id="" activePageId="Viewer.1" focus="true">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="416"/>
+                <dock id="" activePageId="DAG.1">
+                    <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
                 </dock>
             </splitter>
-            <split size="1027"/>
-            <dock id="" activePageId="DAG.1" focus="true">
-                <page id="DAG.1"/>
-                <page id="DopeSheet.1"/>
-                <page id="DAG.2"/>
-            </dock>
-            <split size="554"/>
+            <split size="615"/>
             <dock id="" activePageId="Properties.1">
                 <page id="Properties.1"/>
                 <page id="uk.co.thefoundry.backgroundrenderview.1"/>
@@ -43,8 +32,8 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 }
 Root {
  inputs 0
- name /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/nuke/box-closed_renders.nk
- frame 2
+ name /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/nuke/box-closed_renders_v1.nk
+ frame 4
  lock_range true
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
  proxy_type scale
@@ -151,7 +140,7 @@ Premult {
  xpos -165
  ypos 2
 }
-set N2201ac00 [stack 0]
+set N1eb83c00 [stack 0]
 Write {
  in_colorspace scene_linear
  out_colorspace scene_linear
@@ -217,7 +206,7 @@ Write {
  xpos -711
  ypos 9
 }
-push $N2201ac00
+push $N1eb83c00
 Keyer {
  operation "luminance key"
  range {0.0004040302013 0.8456604631 1 1}
@@ -384,41 +373,6 @@ Read {
  addUserKnob {20 User}
  addUserKnob {22 Random l "" t "import nuke\nimport os.path as path\nimport random\n\nfolder = path.abspath(\"C:\\Users\\Jotun\\Downloads\")\nfile_names = nuke.getFileNameList(folder)\nfile_names = \[name for name in file_names if \".jpg\" in name]\nchosen = random.choice(file_names)\nfile_path = path.join(folder, chosen)\n\nreadNode = nuke.createNode(\"Read\")\nreadNode\[\"file\"].fromUserText(file_path)" +STARTLINE +STARTLINE}
 }
-Group {
- inputs 0
- name Random
- xpos 3012
- ypos -883
- addUserKnob {20 "" l Settings}
- addUserKnob {26 "" l "@b;Random"}
- addUserKnob {7 minx l "Min X"}
- addUserKnob {7 maxx l "Max X:"}
- addUserKnob {7 miny l "Min Y:" R -100 100}
- miny -9
- addUserKnob {7 maxy l "Max Y:" R -100 100}
- maxy 9
- addUserKnob {7 speed R 0 10}
- speed {{random(10)}}
- addUserKnob {26 ""}
- addUserKnob {12 Rtran}
- Rtran {{random(20)} {(random(frame/(speed))*(maxy-miny)+miny)}}
- addUserKnob {7 Rrot}
- addUserKnob {12 Rscl}
- addUserKnob {7 result l Result: R 0 100}
- result {{(random(frame/(speed))*(maxy-miny)+miny)}}
-}
- NoOp {
-  inputs 0
-  name NoOp1
-  xpos 19
-  ypos 13
- }
- Output {
-  name Output1
-  xpos 19
-  ypos 39
- }
-end_group
 Read {
  inputs 0
  file_type png
@@ -446,7 +400,7 @@ Read {
  xpos -1795
  ypos 990
 }
-set N557d5c00 [stack 0]
+set N1ec3ec00 [stack 0]
 Transform {
  center {1536 1536}
  name Transform6
@@ -470,7 +424,7 @@ Read {
  xpos -1580
  ypos 1016
 }
-push $N557d5c00
+push $N1ec3ec00
 Dilate {
  size 38
  name Dilate6
@@ -593,6 +547,8 @@ Write {
  file_type png
  checkHashOnRead false
  version 6
+ in_colorspace scene_linear
+ out_colorspace scene_linear
  name Write4
  xpos -1679
  ypos 1279
@@ -618,7 +574,7 @@ Read {
  xpos -298
  ypos -553
 }
-set Na1ea8800 [stack 0]
+set N1ece5c00 [stack 0]
 Roto {
  output none
  premultiply rgba
@@ -715,7 +671,7 @@ Constant {
  xpos 712
  ypos -442
 }
-set N324e3c00 [stack 0]
+set N1ece5400 [stack 0]
 Dot {
  name Dot2
  xpos 16
@@ -900,7 +856,7 @@ Roto {
  ypos 776
  postage_stamp true
 }
-set N32576000 [stack 0]
+set N1ece4c00 [stack 0]
 Invert {
  name Invert1
  xpos 476
@@ -936,7 +892,7 @@ Emboss {
  xpos 698
  ypos 654
 }
-push $N324e3c00
+push $N1ece5400
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
@@ -967,7 +923,7 @@ Text2 {
  ypos -84
  disable {{curve i K x1 0}}
 }
-push $N324e3c00
+push $N1ece5400
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
@@ -998,7 +954,7 @@ Text2 {
  ypos -84
  disable {{curve i K x1 0}}
 }
-push $N324e3c00
+push $N1ece5400
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
@@ -1029,7 +985,7 @@ Text2 {
  ypos -84
  disable {{curve i K x1 0}}
 }
-push $N324e3c00
+push $N1ece5400
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
@@ -1060,7 +1016,7 @@ Text2 {
  ypos -84
  disable {{curve i K x1 0}}
 }
-push $N324e3c00
+push $N1ece5400
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
@@ -1091,7 +1047,7 @@ Text2 {
  ypos -84
  disable {{curve i K x1 0}}
 }
-push $N324e3c00
+push $N1ece5400
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
@@ -1122,7 +1078,7 @@ Text2 {
  ypos -84
  disable {{curve i K x1 0}}
 }
-push $N324e3c00
+push $N1ece5400
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
@@ -1153,7 +1109,7 @@ Text2 {
  ypos -84
  disable {{curve i K x1 0}}
 }
-push $N324e3c00
+push $N1ece5400
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
@@ -1184,7 +1140,7 @@ Text2 {
  ypos -84
  disable {{curve i K x1 0}}
 }
-push $N324e3c00
+push $N1ece5400
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
@@ -1215,7 +1171,7 @@ Text2 {
  ypos -84
  disable {{curve i K x1 0}}
 }
-push $N324e3c00
+push $N1ece5400
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
@@ -1246,8 +1202,8 @@ Text2 {
  ypos -84
  disable {{curve K x1 0}}
 }
-set Na8253c00 [stack 0]
-push $Na8253c00
+set N2e2a7000 [stack 0]
+push $N2e2a7000
 Switch {
  inputs 11
  which {{frame}}
@@ -1255,8 +1211,8 @@ Switch {
  xpos 853
  ypos 103
 }
-set N5ffb7180 [stack 0]
-push $N324e3c00
+set N2e2e6880 [stack 0]
+push $N1ece5400
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
@@ -1491,7 +1447,7 @@ CornerPin2D {
  xpos 1046
  ypos 509
 }
-push $N324e3c00
+push $N1ece5400
 Roto {
  output alpha
  curves {{{v x3f99999a}
@@ -1561,7 +1517,7 @@ Merge2 {
  xpos 1046
  ypos 724
 }
-push $N32576000
+push $N1ece4c00
 Blur {
  size 400
  filter box
@@ -1576,7 +1532,7 @@ Text2 {
  font_height_toolbar 100
  opacity 0.535
  message "Rare Pizza Box: \[format %03d \[frame]] of 100  "
- old_message {{82 97 114 101 32 80 105 122 122 97 32 66 111 120 58 32 48 48 48 32 111 102 32 49 48 48 32 32}
+ old_message {{82 97 114 101 32 80 105 122 122 97 32 66 111 120 58 32 48 48 56 32 111 102 32 49 48 48 32 32}
    }
  old_expression_markers {{16 18}
    }
@@ -1616,7 +1572,7 @@ CornerPin2D {
  xpos -73
  ypos 508
 }
-push $N2201ac00
+push $N1eb83c00
 Grade {
  channels alpha
  name Grade2
@@ -1630,7 +1586,7 @@ Blur {
  ypos 165
  disable true
 }
-set N326ff400 [stack 0]
+set N378ea800 [stack 0]
 Noise {
  output rgb
  premult alpha
@@ -1645,7 +1601,7 @@ Noise {
  ypos 211
  postage_stamp true
 }
-set N326ff000 [stack 0]
+set N378ea400 [stack 0]
 Noise {
  output rgb
  premult alpha
@@ -1660,8 +1616,8 @@ Noise {
  ypos 306
  postage_stamp true
 }
-push $N326ff000
-push $N326ff400
+push $N378ea400
+push $N378ea800
 Merge2 {
  inputs 2
  operation multiply
@@ -1710,8 +1666,8 @@ Dot {
  xpos -131
  ypos 583
 }
-set N3274d400 [stack 0]
-push $N3274d400
+set N37932400 [stack 0]
+push $N37932400
 Keyer {
  invert true
  operation "luminance key"
@@ -1727,7 +1683,7 @@ Merge2 {
  xpos -117
  ypos 734
 }
-set N3274cc00 [stack 0]
+set N37963c00 [stack 0]
 Read {
  inputs 0
  file_type png
@@ -1919,7 +1875,7 @@ Reformat {
  xpos -612
  ypos 507
 }
-push $N3274d400
+push $N37932400
 Shuffle2 {
  fromInput1 {{0} B}
  fromInput2 {{0} B}
@@ -2030,7 +1986,7 @@ ColorCorrect {
  ypos 1151
  disable true
 }
-set N3287e800 [stack 0]
+set N37a91800 [stack 0]
 Merge2 {
  inputs 2
  name Out2
@@ -2038,7 +1994,7 @@ Merge2 {
  ypos 1203
  disable true
 }
-push $Na1ea8800
+push $N1ece5c00
 Grade {
  gamma 0.305
  name Grade4
@@ -2066,11 +2022,11 @@ Read {
  xpos 1912
  ypos -197
 }
-set N220d5c00 [stack 0]
+set N37a90800 [stack 0]
 push 0
 Switch {
  inputs 2
- which {{clamp((random(frame,0.1)*9)-7)}}
+ which {{chef.special}}
  name special
  label clamp((random(frame,0.1)*7)-4)
  xpos 2735
@@ -2082,18 +2038,18 @@ Transform {
  scale {0.09099999815 0.05283870548}
  center {276 264}
  name Transform_special
- xpos 2845
+ xpos 2877
  ypos 99
 }
-push $N220d5c00
+push $N37a90800
 push 0
 Switch {
  inputs 2
- which {{curve K x1.906225204 0 x1.906225204 1 x2.732931137 0 x7 1 x8 0 x34 1 x35 0}}
+ which {{chef.candy K x1.906225204 0 x1.906225204 1 x2.732931137 0 x7 1 x8 0 x34 1 x35 0}}
  name candy
  label clamp((random(frame,frame*0.1)*4)-5)
- xpos 3100
- ypos -1152
+ xpos 2737
+ ypos 183
 }
 Transform {
  translate {{Random.Rtran.x+2416} {Random.Rtran.y+61}}
@@ -2101,18 +2057,18 @@ Transform {
  scale {0.123999998 0.0719999969}
  center {276 264}
  name Transform_candy
- xpos 3100
- ypos -1077
+ xpos 2888
+ ypos 187
 }
-push $N220d5c00
+push $N37a90800
 push 0
 Switch {
  inputs 2
- which {{clamp((random(frame,0.01)*9)-4) i x30 0}}
+ which {{chef.vegan x30 0}}
  name vegan
  label clamp((random(frame,0.1)*7)-4)
  xpos 2734
- ypos 235
+ ypos 227
 }
 Transform {
  translate {2400.5 35.5}
@@ -2120,16 +2076,18 @@ Transform {
  scale {0.07900000364 0.09796000272}
  center {276 264}
  name Transform_vegan
- xpos 2853
- ypos 239
+ xpos 2884
+ ypos 231
 }
-push $N220d5c00
+push $N37a90800
+push 0
 Switch {
- which {{clamp((random(frame*4,0.1)*9)-4) i}}
+ inputs 2
+ which {{chef.gf}}
  name gf
  label clamp((random(frame,0.1)*7)-4)
- xpos 2733
- ypos 274
+ xpos 2735
+ ypos 280
 }
 Transform {
  translate {2385 2}
@@ -2137,14 +2095,14 @@ Transform {
  scale {-0.0719999969 0.0719999969}
  center {276 264}
  name Transform_gf
- xpos 2858
- ypos 278
+ xpos 2890
+ ypos 284
 }
-push $N220d5c00
+push $N37a90800
 push 0
 Switch {
  inputs 2
- which {{clamp((random(frame,0.01)*11)-10) i}}
+ which {{chef.space}}
  name space
  label clamp((random(frame,0.1)*7)-4)
  xpos 2730
@@ -2156,12 +2114,14 @@ Transform {
  scale {0.123999998 0.0719999969}
  center {276 264}
  name Transform_Space
- xpos 2842
+ xpos 2874
  ypos -48
 }
-push $N220d5c00
+push $N37a90800
+push 0
 Switch {
- which {{curve i K x1.906229973 0 x1.906229973 1 x2.732929945 0 x7 1 x8 0 x34 1 x35 0}}
+ inputs 2
+ which {{chef.herbs K x1.906229973 0 x1.906229973 1 x2.732929945 0 x7 1 x8 0 x34 1 x35 0}}
  name herbs
  label clamp((random(frame,0.1)*7)-4)
  xpos 2731
@@ -2173,12 +2133,13 @@ Transform {
  scale {0.07900000364 0.09796000272}
  center {276 264}
  name Transform_Herbs
- xpos 2841
+ xpos 2873
 }
-push $N220d5c00
+push $N37a90800
 push 0
 Switch {
  inputs 2
+ which {{chef.crypto}}
  name crypto
  label clamp((random(frame,0.1)*7)-4)
  xpos 2731
@@ -2193,18 +2154,18 @@ Transform {
  scale {-0.0719999969 0.0719999969}
  center {276 264}
  name Transform_crypto
- xpos 2844
+ xpos 2876
  ypos 52
 }
-push $N220d5c00
+push $N37a90800
 push 0
 Switch {
  inputs 2
- which {{clamp((random(frame,0.008)*10)-8)}}
+ which {{chef.rare}}
  name rare
  label clamp((random(frame,0.1)*7)-4)
- xpos 2733
- ypos 319
+ xpos 2732
+ ypos 332
 }
 Transform {
  translate {2372.5 -27.5}
@@ -2212,15 +2173,17 @@ Transform {
  scale {0.09099999815 0.05283870548}
  center {276 264}
  name Transform_Peppes
- xpos 2859
- ypos 323
+ xpos 2890
+ ypos 336
 }
-push $N220d5c00
+push $N37a90800
+push 0
 Switch {
- which {{clamp((random(frame,0.1)*7)-4)}}
+ inputs 2
+ which {{chef.poultry}}
  name poultry
  label clamp((random(frame,0.1)*7)-4)
- xpos 2723
+ xpos 2727
  ypos -249
 }
 Transform {
@@ -2229,17 +2192,17 @@ Transform {
  scale {0.09099999815 0.05283870548}
  center {276 264}
  name Transform_poulty
- xpos 2833
+ xpos 2865
  ypos -245
 }
-push $N220d5c00
+push $N37a90800
 push 0
 Switch {
  inputs 2
- which {{clamp((random(frame,0.09)*7)-5)}}
+ which {{chef.nuts}}
  name nuts
  label clamp((random(frame,0.1)*7)-4)
- xpos 2728
+ xpos 2732
  ypos -349
 }
 Transform {
@@ -2248,17 +2211,17 @@ Transform {
  scale {0.07900000364 0.09796000272}
  center {276 264}
  name Transform_nuts
- xpos 2838
+ xpos 2870
  ypos -345
 }
-push $N220d5c00
+push $N37a90800
 push 0
 Switch {
  inputs 2
- which {{curve x2 0 x72 0 x73 1 0}}
+ which {{chef.seafood x72 0 1 0}}
  name seafood
  label clamp((random(frame,0.1)*7)-4)
- xpos 2715
+ xpos 2737
  ypos -646
 }
 Transform {
@@ -2267,17 +2230,17 @@ Transform {
  scale {0.123999998 0.0719999969}
  center {276 264}
  name Transform2
- xpos 2864
+ xpos 2896
  ypos -642
 }
-push $N220d5c00
+push $N37a90800
 push 0
 Switch {
  inputs 2
- which {{clamp((random(frame,0.8)*9)-7)}}
+ which {{chef.fungi}}
  name veggies
  label clamp((random(frame,0.1)*7)-4)
- xpos 2714
+ xpos 2733
  ypos -544
 }
 Transform {
@@ -2286,15 +2249,17 @@ Transform {
  scale {-0.07400000095 0.08823075891}
  center {276 264}
  name Transform4
- xpos 2854
+ xpos 2886
  ypos -540
 }
-push $N220d5c00
+push $N37a90800
+push 0
 Switch {
- which {{clamp((random(frame,0.1)*7)-4)}}
+ inputs 2
+ which {{chef.cheese}}
  name cheese
  label clamp((random(frame,0.1)*7)-4)
- xpos 2718
+ xpos 2736
  ypos -588
 }
 Transform {
@@ -2303,15 +2268,17 @@ Transform {
  scale {0.07900000364 0.09796000272}
  center {276 264}
  name Transform_cheese
- xpos 2857
+ xpos 2889
  ypos -584
 }
-push $N220d5c00
+push $N37a90800
+push 0
 Switch {
- which {{(random(frame,0.5)*15)-10}}
+ inputs 2
+ which {{chef.fungi}}
  name fungi
  label clamp((random(frame,0.1)*7)-4)
- xpos 2711
+ xpos 2733
  ypos -498
 }
 Transform {
@@ -2320,18 +2287,18 @@ Transform {
  scale {-0.05900000036 0.07034613937}
  center {276 264}
  name Transform_fungi
- xpos 2851
+ xpos 2883
  ypos -494
 }
 push 0
-push $N220d5c00
+push $N37a90800
 push 0
 Switch {
  inputs 2
- which {{clamp((random(frame,0.01)*10)-8) i}}
+ which {{chef.bugs}}
  name bugs
  label clamp((random(frame,0.1)*7)-4)
- xpos 2726
+ xpos 2731
  ypos -298
 }
 Transform {
@@ -2340,12 +2307,14 @@ Transform {
  scale {0.123999998 0.0719999969}
  center {276 264}
  name Transform_Bugs
- xpos 2841
+ xpos 2873
  ypos -294
 }
-push $N220d5c00
+push $N37a90800
+push 0
 Switch {
- which {{clamp((random(frame,0.1)*7)-4)}}
+ inputs 2
+ which {{chef.fruit}}
  name fruit
  label clamp((random(frame,0.1)*7)-4)
  xpos 2730
@@ -2356,16 +2325,17 @@ Transform {
  scale {0.123999998 0.0719999969}
  center {276 264}
  name Transform_fruit
- xpos 2840
+ xpos 2872
  ypos -388
 }
 Merge2 {
  inputs 16+1
  name Merge6
- xpos 3089
- ypos -233
+ xpos 3087
+ ypos -171
  hide_input true
 }
+set N37b44400 [stack 0]
 ColorCorrect {
  gain 0.1
  name ColorCorrect5
@@ -2377,7 +2347,7 @@ Dot {
  xpos 3230
  ypos 1269
 }
-push $N3287e800
+push $N37a91800
 Merge2 {
  inputs 2
  mix 0.88
@@ -2395,7 +2365,7 @@ Write {
  xpos 1046
  ypos 1552
 }
-set N3287e000 [stack 0]
+set N37b95400 [stack 0]
 push 0
 push 0
 push 0
@@ -2404,16 +2374,50 @@ push 0
 push 0
 push 0
 push 0
-push $N5ffb7180
+push $N2e2e6880
 Viewer {
  inputs 10
- frame 2
  frame_range 1-100
  name Viewer1
  xpos -990
  ypos 593
 }
-push $N3287e000
+Group {
+ inputs 0
+ name Random
+ xpos 3012
+ ypos -883
+ addUserKnob {20 "" l Settings}
+ addUserKnob {26 "" l "@b;Random"}
+ addUserKnob {7 minx l "Min X"}
+ addUserKnob {7 maxx l "Max X:"}
+ addUserKnob {7 miny l "Min Y:" R -100 100}
+ miny -9
+ addUserKnob {7 maxy l "Max Y:" R -100 100}
+ maxy 9
+ addUserKnob {7 speed R 0 10}
+ speed {{random(10)}}
+ addUserKnob {26 ""}
+ addUserKnob {12 Rtran}
+ Rtran {{random(20)} {(random(frame/(speed))*(maxy-miny)+miny)}}
+ addUserKnob {7 Rrot}
+ addUserKnob {12 Rscl}
+ addUserKnob {7 result l Result: R 0 100}
+ result {{(random(frame/(speed))*(maxy-miny)+miny)}}
+}
+ NoOp {
+  inputs 0
+  name NoOp1
+  xpos 19
+  ypos 13
+ }
+ Output {
+  name Output1
+  xpos 19
+  ypos 39
+ }
+end_group
+push $N37b95400
 push 0
 push 0
 push 0
@@ -2421,42 +2425,57 @@ push 0
 push 0
 push 0
 push 0
-push $N3274cc00
-push $N5ffb7180
+push $N37963c00
+push $N37b95400
 Viewer {
  inputs 10
- frame 2
+ frame 4
  frame_range 1-100
  frame_range_lock true
- input_number 9
  downrez 2
  roi {0.3289999962 -0.8899999857 0.9300000072 -0.7509999871}
  name Viewer2
  xpos 390
  ypos 1340
 }
+push $N37b44400
 NoOp {
- inputs 0
- name Ingredient
+ name chef
  label CONTROL
  selected true
- xpos 3269
- ypos -239
+ xpos 3236
+ ypos -175
  addUserKnob {20 Ingredients}
  addUserKnob {6 seafood +STARTLINE}
+ seafood true
  addUserKnob {6 cheese +STARTLINE}
+ cheese true
  addUserKnob {6 veggies +STARTLINE}
+ veggies true
  addUserKnob {6 fungi +STARTLINE}
+ fungi true
  addUserKnob {6 fruit +STARTLINE}
+ fruit true
  addUserKnob {6 nuts +STARTLINE}
+ nuts true
  addUserKnob {6 bugs +STARTLINE}
+ bugs true
  addUserKnob {6 poultry +STARTLINE}
+ poultry true
  addUserKnob {6 space +STARTLINE}
+ space true
  addUserKnob {6 herbs +STARTLINE}
+ herbs true
  addUserKnob {6 crypto +STARTLINE}
+ crypto true
  addUserKnob {6 special +STARTLINE}
+ special true
  addUserKnob {6 candy +STARTLINE}
+ candy true
  addUserKnob {6 vegan +STARTLINE}
+ vegan true
  addUserKnob {6 gf +STARTLINE}
+ gf true
  addUserKnob {6 rare +STARTLINE}
+ rare true
 }
