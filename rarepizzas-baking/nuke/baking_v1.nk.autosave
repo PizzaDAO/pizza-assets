@@ -2,7 +2,7 @@
 version 12.1 v2
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="-2025" y="23" w="1680" h="980" screen="1">
+    <window x="-2177" y="23" w="1680" h="1005" screen="1">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
@@ -10,12 +10,12 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
             </dock>
             <split size="1017" stretch="1"/>
             <splitter orientation="2">
-                <split size="564"/>
+                <split size="578"/>
                 <dock id="" activePageId="Viewer.1">
                     <page id="Viewer.1"/>
                 </dock>
-                <split size="396"/>
-                <dock id="" activePageId="DAG.1">
+                <split size="407"/>
+                <dock id="" activePageId="DAG.1" focus="true">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
@@ -107,7 +107,7 @@ Reformat {
  xpos -1846
  ypos -582
 }
-set N17c6b800 [stack 0]
+set Nf64fc00 [stack 0]
 Noise {
  size 680
  zoffset 1.72
@@ -120,7 +120,7 @@ Noise {
  ypos -804
  postage_stamp true
 }
-push $N17c6b800
+push $Nf64fc00
 Transform {
  translate {80 580}
  scale 0.4329999983
@@ -135,7 +135,7 @@ Merge2 {
  xpos -2041
  ypos -598
 }
-push $N17c6b800
+push $Nf64fc00
 Merge2 {
  inputs 2
  operation multiply
@@ -154,8 +154,8 @@ Read {
  xpos -2081
  ypos -213
 }
-set N17cb1c00 [stack 0]
-push $N17cb1c00
+set Nf694000 [stack 0]
+push $Nf694000
 Shuffle2 {
  fromInput1 {{0} B}
  fromInput2 {{0} B}
@@ -198,7 +198,7 @@ Dot {
  xpos -1844
  ypos 5
 }
-set N17cf4c00 [stack 0]
+set Nf6cf000 [stack 0]
 Transform {
  translate {1428 1250}
  scale 2.407000065
@@ -208,7 +208,7 @@ Transform {
  ypos -98
  disable true
 }
-push $N17cf4c00
+push $Nf6cf000
 Transform {
  translate {2090 1495}
  scale 2.64199996
@@ -218,7 +218,7 @@ Transform {
  ypos -54
  disable true
 }
-push $N17cf4c00
+push $Nf6cf000
 Transform {
  translate {2200 980}
  scale 2.83100009
@@ -230,7 +230,7 @@ Transform {
 }
 push 0
 push 0
-push $N17cf4c00
+push $Nf6cf000
 Transform {
  translate {1680 1490}
  scale 2.217999935
@@ -286,7 +286,7 @@ Read {
  xpos -35
  ypos 218
 }
-set N17d3ec00 [stack 0]
+set Nf719000 [stack 0]
 Noise {
  size 680
  zoffset 1.72
@@ -311,7 +311,7 @@ Grade {
  xpos -70
  ypos 417
 }
-push $N17d3ec00
+push $Nf719000
 Merge2 {
  inputs 2
  operation multiply
@@ -366,7 +366,7 @@ Grade {
  xpos 451
  ypos -116
 }
-set N17d7ac00 [stack 0]
+set Nf75b000 [stack 0]
 Read {
  inputs 0
  file_type png
@@ -384,13 +384,12 @@ Reformat {
  xpos 712
  ypos -155
 }
-set N17d7a400 [stack 0]
 Dot {
  name Dot4
  xpos 635
  ypos -148
 }
-set N17db3c00 [stack 0]
+set Nf75a000 [stack 0]
 Shuffle2 {
  inputs 2
  fromInput1 {{0} B A}
@@ -433,7 +432,7 @@ Transform {
  xpos -298
  ypos -382
 }
-set N17db2800 [stack 0]
+set Nf790c00 [stack 0]
 Dilate {
  channels alpha
  size -3
@@ -441,7 +440,7 @@ Dilate {
  xpos -230
  ypos -269
 }
-push $N17db2800
+push $Nf790c00
 Shuffle2 {
  fromInput1 {{0} B}
  fromInput2 {{0} B}
@@ -494,10 +493,10 @@ Read {
  origset true
  premultiplied true
  name Read3
- selected true
  xpos -244
  ypos -1017
 }
+set Nf7c2c00 [stack 0]
 Grain2 {
  name Grain2_1
  label "Kodak 5248"
@@ -535,6 +534,7 @@ Read {
  xpos -450
  ypos -1015
 }
+set N2e622400 [stack 0]
 EdgeBlur {
  size 7.8
  name EdgeBlur1
@@ -556,7 +556,7 @@ Read {
  origset true
  name Read4
  xpos -457
- ypos -1451
+ ypos -1454
 }
 Grade {
  gamma 1.18
@@ -575,7 +575,7 @@ Read {
  xpos -463
  ypos -1879
 }
-set N269c3000 [stack 0]
+set N2e671400 [stack 0]
 Dot {
  name Dot1
  xpos -645
@@ -619,7 +619,7 @@ Merge2 {
  xpos -1443
  ypos 116
 }
-set N26a13400 [stack 0]
+set N2e6af800 [stack 0]
 Reformat {
  format "512 512 0 0 512 512 1 square_512"
  name Reformat1
@@ -644,7 +644,7 @@ Write {
  xpos -1533
  ypos 279
 }
-push $N17cf4c00
+push $Nf6cf000
 Transform {
  translate {1700 1230}
  scale 6.353000164
@@ -659,8 +659,8 @@ Sharpen {
  xpos -1598
  ypos 73
 }
-push $N269c3000
-push $N26a13400
+push $N2e671400
+push $N2e6af800
 Shuffle2 {
  inputs 2
  fromInput1 {{0} B A}
@@ -677,7 +677,7 @@ Premult {
  xpos -1384
  ypos 219
 }
-set N26a4b400 [stack 0]
+set N2e6e3800 [stack 0]
 Write {
  file /Users/anthonyshafer/Dropbox/RarePizzas/rarepizzas-shared/rarepizzas-baking/out/rarepizzas-blenpie_3k.jpg
  file_type jpeg
@@ -690,7 +690,7 @@ Write {
  xpos -1435
  ypos 334
 }
-push $N26a4b400
+push $N2e6e3800
 Reformat {
  format "350 350 0 0 350 350 1 350x350"
  name Reformat3
@@ -709,7 +709,7 @@ Write {
  xpos -1225
  ypos 319
 }
-push $N26a4b400
+push $N2e6e3800
 Transform {
  translate {76 21}
  scale 0.66
@@ -736,7 +736,7 @@ Write {
  xpos -1330
  ypos 413
 }
-push $N17c6b800
+push $Nf64fc00
 Shuffle2 {
  fromInput1 {{0} B}
  fromInput2 {{0} B}
@@ -768,7 +768,7 @@ Dot {
  xpos -1295
  ypos -373
 }
-set N271d6400 [stack 0]
+set N2e77a800 [stack 0]
 Noise {
  size 170
  zoffset 1.72
@@ -792,8 +792,8 @@ Grade {
  xpos -1298
  ypos -307
 }
-set N2720bc00 [stack 0]
-push $N271d6400
+set N2e77a000 [stack 0]
+push $N2e77a800
 Shuffle2 {
  inputs 2
  fromInput1 {{0} B A}
@@ -817,7 +817,7 @@ Premult {
  xpos -976
  ypos -175
 }
-push $N17c6b800
+push $Nf64fc00
 Transform {
  translate {220 605}
  scale 0.8309999704
@@ -845,8 +845,8 @@ Grade {
  xpos -1604
  ypos -585
 }
-push $N2720bc00
-push $N271d6400
+push $N2e77a000
+push $N2e77a800
 Merge2 {
  inputs 2
  operation multiply
@@ -872,10 +872,9 @@ Shuffle2 {
  xpos 246
  ypos -51
 }
-set N27241800 [stack 0]
 push 0
-push $N17d7ac00
-push $N17db3c00
+push $Nf75b000
+push $Nf75a000
 Merge2 {
  inputs 3+1
  operation multiply
@@ -884,18 +883,6 @@ Merge2 {
  name Multiply4
  xpos 483
  ypos -30
-}
-push $N17d7a400
-push $N27241800
-Viewer {
- inputs 2
- frame 1
- frame_range 1-100
- translate {0.08799999952 -0.06000000238}
- rotate 19.21265793
- name Viewer1
- xpos -679
- ypos 528
 }
 Read {
  inputs 0
@@ -906,4 +893,18 @@ Read {
  name Read2
  xpos -251
  ypos -1872
+}
+push $Nf7c2c00
+push $N2e622400
+Viewer {
+ inputs 2
+ frame 1
+ frame_range 1-100
+ input_number 1
+ translate {0.08799999952 -0.06000000238}
+ rotate 19.21265793
+ name Viewer1
+ selected true
+ xpos -679
+ ypos 528
 }
