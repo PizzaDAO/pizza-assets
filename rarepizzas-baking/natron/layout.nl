@@ -6,11 +6,11 @@
 	<Window class_id="1" tracking_level="0" version="1">
 		<ChildType>0</ChildType>
 		<Child class_id="2" tracking_level="1" version="1" object_id="_0">
-			<Sizes>1742 614</Sizes>
+			<Sizes>1920 578</Sizes>
 			<Orientation>1</Orientation>
 			<ChildIsSplitter>1</ChildIsSplitter>
 			<Child object_id="_1">
-				<Sizes>870 869</Sizes>
+				<Sizes>861 1056</Sizes>
 				<Orientation>1</Orientation>
 				<ChildIsSplitter>0</ChildIsSplitter>
 				<Child class_id="3" tracking_level="1" version="5" object_id="_2">
@@ -50,10 +50,10 @@
 			</Child>
 		</Child>
 		<MainWindow>1</MainWindow>
-		<x>138</x>
-		<y>24</y>
-		<w>2392</w>
-		<h>1009</h>
+		<x>-2550</x>
+		<y>-55</y>
+		<w>2534</w>
+		<h>1035</h>
 	</Window>
 </Layout>
 </boost_serialization>

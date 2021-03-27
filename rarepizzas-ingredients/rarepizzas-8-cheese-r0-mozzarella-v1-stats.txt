@@ -1,0 +1,17 @@
+Time spent to render frame (wall clock time): 1.26 seconds
+------------------------------- internalEncoderNode------------------------------- 
+Time spent rendering: 1.26 seconds
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? No
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072

@@ -1,0 +1,2227 @@
+Time spent to render frame (wall clock time): 40.34 seconds
+------------------------------- switch_sauce_1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Merge3
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot13------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to switch_scheese_1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Read12_3------------------------------- 
+Time spent rendering: 0.43 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? No
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Dot10------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to t_crust
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Crop2------------------------------- 
+Time spent rendering: 0.18 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Grade9------------------------------- 
+Time spent rendering: 0.10 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- t_cheese_0------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to switch_cheese_0
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- switch_scheese_1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to t_cheese
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot22_3------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot13
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot21_3------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot22_3
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- switch_cheese_0------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot21_3
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_cheese------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Grade1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Shuffle1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Multiply1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Clamp2------------------------------- 
+Time spent rendering: 0.17 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Grade6------------------------------- 
+Time spent rendering: 0.11 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Clamp1------------------------------- 
+Time spent rendering: 0.11 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Saturation1------------------------------- 
+Time spent rendering: 0.11 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Blur1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Transform2
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Merge1------------------------------- 
+Time spent rendering: 0.27 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Transform2------------------------------- 
+Time spent rendering: 0.34 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3065.64 y2 = 3064.83
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3066 y2 = 3065
+------------------------------- Multiply1------------------------------- 
+Time spent rendering: 0.11 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 7 x2 = 3072 y2 = 3072
+------------------------------- Premult1------------------------------- 
+Time spent rendering: 0.13 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3065.64 y2 = 3064.83
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3066 y2 = 3065
+------------------------------- ColorCorrect5------------------------------- 
+Time spent rendering: 0.43 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- t_sauce_1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to In1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- EdgeDetect1------------------------------- 
+Time spent rendering: 3.62 seconds
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Merge3------------------------------- 
+Time spent rendering: 0.13 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Transform6------------------------------- 
+Time spent rendering: 0.25 second
+Region of definition: x1 = -13 y1 = -1 x2 = 3061 y2 = 3073
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -13 y1 = 0 x2 = 3061 y2 = 3073
+------------------------------- Grade6------------------------------- 
+Time spent rendering: 0.14 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Out5------------------------------- 
+Time spent rendering: 0.12 second
+Region of definition: x1 = -13 y1 = -1 x2 = 3072 y2 = 3073
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -13 y1 = 0 x2 = 3072 y2 = 3073
+------------------------------- Grade9------------------------------- 
+Time spent rendering: 0.09 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Clamp3------------------------------- 
+Time spent rendering: 0.24 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Out5------------------------------- 
+Time spent rendering: 0.10 second
+Region of definition: x1 = -21 y1 = -21 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -21 y1 = -21 x2 = 3072 y2 = 3072
+------------------------------- Blur1------------------------------- 
+Time spent rendering: 1.23 seconds
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- In1------------------------------- 
+Time spent rendering: 0.10 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Plasma2------------------------------- 
+Time spent rendering: 1.37 seconds
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? No
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Saturation1------------------------------- 
+Time spent rendering: 0.12 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Transform2------------------------------- 
+Time spent rendering: 0.23 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3065.64 y2 = 3064.83
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = -10 x2 = 3066 y2 = 3065
+------------------------------- Shuffle1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Multiply1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Clamp1------------------------------- 
+Time spent rendering: 0.09 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Clamp2------------------------------- 
+Time spent rendering: 0.18 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Multiply1------------------------------- 
+Time spent rendering: 0.08 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Premult1------------------------------- 
+Time spent rendering: 0.08 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3065.64 y2 = 3064.83
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = -10 x2 = 3066 y2 = 3065
+------------------------------- Clamp3------------------------------- 
+Time spent rendering: 0.17 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Merge3------------------------------- 
+Time spent rendering: 0.12 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = -10 x2 = 3072 y2 = 3072
+------------------------------- Blur1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Transform2
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- EdgeDetect1------------------------------- 
+Time spent rendering: 3.31 seconds
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Merge1------------------------------- 
+Time spent rendering: 0.20 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = -10 x2 = 3072 y2 = 3072
+------------------------------- t_sauce_1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to In1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- ColorCorrect5------------------------------- 
+Time spent rendering: 0.64 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = -10 x2 = 3072 y2 = 3072
+------------------------------- Dot22_3_2------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot13_2
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot21_3_2------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot22_3_2
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- switch_topping_1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to t_topping_1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Read12_3_2------------------------------- 
+Time spent rendering: 0.09 second
+Region of definition: x1 = 0 y1 = 0 x2 = 1024 y2 = 1024
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? No
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 1024 y2 = 1024
+------------------------------- Blur1------------------------------- 
+Time spent rendering: 1.22 seconds
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Transform6------------------------------- 
+Time spent rendering: 0.22 second
+Region of definition: x1 = -21 y1 = -21 x2 = 3053 y2 = 3053
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -21 y1 = -21 x2 = 3053 y2 = 3053
+------------------------------- Transform7------------------------------- 
+Time spent rendering: 0.26 second
+Region of definition: x1 = 98.4522 y1 = 97.6665 x2 = 2965.19 y2 = 2965.16
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 98 y1 = 97 x2 = 2966 y2 = 2966
+------------------------------- t_topping_1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Merge3
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- switch_topping_0_2------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot21_3_2
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Grade1------------------------------- 
+Time spent rendering: 0.10 second
+Region of definition: x1 = 98.4522 y1 = 97.6665 x2 = 2965.19 y2 = 2965.16
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 98 y1 = 97 x2 = 2966 y2 = 2966
+------------------------------- t_topping_0_2------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to switch_topping_0_2
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot13_2------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to switch_topping_1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Grade6------------------------------- 
+Time spent rendering: 0.17 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Clamp2------------------------------- 
+Time spent rendering: 0.18 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Clamp1------------------------------- 
+Time spent rendering: 0.10 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Plasma2------------------------------- 
+Time spent rendering: 1.42 seconds
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? No
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- In1------------------------------- 
+Time spent rendering: 0.11 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Saturation1------------------------------- 
+Time spent rendering: 0.11 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Clamp3------------------------------- 
+Time spent rendering: 0.17 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Premult1------------------------------- 
+Time spent rendering: 0.07 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3065.64 y2 = 3064.83
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3066 y2 = 3065
+------------------------------- Shuffle1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Multiply1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Blur1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Transform2
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Merge1------------------------------- 
+Time spent rendering: 0.23 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Transform2------------------------------- 
+Time spent rendering: 0.21 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3065.64 y2 = 3064.83
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3066 y2 = 3065
+------------------------------- Multiply1------------------------------- 
+Time spent rendering: 0.08 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 7 x2 = 3072 y2 = 3072
+------------------------------- t_sauce_1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to In1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- EdgeDetect1------------------------------- 
+Time spent rendering: 3.25 seconds
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Merge3------------------------------- 
+Time spent rendering: 0.13 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Grade9------------------------------- 
+Time spent rendering: 0.10 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- ColorCorrect5------------------------------- 
+Time spent rendering: 0.50 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Out5------------------------------- 
+Time spent rendering: 0.10 second
+Region of definition: x1 = -21 y1 = -21 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -16 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Blur1------------------------------- 
+Time spent rendering: 1.14 seconds
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Merge3------------------------------- 
+Time spent rendering: 0.22 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Transform2------------------------------- 
+Time spent rendering: 0.21 second
+Region of definition: x1 = -24.0673 y1 = -50.5814 x2 = 3058.29 y2 = 3032.59
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: unpremultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -25 y1 = -30 x2 = 3059 y2 = 3033
+------------------------------- Shuffle1------------------------------- 
+Time spent rendering: 0.09 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: unpremultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 9 x2 = 3072 y2 = 3072
+------------------------------- Blur1------------------------------- 
+Time spent rendering: 0.57 second
+Region of definition: x1 = -55 y1 = -81 x2 = 3072 y2 = 3063
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: unpremultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3063
+------------------------------- Transform6------------------------------- 
+Time spent rendering: 0.21 second
+Region of definition: x1 = -21 y1 = -21 x2 = 3053 y2 = 3053
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -16 y1 = 0 x2 = 3053 y2 = 3053
+------------------------------- Solid1------------------------------- 
+Time spent rendering: 0.06 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGB 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 9 x2 = 3072 y2 = 3072
+------------------------------- Multiply1------------------------------- 
+Time spent rendering: 0.08 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 9 x2 = 3072 y2 = 3072
+------------------------------- Premult1------------------------------- 
+Time spent rendering: 0.08 second
+Region of definition: x1 = -55 y1 = -81 x2 = 3072 y2 = 3063
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3063
+------------------------------- Merge1------------------------------- 
+Time spent rendering: 0.31 second
+Region of definition: x1 = -55 y1 = -81 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- t_scatter1_2_3_13------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_12------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_11------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_10------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- ColorCorrect5------------------------------- 
+Time spent rendering: 0.38 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Sharpen3------------------------------- 
+Time spent rendering: 0.80 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = -10 x2 = 3072 y2 = 3072
+------------------------------- t_scatter1_2_3_7------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_0------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_4------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot32------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Read12_3_2
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_2------------------------------- 
+Time spent rendering: 0.02 second
+Region of definition: x1 = 342.04 y1 = 342.04 x2 = 681.96 y2 = 681.96
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 342 y1 = 342 x2 = 682 y2 = 682
+------------------------------- t_scatter1_2_3_3------------------------------- 
+Time spent rendering: 0.02 second
+Region of definition: x1 = 357.4 y1 = 357.4 x2 = 666.6 y2 = 666.6
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 357 y1 = 357 x2 = 667 y2 = 667
+------------------------------- t_scatter1_2_3_5------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_6------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_16------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_15------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_14------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_17------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Reformat4------------------------------- 
+Time spent rendering: 0.46 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- t_scatter1_2_3_19------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_18------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_22------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_21------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_scatter1_2_3_20------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot32
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Merge8------------------------------- 
+Time spent rendering: 0.16 second
+Region of definition: x1 = 0 y1 = 0 x2 = 2745 y2 = 2205
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 1090 y2 = 1098
+------------------------------- Crop3------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Merge8
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Merge1------------------------------- 
+Time spent rendering: 0.16 second
+Region of definition: x1 = -55 y1 = -81 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Read1------------------------------- 
+Time spent rendering: 0.59 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? No
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Read2------------------------------- 
+Time spent rendering: 0.59 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? No
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Merge2_2------------------------------- 
+Time spent rendering: 0.14 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- switch_crust------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot29
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot2------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot7
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- switch_sauce------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot21
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Read11------------------------------- 
+Time spent rendering: 0.54 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? No
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- switch_box------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot4
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot4------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Read1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Grade7------------------------------- 
+Time spent rendering: 0.17 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- switch_crust_1------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Read2
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot12------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Merge5
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot7------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to switch_box
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- t_crust------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to switch_crust
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot29------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot20
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot20------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to switch_crust_1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- transform_sauce------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to switch_sauce
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Merge5------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot2
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot21------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to Dot22
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Dot22------------------------------- 
+Time spent rendering: 0.00 second
+Region of definition: x1 = 0 y1 = 0 x2 = 0 y2 = 0
+Is Identity to Effect? Yes, to switch_sauce_1
+Has render-scale support? No
+Has tiles support? No
+Channels processed: 
+Output alpha premultiplication: opaque
+Mipmap level(s) rendered: 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: 
+Identity rectangles: 0
+Rectangles rendered: 0
+------------------------------- Merge7------------------------------- 
+Time spent rendering: 0.19 second
+Region of definition: x1 = -8.36044 y1 = -9.17459 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = -9 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- internalEncoderNode------------------------------- 
+Time spent rendering: 6.32 seconds
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? No
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 0
+Nb cache miss: 0
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- Plasma2------------------------------- 
+Time spent rendering: 1.38 seconds
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? No
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+------------------------------- In1------------------------------- 
+Time spent rendering: 0.11 second
+Region of definition: x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
+Is Identity to Effect? No
+Has render-scale support? Yes
+Has tiles support? Yes
+Channels processed: red green blue alpha
+Output alpha premultiplication: premultiplied
+Mipmap level(s) rendered: 0 
+Nb cache hit: 1
+Nb cache miss: 1
+Nb cache hit requiring mipmap downscaling: 0
+Plane(s) rendered: RGBA 
+Identity rectangles: 0
+Rectangles rendered: 1
+x1 = 0 y1 = 0 x2 = 3072 y2 = 3072
